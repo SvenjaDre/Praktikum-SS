@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.9.21)  5 APR 2023 21:29
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.9.21)  5 APR 2023 22:57
  restricted system commands enabled.
 **vXXX.tex
 (./vXXX.tex
@@ -1381,36 +1381,63 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 \openout4 = vXXX.toc
  [2
 
-] (./content/theorie.tex) (./content/durchfuehrung.tex) (./content/auswertung.tex
-<plot.pdf, id=32, 417.7206pt x 258.0049pt>
+] (./content/Zielsetzung.tex) (./content/theorie.tex) (./content/durchfuehrung.tex
+<content/Aufbau 701.png, id=37, 610.53094pt x 457.71pt>
+File: content/Aufbau 701.png Graphic file (type png)
+<use content/Aufbau 701.png>
+Package luatex.def Info: content/Aufbau 701.png  used on input line 6.
+(luatex.def)             Requested size: 305.26472pt x 228.85445pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--12
+
+ []
+
+[3]) (./content/auswertung.tex
+<plot.pdf, id=52, 417.7206pt x 258.0049pt>
 File: plot.pdf Graphic file (type pdf)
 <use plot.pdf>
 Package luatex.def Info: plot.pdf  used on input line 6.
 (luatex.def)             Requested size: 417.71957pt x 258.00426pt.
-) (./content/diskussion.tex [3]) [4<build/plot.pdf>] (./build/vXXX.aux)
+) (./content/diskussion.tex [4<./content/Aufbau 701.png>]) (./content/Anhang.tex
+<content/Anhang 1.jpg, id=62, 2258.4375pt x 3011.25pt>
+File: content/Anhang 1.jpg Graphic file (type jpg)
+<use content/Anhang 1.jpg>
+Package luatex.def Info: content/Anhang 1.jpg  used on input line 6.
+(luatex.def)             Requested size: 418.25555pt x 557.66986pt.
+<content/Anhang 2.jpg, id=63, 2258.4375pt x 3011.25pt>
+File: content/Anhang 2.jpg Graphic file (type jpg)
+<use content/Anhang 2.jpg>
+Package luatex.def Info: content/Anhang 2.jpg  used on input line 11.
+(luatex.def)             Requested size: 418.25555pt x 557.66986pt.
+<content/Anhang 3.jpg, id=64, 3011.25pt x 2258.4375pt>
+File: content/Anhang 3.jpg Graphic file (type jpg)
+<use content/Anhang 3.jpg>
+Package luatex.def Info: content/Anhang 3.jpg  used on input line 16.
+(luatex.def)             Requested size: 418.25555pt x 313.66345pt.
+) [5<build/plot.pdf>] [6<./content/Anhang 1.jpg>] [7<./content/Anhang 2.jpg>] [8<./content/Anhang 3.jpg>] [9] (./build/vXXX.aux)
 Package rerunfilecheck Info: File `vXXX.aux' has not changed.
-(rerunfilecheck)             Checksum: 6DBD736F2D9AA1D495C6116C414CDF47;3238.
+(rerunfilecheck)             Checksum: 50A53EF87F562029AD3F0B981BD358D1;4204.
 Package rerunfilecheck Info: File `vXXX.toc' has not changed.
-(rerunfilecheck)             Checksum: F5B638A2EAB42F2751DA7BC0817A2C17;424.
+(rerunfilecheck)             Checksum: 28BA3042C2B47265832962A8882BF6F4;553.
 Package logreq Info: Writing requests to 'vXXX.run.xml'.
 
 \openout1 = vXXX.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 38204 strings out of 477356
+ 38294 strings out of 477356
  100000,1977958 words of node,token memory allocated
  687 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 26 attribute, 75 glue_spec, 15 attribute_list, 1 write nodes
-   avail lists: 1:5,2:520,3:128,4:54,5:399,6:24,7:4719,8:49,9:341,10:5,11:498,12:1
- 58195 multiletter control sequences out of 65536+600000
- 83 fonts using 32600759 bytes
- 113i,7n,117p,10617b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
+   avail lists: 1:5,2:540,3:133,4:70,5:431,6:27,7:5423,8:50,9:347,10:5,11:570,12:1
+ 58232 multiletter control sequences out of 65536+600000
+ 85 fonts using 32864423 bytes
+ 113i,8n,117p,10617b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on vXXX.pdf (4 pages, 51651 bytes).
+Output written on vXXX.pdf (9 pages, 12283464 bytes).
 
-PDF statistics: 147 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 131072)
- 41 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 188 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 131072)
+ 57 words of extra memory for PDF output out of 10000 (max. 100000000)
 

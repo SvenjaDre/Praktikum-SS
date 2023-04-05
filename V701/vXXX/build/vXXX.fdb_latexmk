@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber build/vXXX"] 1680721649 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1680722979
-  "../lit.bib" 1680681450 132 2a042ff84d3688679b9c9b453247025e ""
-  "build/vXXX.bcf" 1680722978 107337 1ffd95bbbb6c83a03058b63934e0989e "lualatex"
+["biber build/vXXX"] 1680724229 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1680728248
+  "../lit.bib" 1680723815 134 8ec6bac5bdf47116b621882e052dc7dd ""
+  "build/vXXX.bcf" 1680728248 107337 1ffd95bbbb6c83a03058b63934e0989e "lualatex"
   (generated)
   "build/vXXX.bbl"
   "build/vXXX.blg"
-["lualatex"] 1680722945 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1680722979
+["lualatex"] 1680728225 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1680728248
   "../header.tex" 1680618483 3524 439249e4b3aa68971e0f8486518d8ef1 ""
   "/home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf" 1429396570 733736 0b8cd5044567d896491fd777c12d5cda ""
   "/home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf" 1255129361 111240 0af0b64d6d3df41bead3f9de314afbd4 ""
@@ -218,6 +218,8 @@
   "/home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1668365096 127336 5bb5dd201c7512a9b41a7e3895cb83b9 ""
   "/home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc" 1668365131 128308 3048f381630bab933948245e007c8f72 ""
   "/home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc" 1668365102 127679 f75d152fb83b4c948451a734d37b71a6 ""
+  "/home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc" 1668365133 125976 02cfb34a12e93a26fd2ed35d564c0688 ""
+  "/home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc" 1668365133 128155 baf75c6bbe44a19676404d2d6b97902e ""
   "/home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-bold.luc" 1668365131 128113 6d6a6f413fb70bb116ab4b5e3c92e9a4 ""
   "/home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-regular.luc" 1668365131 127655 5a0e84ebcc75efecd1c2d2c3daa64e48 ""
   "/home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/xitsmath-bold.luc" 1668365097 291912 89404194e7121363fecc82fd917b8b3a ""
@@ -227,15 +229,21 @@
   "/home/svenja/.local/texlive/2022/texmf-var/tex/generic/config/language.dat" 1663774547 6647 d1f26eb7264334694828c68a79bff271 ""
   "/home/svenja/.local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt" 1663774588 4783939 5ac74a52494e9d2dcb8bd4f3b8338a1c ""
   "build/plot.pdf" 1680681334 11147 35f034459e7e5cf60b3ad5778cd019ec ""
-  "build/vXXX.aux" 1680722978 3238 6dbd736f2d9aa1d495c6116c414cdf47 "lualatex"
-  "build/vXXX.bbl" 1680721650 889 64f7efb95c5902e36e818fab3db70119 "biber build/vXXX"
-  "build/vXXX.run.xml" 1680722978 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
-  "build/vXXX.toc" 1680722978 424 f5b638a2eab42f2751da7bc0817a2c17 "lualatex"
+  "build/vXXX.aux" 1680728247 4204 50a53ef87f562029ad3f0b981bd358d1 "lualatex"
+  "build/vXXX.bbl" 1680724230 891 ef01c5fbddf0d1c5e786c695a13c7370 "biber build/vXXX"
+  "build/vXXX.run.xml" 1680728248 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
+  "build/vXXX.toc" 1680728247 553 28ba3042c2b47265832962a8882bf6f4 "lualatex"
+  "content/Anhang 1.jpg" 1680618325 3602201 a01ab0d5a3502170960da3d204d68e88 ""
+  "content/Anhang 2.jpg" 1680618219 3698172 1657eed6f7a235476192f8c48bc83f68 ""
+  "content/Anhang 3.jpg" 1680618126 3856158 6cd2a86e4eb4d8ca61e5ae539b610ef0 ""
+  "content/Anhang.tex" 1680723722 344 52547e43d27a5e12a41f152659b27b95 ""
+  "content/Aufbau 701.png" 1680725690 944594 76c754060acb7e6e372eec4af7f8c5ba ""
+  "content/Zielsetzung.tex" 1680724064 205 d796dcae312041279a1d8a0ef4e6bf7b ""
   "content/auswertung.tex" 1680618483 180 979545206919101e3933038b45e3411d ""
   "content/diskussion.tex" 1680618483 44 402cc6c9751419c0f1a455b2d4ed1f51 ""
-  "content/durchfuehrung.tex" 1680618483 50 21282d8bb0cc9b2f3316d3739203a5a9 ""
+  "content/durchfuehrung.tex" 1680728221 557 737e7802f885e8256da2e85bc6eca288 ""
   "content/theorie.tex" 1680722942 2255 0913eb33749fbf94fb512e2a04266c42 ""
-  "vXXX.tex" 1680618483 384 88fc32654f7a118cf9c44370bd6ed931 ""
+  "vXXX.tex" 1680724130 441 f7907c1e3807aa45f20da7cfbf02ed27 ""
   (generated)
   "build/vXXX.aux"
   "build/vXXX.bcf"

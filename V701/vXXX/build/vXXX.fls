@@ -461,10 +461,17 @@ INPUT build/vXXX.toc
 INPUT build/vXXX.toc
 INPUT build/vXXX.toc
 OUTPUT build/vXXX.toc
+INPUT ./content/Zielsetzung.tex
+INPUT ./content/Zielsetzung.tex
 INPUT ./content/theorie.tex
 INPUT ./content/theorie.tex
 INPUT ./content/durchfuehrung.tex
 INPUT ./content/durchfuehrung.tex
+INPUT ./content/Aufbau 701.png
+INPUT ./content/Aufbau 701.png
+INPUT ./content/Aufbau 701.png
+INPUT /home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
+INPUT /home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
 INPUT ./content/auswertung.tex
 INPUT ./content/auswertung.tex
 INPUT build/plot.pdf
@@ -472,6 +479,17 @@ INPUT build/plot.pdf
 INPUT build/plot.pdf
 INPUT ./content/diskussion.tex
 INPUT ./content/diskussion.tex
+INPUT ./content/Anhang.tex
+INPUT ./content/Anhang.tex
+INPUT ./content/Anhang 1.jpg
+INPUT ./content/Anhang 1.jpg
+INPUT ./content/Anhang 1.jpg
+INPUT ./content/Anhang 2.jpg
+INPUT ./content/Anhang 2.jpg
+INPUT ./content/Anhang 2.jpg
+INPUT ./content/Anhang 3.jpg
+INPUT ./content/Anhang 3.jpg
+INPUT ./content/Anhang 3.jpg
 INPUT /home/svenja/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
 INPUT build/vXXX.aux
 INPUT build/vXXX.aux
