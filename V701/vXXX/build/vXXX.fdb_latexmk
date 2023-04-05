@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber build/vXXX"] 1680682550 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1680684205
+["biber build/vXXX"] 1680721649 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1680722979
   "../lit.bib" 1680681450 132 2a042ff84d3688679b9c9b453247025e ""
-  "build/vXXX.bcf" 1680684204 107337 1ffd95bbbb6c83a03058b63934e0989e "lualatex"
+  "build/vXXX.bcf" 1680722978 107337 1ffd95bbbb6c83a03058b63934e0989e "lualatex"
   (generated)
   "build/vXXX.bbl"
   "build/vXXX.blg"
-["lualatex"] 1680684170 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1680684205
+["lualatex"] 1680722945 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1680722979
   "../header.tex" 1680618483 3524 439249e4b3aa68971e0f8486518d8ef1 ""
   "/home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf" 1429396570 733736 0b8cd5044567d896491fd777c12d5cda ""
   "/home/svenja/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf" 1255129361 111240 0af0b64d6d3df41bead3f9de314afbd4 ""
@@ -227,14 +227,14 @@
   "/home/svenja/.local/texlive/2022/texmf-var/tex/generic/config/language.dat" 1663774547 6647 d1f26eb7264334694828c68a79bff271 ""
   "/home/svenja/.local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt" 1663774588 4783939 5ac74a52494e9d2dcb8bd4f3b8338a1c ""
   "build/plot.pdf" 1680681334 11147 35f034459e7e5cf60b3ad5778cd019ec ""
-  "build/vXXX.aux" 1680684204 3238 6dbd736f2d9aa1d495c6116c414cdf47 "lualatex"
-  "build/vXXX.bbl" 1680682551 889 64f7efb95c5902e36e818fab3db70119 "biber build/vXXX"
-  "build/vXXX.run.xml" 1680684204 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
-  "build/vXXX.toc" 1680684204 424 f5b638a2eab42f2751da7bc0817a2c17 "lualatex"
+  "build/vXXX.aux" 1680722978 3238 6dbd736f2d9aa1d495c6116c414cdf47 "lualatex"
+  "build/vXXX.bbl" 1680721650 889 64f7efb95c5902e36e818fab3db70119 "biber build/vXXX"
+  "build/vXXX.run.xml" 1680722978 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
+  "build/vXXX.toc" 1680722978 424 f5b638a2eab42f2751da7bc0817a2c17 "lualatex"
   "content/auswertung.tex" 1680618483 180 979545206919101e3933038b45e3411d ""
   "content/diskussion.tex" 1680618483 44 402cc6c9751419c0f1a455b2d4ed1f51 ""
   "content/durchfuehrung.tex" 1680618483 50 21282d8bb0cc9b2f3316d3739203a5a9 ""
-  "content/theorie.tex" 1680684134 1257 99c25a7eb57f54ede15c0c4ab1fb4ca2 ""
+  "content/theorie.tex" 1680722942 2255 0913eb33749fbf94fb512e2a04266c42 ""
   "vXXX.tex" 1680618483 384 88fc32654f7a118cf9c44370bd6ed931 ""
   (generated)
   "build/vXXX.aux"
