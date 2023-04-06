@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.9.28)  4 APR 2023 13:11
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.9.28)  6 APR 2023 18:32
  restricted system commands enabled.
 **vXXX.tex
 (./vXXX.tex
@@ -1404,7 +1404,7 @@ Here is how much of LuaTeX's memory you used:
    7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 12 attribute, 75 glue_spec, 8 attribute_list, 1 write nodes
    avail lists: 1:5,2:460,3:143,4:54,5:132,6:24,7:896,8:23,9:129,10:4,11:56,12:1
  58171 multiletter control sequences out of 65536+600000
- 83 fonts using 32600759 bytes
+ 83 fonts using 32600471 bytes
  113i,7n,117p,10617b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
 Output written on vXXX.pdf (3 pages, 36001 bytes).
