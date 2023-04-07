@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber build/vXXX"] 1680814240 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1680814275
+["biber build/vXXX"] 1680814240 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1680868803
   "../lit.bib" 1680604915 133 a0647d59b11d7337e960ae3d08f5ae8b ""
-  "build/vXXX.bcf" 1680814274 107337 1ffd95bbbb6c83a03058b63934e0989e "lualatex"
+  "build/vXXX.bcf" 1680868802 107337 1ffd95bbbb6c83a03058b63934e0989e "lualatex"
   (generated)
   "build/vXXX.bbl"
   "build/vXXX.blg"
-["lualatex"] 1680814265 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1680814275
+["lualatex"] 1680868794 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1680868803
   "../header.tex" 1680606661 3661 f9a9b8475f16357bc7804109827d09c6 ""
   "/home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf" 1429396570 733736 0b8cd5044567d896491fd777c12d5cda ""
   "/home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf" 1255129361 111240 0af0b64d6d3df41bead3f9de314afbd4 ""
@@ -228,13 +228,13 @@
   "/home/mas1912/.local/texlive/2022/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1664884056 275087 e00e573f9cf7fedd9500224d31191c83 ""
   "/home/mas1912/.local/texlive/2022/texmf-var/tex/generic/config/language.dat" 1664353844 6647 93ac7a8ac5929ae785536c95a30408d0 ""
   "/home/mas1912/.local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt" 1664353943 4784003 e69ee1b071f679cd734e02e69430e229 ""
-  "build/vXXX.aux" 1680814274 4011 eb5a2e9b94506d5306170d21b316cef0 "lualatex"
+  "build/vXXX.aux" 1680868802 4011 eb5a2e9b94506d5306170d21b316cef0 "lualatex"
   "build/vXXX.bbl" 1680814243 885 090278d509130902c59862cbb6b16f99 "biber build/vXXX"
-  "build/vXXX.run.xml" 1680814274 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
-  "build/vXXX.toc" 1680814274 553 9067c655dd8369d5b4c0312db92bb406 "lualatex"
+  "build/vXXX.run.xml" 1680868802 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
+  "build/vXXX.toc" 1680868802 553 9067c655dd8369d5b4c0312db92bb406 "lualatex"
   "content/Anhang 1.jpg" 1680623151 3602201 a01ab0d5a3502170960da3d204d68e88 ""
   "content/Anhang 2.jpg" 1680623151 3698172 1657eed6f7a235476192f8c48bc83f68 ""
-  "content/Anhang 3.jpg" 1680623151 3856158 6cd2a86e4eb4d8ca61e5ae539b610ef0 ""
+  "content/Anhang 3.jpg" 1680868696 3803766 8cd56407d37d7419bc5830670e1c6fac ""
   "content/Anhang.tex" 1680808159 344 52547e43d27a5e12a41f152659b27b95 ""
   "content/Aufbau 701.png" 1680808159 944594 76c754060acb7e6e372eec4af7f8c5ba ""
   "content/Zielsetzung.tex" 1680808159 205 d796dcae312041279a1d8a0ef4e6bf7b ""
