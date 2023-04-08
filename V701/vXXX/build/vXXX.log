@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.9.28)  7 APR 2023 13:59
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.9.28)  8 APR 2023 19:33
  restricted system commands enabled.
 **vXXX.tex
 (./vXXX.tex
@@ -1226,7 +1226,20 @@ Package: extdash 2018/06/24 v1.3 Extended Dash Package (NCC)
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (./build/vXXX.aux)
+ (./build/vXXX.aux
+
+LaTeX Warning: Label `fig:Energie1' multiply defined.
+
+
+LaTeX Warning: Label `fig:Energie1' multiply defined.
+
+
+LaTeX Warning: Label `fig:Energie1' multiply defined.
+
+
+LaTeX Warning: Label `fig:Energie1' multiply defined.
+
+)
 \openout1 = vXXX.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1382,7 +1395,7 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
  [2
 
 ] (./content/Zielsetzung.tex) (./content/theorie.tex) (./content/durchfuehrung.tex
-<content/Aufbau 701.png, id=37, 610.53094pt x 457.71pt>
+<content/Aufbau 701.png, id=46, 610.53094pt x 457.71pt>
 File: content/Aufbau 701.png Graphic file (type png)
 <use content/Aufbau 701.png>
 Package luatex.def Info: content/Aufbau 701.png  used on input line 6.
@@ -1394,56 +1407,107 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
 [3]) (./content/auswertung.tex
 
-LaTeX Warning: Reference `fig:plot' on page 4 undefined on input line 5.
+Package siunitx Warning: Unit macro \bar has been deprecated in this release.
+(siunitx)                
+(siunitx)                The BIPM have removed this unit from the SI Brochure.
+(siunitx)                You should define it yourself using \DeclareSIUnit in
+(siunitx)                your source. The current definition is
+(siunitx)                
+(siunitx)                \DeclareSIUnit\bar{bar}
 
-) (./content/diskussion.tex) (./content/Anhang.tex
-<content/Anhang 1.jpg, id=52, 2258.4375pt x 3011.25pt>
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 22.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 22.
+
+Overfull \hbox (0.69653pt too wide) in paragraph at lines 24--51
+ [][] 
+ []
+
+[4<./content/Aufbau 701.png>] [5]
+<Energiemaxima1.pdf, id=81, 417.7206pt x 258.0049pt>
+File: Energiemaxima1.pdf Graphic file (type pdf)
+<use Energiemaxima1.pdf>
+Package luatex.def Info: Energiemaxima1.pdf  used on input line 94.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+ [6]
+<Energiemaxima2.pdf, id=86, 417.7206pt x 258.0049pt>
+File: Energiemaxima2.pdf Graphic file (type pdf)
+<use Energiemaxima2.pdf>
+Package luatex.def Info: Energiemaxima2.pdf  used on input line 101.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+ [7<build/Energiemaxima1.pdf>]
+<Zählrate1.pdf, id=116, 417.7206pt x 258.0049pt>
+File: Zählrate1.pdf Graphic file (type pdf)
+<use Zählrate1.pdf>
+Package luatex.def Info: Zählrate1.pdf  used on input line 110.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+ [8<build/Energiemaxima2.pdf>]
+<Zählrate2.pdf, id=146, 417.7206pt x 258.0049pt>
+File: Zählrate2.pdf Graphic file (type pdf)
+<use Zählrate2.pdf>
+Package luatex.def Info: Zählrate2.pdf  used on input line 117.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+ [9<build/Zählrate1.pdf>] [10<build/Zählrate2.pdf>]
+<Statistik.pdf, id=206, 417.7206pt x 258.0049pt>
+File: Statistik.pdf Graphic file (type pdf)
+<use Statistik.pdf>
+Package luatex.def Info: Statistik.pdf  used on input line 163.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+ [11]
+<Statistik1.pdf, id=213, 417.7206pt x 258.0049pt>
+File: Statistik1.pdf Graphic file (type pdf)
+<use Statistik1.pdf>
+Package luatex.def Info: Statistik1.pdf  used on input line 170.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+) (./content/diskussion.tex [12<build/Statistik.pdf>]) (./content/Anhang.tex
+<content/Anhang 1.jpg, id=236, 2258.4375pt x 3011.25pt>
 File: content/Anhang 1.jpg Graphic file (type jpg)
 <use content/Anhang 1.jpg>
 Package luatex.def Info: content/Anhang 1.jpg  used on input line 6.
 (luatex.def)             Requested size: 418.25555pt x 557.66986pt.
-<content/Anhang 2.jpg, id=53, 2258.4375pt x 3011.25pt>
+<content/Anhang 2.jpg, id=237, 2258.4375pt x 3011.25pt>
 File: content/Anhang 2.jpg Graphic file (type jpg)
 <use content/Anhang 2.jpg>
 Package luatex.def Info: content/Anhang 2.jpg  used on input line 11.
 (luatex.def)             Requested size: 418.25555pt x 557.66986pt.
 
 warning  (file content/Anhang 3.jpg) (readjpg): Exif resolution 72dpi x 72dpi differs from the input resolution 96dpi x 96dpi
-<content/Anhang 3.jpg, id=54, 3011.25pt x 2258.4375pt>
+<content/Anhang 3.jpg, id=238, 3011.25pt x 2258.4375pt>
 File: content/Anhang 3.jpg Graphic file (type jpg)
 <use content/Anhang 3.jpg>
 Package luatex.def Info: content/Anhang 3.jpg  used on input line 16.
 (luatex.def)             Requested size: 418.25555pt x 313.66345pt.
-) [4<./content/Aufbau 701.png>] [5<./content/Anhang 1.jpg>] [6<./content/Anhang 2.jpg>] [7<./content/Anhang 3.jpg
+) [13<build/Statistik1.pdf>] [14<./content/Anhang 1.jpg>] [15<./content/Anhang 2.jpg>] [16<./content/Anhang 3.jpg
 warning  (readjpg): Exif resolution 72dpi x 72dpi differs from the input resolution 96dpi x 96dpi
->] [8] (./build/vXXX.aux)
+>] [17] (./build/vXXX.aux)
 Package rerunfilecheck Info: File `vXXX.aux' has not changed.
-(rerunfilecheck)             Checksum: EB5A2E9B94506D5306170D21B316CEF0;4011.
+(rerunfilecheck)             Checksum: C8B9630DBC5D84A6C46A6360E8212C6D;10849.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `vXXX.toc' has not changed.
-(rerunfilecheck)             Checksum: 9067C655DD8369D5B4C0312DB92BB406;553.
+(rerunfilecheck)             Checksum: A104D97F6C037D56756CDF08DAFF60C2;1031.
 Package logreq Info: Writing requests to 'vXXX.run.xml'.
 
 \openout1 = vXXX.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 38278 strings out of 477356
+ 38424 strings out of 477356
  100000,1977958 words of node,token memory allocated
- 687 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 26 attribute, 75 glue_spec, 15 attribute_list, 1 write nodes
-   avail lists: 1:5,2:540,3:140,4:70,5:431,6:27,7:5423,8:50,9:346,10:5,11:570,12:1
- 58222 multiletter control sequences out of 65536+600000
- 85 fonts using 32863991 bytes
- 113i,8n,117p,10617b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 732 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 36 attribute, 78 glue_spec, 20 attribute_list, 1 write nodes
+   avail lists: 1:5,2:6077,3:168,4:89,5:819,6:36,7:7854,8:50,9:1910,10:11,11:570,12:1
+ 58320 multiletter control sequences out of 65536+600000
+ 96 fonts using 37213127 bytes
+ 113i,12n,117p,10617b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on vXXX.pdf (8 pages, 12219258 bytes).
+Output written on vXXX.pdf (17 pages, 12300050 bytes).
 
-PDF statistics: 163 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 131072)
- 57 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 378 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 131072)
+ 89 words of extra memory for PDF output out of 10000 (max. 100000000)
 
