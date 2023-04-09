@@ -90,14 +90,26 @@ Die Normaldruckentfernung $x_0$ beträgt dabei $\qty{3.2}{\centi\meter}$.
   \end{tabular}
 \end{table}
 \subsubsection{Energieverlust von Alpha-Strahlung}
-
+Im Folgenden soll ermittelt werden, wie viel Energie die Alpha-Teilchen pro Wegeinheit
+an die umgebende Luft abgeben. Dafür wird jedem Druck eine effektive Entfernung zum Detektor zugeordnet.
+Ein Alpha-Teilchen trifft bei halben Atmosphärendruck auf die Hälfte der Luftmoleküle. Damit interagiert
+das Teilchen mit genauso vielen Molekülen, wie wenn die Distanz halb so groß ist.
+Daher kann die Abhängigkeit zwischen Energie und Weg direkt aus der Abhängigkeit zwischen detektierter Energie
+der Alpha-Teilchen und dem eingestellten Druck ermittelt werden.
+In Abbildung \ref{fig:Energie1} ist diese Abhängigkeit bei einer festen Distanz von $\qty{2.3}{\centi\meter}$ 
+dargestellt. Es lässt sich ein lineare Zusammenhang mit einer Steigung von $\frac{\symup{d}E}{\symup{d}p}=\qty{-2.65}{\mega\electronvolt\per\bar}$
+feststellen. Die lineare Regression ist mit der Funktion Polyfit aus der Numpy-Bibliothek erstellt worden \cite{numpy}.
+Durch den linearen Zusammenhang zwischen Druck und effektiver Reichweite \eqref{eq:ptox}, ergibt sich ein konstanter Energieverlust der Alpha-Teilchen
+von $\frac{\symup{d}E}{\symup{d}x}=\qty{-1.17}{\mega\electronvolt\per\centi\meter}$
 \begin{figure}[H]
   \centering
   \includegraphics{Energiemaxima1.pdf}
   \caption{Energie von Alpha-Strahlung bei $\qty{2.3}{\centi\meter}$ Entfernung}
   \label{fig:Energie1}
 \end{figure}
-
+\noindent Der gleiche Auswertungsprozess wird nun für die zweite Messreihe bei einer Entfernung von $\qty{3.2}{\centi\meter}$
+wiederholt. Die Datenpunkte und die lineare Regression sind in Abbildung \ref{fig:Energie2} abgebildet.
+Die Änderung der Energie pro Centimeter ergibt sich zu $\frac{\symup{d}E}{\symup{d}x}=\qty{-1.05}{\mega\electronvolt\per\centi\meter}$.
 \begin{figure}[H]
   \centering
   \includegraphics{Energiemaxima2.pdf}
@@ -106,19 +118,33 @@ Die Normaldruckentfernung $x_0$ beträgt dabei $\qty{3.2}{\centi\meter}$.
 \end{figure}
 
 \subsubsection{Bestimmung der mittleren Reichweite von Alpha-Strahlung in Luft}
-
+Die mittlere Reichweite von Alpha-Strahlung definiert sich dadurch, dass nur die Hälfte der emittierten Alpha-Teilchen
+detektiert werden. In Abbildung \ref{fig:Rate1} sind die gemessenen Zählraten den effektiven Entfernungen
+zugeordnet. Es lässt sich erkennen, dass die Zählrate bei geringer Distanz relativ konstant ist. Bei Vakuum beziehungsweise
+bei vernachlässigbar kleinen Distanzen, kann angenommen werden, dass alle Alpha-Teilchen den Detektor erreichen.
+Dort sind 84290 Detektionen gemessen worden. Das heißt aus der Annahme folgt, dass bei einer gemessen Detektion von 42145
+die effektive Reichweite der mittleren Reichweite entsprechen wird. Diese Grenze ist in Abbildung \ref{fig:Rate1} grün dargestellt.
+Da dieser Wert bei einer endlichen Menge an Messpunkten nicht direkt gemessen wird, wird im linear abfallenden Bereich der letzten 4 Messpunkte 
+eine lineare Regression durchgeführt, um eine analytische Näherung der Form $y=m\cdot x+n$
+zu bekommen. Die Fit-Parameter $m,n$ ergeben sich zu
+\begin{align*}
+  m&=\qty{-9.13(0.47)e6}{\per\meter}\\
+  n&=\num{2.37(0.10)e5}.\\
+\end{align*}
+Die mittlere Reichweite bestimmt sich dann mit $x=(42145-n)/m$ zu $\qty{2.13(0.15)}{\centi\meter}$.
+Die zugehörige Energie lässt sich aus der Regression von Abbildung \ref{fig:Energie1} zu $E=\qty{1.53(0.18)}{\mega\electronvolt}$ bestimmen.
 \begin{figure}[H]
   \centering
   \includegraphics{Zählrate1.pdf}
   \caption{Detektierte Zerfälle pro 2 Minuten bei $\qty{2.3}{\centi\meter}$ Entfernung}
-  \label{fig:Energie1}
+  \label{fig:Rate1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics{Zählrate2.pdf}
   \caption{Detektierte Zerfälle pro 2 Minuten bei $\qty{2.3}{\centi\meter}$ Entfernung}
-  \label{fig:Energie1}
+  \label{fig:Rate2}
 \end{figure}
 
 \subsection{Statistik des radioaktiven Zerfalls}
@@ -164,12 +190,12 @@ Die Normaldruckentfernung $x_0$ beträgt dabei $\qty{3.2}{\centi\meter}$.
   \centering
   \includegraphics{Statistik.pdf}
   \caption{Detektierte Zerfälle in 10s bei $\qty{3.2}{\centi\meter}$ Entfernung im Vergleich mit einer Normalverteilung}
-  \label{fig:Energie1}
+  \label{fig:Stat1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics{Statistik1.pdf}
   \caption{Detektierte Zerfälle in 10s bei $\qty{3.2}{\centi\meter}$ Entfernung im Vergleich mit einer Poissonverteilung}
-  \label{fig:Energie1}
+  \label{fig:Stat2}
 \end{figure}
