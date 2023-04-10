@@ -115,7 +115,7 @@ x_p=np.linspace(0,3e-2)
 y_p=np.ones(x_p.size)
 params2,errors2=linear(x[-5:],Z[-5:])
 y1=x_p*params2[0]+params2[1]
-plt.plot(x_p,y1 ,"b-" ,label=f'Lineare Regression:'r"$\frac{\text{Detektionen}}{\text{2 Minuten}}$"r'$=\num{-9.13e6}$'r"$\unit{\per\meter} \cdot$" r"x$+\num{2.37e5}$")
+plt.plot(x_p,y1 ,"b-" ,label=f'Lineare Regression:'r"$\frac{\text{Detektionen}}{\text{2 Minuten}}$"r'$=\num{-6.77e6}$'r"$\unit{\per\meter} \cdot$" r"x$+\num{1.80e5}$")
 y2=y_p*Z[0]/2
 plt.plot(x_p,y2,"g-",label=f"Halbe Zählrate")
 SP=(Z[0]/2-params2[1])/params2[0]

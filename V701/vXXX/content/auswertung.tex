@@ -139,7 +139,16 @@ Die zugehörige Energie lässt sich aus der Regression von Abbildung \ref{fig:En
   \caption{Detektierte Zerfälle pro 2 Minuten bei $\qty{2.3}{\centi\meter}$ Entfernung}
   \label{fig:Rate1}
 \end{figure}
-
+\noindent In der Vergleichsmessung, abgebildet in Abbildung \ref{fig:Rate2}, betrug die Vakuum Zählrate
+54534 Detektionen/2 Minuten. Damit ist die mittlere Reichweite erreicht, wenn 27267 Detektionen 
+gemessen werden. Zur Bestimmung dieses Punktes ist zwischen den letzten 5 Datenpunkten eine lineare
+Regression durchgeführt worden. Die Fit-Parameter zu $y=m\cdot x+n$ ergeben sich zu
+\begin{align*}
+  m&=\qty{-6.77(0.76)e6}{\per\meter}\\
+  n&=\num{1.80(0.18)e5}.\\
+\end{align*}
+Die resultierende mittlere Reichweite beträgt $x=(27267-n)/m=\qty{2.25(0.37)}{\centi\meter}$
+und die zugehörige Energie der Alpha-Teilchen beträgt demnach $E=\qty{1.61(0.39)}{\mega\electronvolt}$.
 \begin{figure}[H]
   \centering
   \includegraphics{Zählrate2.pdf}
@@ -148,7 +157,18 @@ Die zugehörige Energie lässt sich aus der Regression von Abbildung \ref{fig:En
 \end{figure}
 
 \subsection{Statistik des radioaktiven Zerfalls}
-
+In Tabelle \ref{tab:Mess3} sind die Ergebnisse von 100 Messungen der Zählrate im Vakuum bei
+$\qty{3.2}{\centi\meter}$ Entfernung und einer Messdauer von 10s eingetragen.
+Nu soll daran die statistische Verteilung der Messwerte untersucht werden.
+Der Mittelwert der Stichprobe beträgt $\overline{n}=4226$ Detektionen und die Vararianz $Var(n)=24596$.
+Nun soll die Verteilung der Messwerte verglichen werden mit
+einer Normalverteilung mit gleichem Mittelwert und Varianz und einer Poissonverteilung
+mit ebenfalls gleichem Mittelwert.
+Für den Vergleich werden die Daten in ein Histogramm eingetragen, wobei die Daten zwischen 3800 und
+4700 in 17 gleich große Intervalle eingeteilt werden. In Abbildung \ref{fig:Stat1} ist das Histogramm mit der
+kontinuierlichen Normalverteilung eingetragen. Im Vergleich dazu ist in Abbildung \ref{fig:Stat2} die diskrete
+Poissonverteilung mit dem Mittelwert der Stichprobe eingezeichnet. Die beiden Verteilungen sind mit Hilfe der Funktionen
+norm.pdf und poisson.pmf aus der Scipy-Bibliothek erzeugt worden \cite{scipy}. 
 \begin{table}[H]
   \centering
   \caption{Messung der Zählrate in $\qty{3.2}{\centi\meter}$ Entfernung nach 10s}
