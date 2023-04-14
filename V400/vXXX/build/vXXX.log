@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.9.28)  4 APR 2023 13:11
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.9.28)  14 APR 2023 19:46
  restricted system commands enabled.
 **vXXX.tex
 (./vXXX.tex
@@ -1381,36 +1381,64 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 \openout4 = vXXX.toc
  [2
 
-] (./content/theorie.tex) (./content/durchfuehrung.tex) (./content/auswertung.tex
-<plot.pdf, id=32, 417.7206pt x 258.0049pt>
+] (./content/theorie.tex
+<content/Reflexion.png, id=43, 139.722pt x 92.14426pt>
+File: content/Reflexion.png Graphic file (type png)
+<use content/Reflexion.png>
+Package luatex.def Info: content/Reflexion.png  used on input line 28.
+(luatex.def)             Requested size: 139.72165pt x 92.14401pt.
+ [3<./content/Reflexion.png>]
+<content/Brechung.png, id=60, 143.3355pt x 119.2455pt>
+File: content/Brechung.png Graphic file (type png)
+<use content/Brechung.png>
+Package luatex.def Info: content/Brechung.png  used on input line 50.
+(luatex.def)             Requested size: 143.33513pt x 119.2452pt.
+ [4<./content/Brechung.png>]
+<content/Strahlenversatz.png, id=78, 208.3785pt x 224.037pt>
+File: content/Strahlenversatz.png Graphic file (type png)
+<use content/Strahlenversatz.png>
+Package luatex.def Info: content/Strahlenversatz.png  used on input line 86.
+(luatex.def)             Requested size: 208.37798pt x 224.03644pt.
+<content/Prisma.png, id=83, 194.52675pt x 123.46124pt>
+File: content/Prisma.png Graphic file (type png)
+<use content/Prisma.png>
+Package luatex.def Info: content/Prisma.png  used on input line 106.
+(luatex.def)             Requested size: 194.52626pt x 123.46092pt.
+ [5<./content/Strahlenversatz.png>]) (./content/durchfuehrung.tex) (./content/auswertung.tex
+<plot.pdf, id=96, 417.7206pt x 258.0049pt>
 File: plot.pdf Graphic file (type pdf)
 <use plot.pdf>
 Package luatex.def Info: plot.pdf  used on input line 6.
 (luatex.def)             Requested size: 417.71957pt x 258.00426pt.
-) (./content/diskussion.tex) [3<build/plot.pdf>] (./build/vXXX.aux)
+) (./content/diskussion.tex [6<./content/Prisma.png>])
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [7<build/plot.pdf>] (./build/vXXX.aux)
 Package rerunfilecheck Info: File `vXXX.aux' has not changed.
-(rerunfilecheck)             Checksum: FADBC6BAD9416D8EA1D8A15E5EB59FB2;3238.
+(rerunfilecheck)             Checksum: 3E4852E0B929C0222538263F8E6B4BAC;7860.
 Package rerunfilecheck Info: File `vXXX.toc' has not changed.
-(rerunfilecheck)             Checksum: 823B21981A2F5F487D256C36EF3863EC;424.
+(rerunfilecheck)             Checksum: 5F9E3E5C5F66A772AAF471487565ABB4;811.
 Package logreq Info: Writing requests to 'vXXX.run.xml'.
 
 \openout1 = vXXX.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 38176 strings out of 477356
+ 38338 strings out of 477356
  100000,1977958 words of node,token memory allocated
- 645 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 12 attribute, 75 glue_spec, 8 attribute_list, 1 write nodes
-   avail lists: 1:5,2:460,3:143,4:54,5:132,6:24,7:896,8:23,9:129,10:4,11:56,12:1
- 58171 multiletter control sequences out of 65536+600000
- 83 fonts using 32600759 bytes
- 113i,7n,117p,10617b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on vXXX.pdf (3 pages, 36001 bytes).
+ 734 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 36 attribute, 76 glue_spec, 20 attribute_list, 1 write, 2 pdf_action nodes
+   avail lists: 1:4,2:645,3:155,4:78,5:374,6:33,7:5012,8:73,9:341,10:28,11:610,12:1
+ 58285 multiletter control sequences out of 65536+600000
+ 88 fonts using 33252687 bytes
+ 113i,12n,117p,10617b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
+Output written on vXXX.pdf (7 pages, 111518 bytes).
 
-PDF statistics: 118 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 131072)
- 41 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 235 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 131072)
+ 81 words of extra memory for PDF output out of 10000 (max. 100000000)
 

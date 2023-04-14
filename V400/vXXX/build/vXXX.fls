@@ -1,4 +1,4 @@
-PWD /mnt/c/Users/mas19/OneDrive/Uni/Grundpraktikum 2/Berichte/Praktikum-SS/V701/vXXX
+PWD /mnt/c/Users/mas19/OneDrive/Uni/Grundpraktikum 2/Berichte/Praktikum-SS/V400/vXXX
 INPUT /home/mas1912/.local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt
 INPUT ./vXXX.tex
 OUTPUT build/vXXX.log
@@ -463,6 +463,20 @@ INPUT build/vXXX.toc
 OUTPUT build/vXXX.toc
 INPUT ./content/theorie.tex
 INPUT ./content/theorie.tex
+INPUT ./content/Reflexion.png
+INPUT ./content/Reflexion.png
+INPUT ./content/Reflexion.png
+INPUT /home/mas1912/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
+INPUT /home/mas1912/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
+INPUT ./content/Brechung.png
+INPUT ./content/Brechung.png
+INPUT ./content/Brechung.png
+INPUT ./content/Strahlenversatz.png
+INPUT ./content/Strahlenversatz.png
+INPUT ./content/Strahlenversatz.png
+INPUT ./content/Prisma.png
+INPUT ./content/Prisma.png
+INPUT ./content/Prisma.png
 INPUT ./content/durchfuehrung.tex
 INPUT ./content/durchfuehrung.tex
 INPUT ./content/auswertung.tex
@@ -473,6 +487,8 @@ INPUT build/plot.pdf
 INPUT ./content/diskussion.tex
 INPUT ./content/diskussion.tex
 INPUT /home/mas1912/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
+INPUT /home/mas1912/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmromancaps10-regular.luc
+INPUT /home/mas1912/.local/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
 INPUT build/vXXX.aux
 INPUT build/vXXX.aux
 INPUT build/vXXX.toc
