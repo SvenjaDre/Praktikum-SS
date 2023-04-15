@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber build/vXXX"] 1681495189 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1681495223
+["biber build/vXXX"] 1681557414 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1681563299
   "../lit.bib" 1681490802 493 0a01a297bf204341f4a5acd33b81e8a4 ""
-  "build/vXXX.bcf" 1681495222 108007 b24b912666984513825b93dabdd76289 "lualatex"
+  "build/vXXX.bcf" 1681563298 108247 31fe7e9d9bf14870d64e9428c70063c1 "lualatex"
   (generated)
   "build/vXXX.bbl"
   "build/vXXX.blg"
-["lualatex"] 1681495213 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1681495223
+["lualatex"] 1681563290 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1681563299
   "../header.tex" 1680606661 3661 f9a9b8475f16357bc7804109827d09c6 ""
   "/home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf" 1429396570 733736 0b8cd5044567d896491fd777c12d5cda ""
   "/home/mas1912/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf" 1255129361 64684 15a2082c8e31f411875a86ea2d29a0ee ""
@@ -232,18 +232,20 @@
   "/home/mas1912/.local/texlive/2022/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1664884056 275087 e00e573f9cf7fedd9500224d31191c83 ""
   "/home/mas1912/.local/texlive/2022/texmf-var/tex/generic/config/language.dat" 1664353844 6647 93ac7a8ac5929ae785536c95a30408d0 ""
   "/home/mas1912/.local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt" 1664353943 4784003 e69ee1b071f679cd734e02e69430e229 ""
-  "build/vXXX.aux" 1681495222 9310 67ab317e8d9c01e97dd470cbe1e1e9b5 "lualatex"
-  "build/vXXX.bbl" 1681495191 2414 4eb591324ffc4e55a6c73b7c81e2d174 "biber build/vXXX"
-  "build/vXXX.run.xml" 1681495222 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
-  "build/vXXX.toc" 1681495222 982 b447637aec06647eb0f8ad3bf09d90c8 "lualatex"
+  "build/vXXX.aux" 1681563298 13607 a17038462e926b03cbb2828a62db4f8e "lualatex"
+  "build/vXXX.bbl" 1681557417 2414 4eb591324ffc4e55a6c73b7c81e2d174 "biber build/vXXX"
+  "build/vXXX.run.xml" 1681563298 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
+  "build/vXXX.toc" 1681563298 1511 8b40597875c6cae19d2e9b00909023c5 "lualatex"
+  "content/Aufbau1.png" 1681484324 253281 fa6fd2fcbea021441f9fd6c877dce0c9 ""
+  "content/Aufbau2.png" 1681484358 250806 5b455d74e92aac9c4633b07506ed3cd8 ""
   "content/Brechung.png" 1681484199 11051 661540db1e82fc852639bbaac0d5464c ""
   "content/Prisma.png" 1681484279 17941 c28210b7038e6643d9ad1dd9ea728d19 ""
   "content/Reflexion.png" 1681484157 9505 d37f57163a2be7440c25af9195d4bf64 ""
   "content/Strahlenversatz.png" 1681484255 18798 403ba77b9f4106162e96c662132b4605 ""
   "content/auswertung.tex" 1681494447 1423 cd1a3500b9cb73349066cbbd1135eaad ""
   "content/diskussion.tex" 1680604915 46 bb061e722fe2baea33587874621d9b9c ""
-  "content/durchfuehrung.tex" 1680604915 52 b8263d04371a49115e1349c419f97dc9 ""
-  "content/theorie.tex" 1681494367 7592 79fdfad3e4daca4f68c2b4364cc0dc00 ""
+  "content/durchfuehrung.tex" 1681563273 4928 d568bce69124a2d085c02dede7fee005 ""
+  "content/theorie.tex" 1681560205 7637 433814bd695f99724a74b9b6a71d2960 ""
   "vXXX.tex" 1681482043 410 004d7719607f0c3053d887589f9265a4 ""
   (generated)
   "build/vXXX.aux"
