@@ -8,11 +8,11 @@ Die gemessenen Einfallswinkel $\alpha_1$ und Ausfallswinkel $\alpha_2$ werden in
 
 \begin{table}[H]
   \centering
-  \caption{Messwerte zur Überprüfung des Reflexionsgesetz}
+  \caption{Messwerte zur Überprüfung des Reflexionsgesetz.}
   \label{tab:Ref}
   \begin{tabular}{c c}
     \toprule
-    $\alpha_1$ & $\alpha_2$ \\
+    $\alpha_1 /°$ & $\alpha_2 /°$ \\
     \midrule
     20 & 18 \\
     25 & 24 \\
@@ -24,7 +24,7 @@ Die gemessenen Einfallswinkel $\alpha_1$ und Ausfallswinkel $\alpha_2$ werden in
     \bottomrule
   \end{tabular}
 \end{table}
-    
+
 \subsection{Das Brechungsgesetz}
 \label{sec:Brechungsgesetz}
 
@@ -32,26 +32,101 @@ Die gemessenen Einfallswinkel $\alpha$ und Brechungswinkel $\beta$ werden in der
 Zur Berechnung des Brechungsindex n von Plexiglas wird die Formel
 
 \begin{equation}
+  \label{eq:B}
   n = \frac{\sin(\alpha)}{\sin(\beta)}.
 \end{equation}
-Die gemessene Werte werden zur berechnung eingesetz und ebenfalls in der Tabelle \ref{tab:Bre} dargestellt.
+Die gemessene Werte werden zur Berechnung eingesetz und ebenfalls in der Tabelle \ref{tab:Bre} dargestellt.
 
 \begin{table}[H]
   \centering
-  \caption{Messwerte zur Überprüfung des Brechungsgesetz}
+  \caption{Messwerte zur Überprüfung des Brechungsgesetz.}
   \label{tab:Bre}
   \begin{tabular}{c c c}
     \toprule
-    $\alpha$ & $\beta$ & $n$\\
+    $\alpha /°$ & $\beta /°$ & $n$\\
     \midrule
-    10 & 7    & \\
-    20 & 13.5 & \\
-    30 & 19.5 & \\
-    40 & 25.5 & \\
-    50 & 31   & \\
-    60 & 36   & \\
-    70 & 48.5 & \\
+    10 & 7    & 1.42 \\
+    20 & 13.5 & 1.46\\
+    30 & 19.5 & 1,49\\
+    40 & 25.5 & 1.49\\
+    50 & 31   & 1.48\\
+    60 & 36   & 1.47\\
+    70 & 48.5 & 1.25\\
     \bottomrule
   \end{tabular}
 \end{table}
+
+\noindent Für die Berechnung des Brechungsindex für Plexiglas wird der Mittelwert berechnet.
+Daraus ergibt sich ein Brechungsindex von
+\begin{equation*}
+  n = 1.43.
+\end{equation*} 
+
+\noindent Um die Lichtgeschwindigkeit v im Plexiglas zu bestimmen wird der Zusammenhang \ref{eq:Brechung} verwendet.
+Dabei ist $n_1$ der Brechungsindex von Luft, welcher $n_1 = 1$ beträgt und $v_1 = 2.99*10^8$.
+Somit ergibt sich für die Lichtgeschwindigkeit im Plexiglas 
+\begin{equation*}
+  v_\text{Plexi} = \qty{208601391.65}{m/s} .
+\end{equation*}
+
+\subsection{Planparallele Platte}
+Zur Bestimmung des Strahlenversatz s werden zwei Methoden verwendet.
+Bei der ersten Methode werden die gemessenen Einfalls- und Ausfallswinkel aus der Tabelle \ref{tab:Bre} verwendet und 
+in die Formel \ref{eq:Strahlenversatz} eingesetzt.
+Dabei beträgt die Dicke der Platte $d = \qty{5.85}{cm}$
+
+Bei der zweiten Methode wird der Winkel $\beta_\text{berechnet}$ mithilfe von \ref{eq:B} berechnet.
+Anschließend wird der Strahlenversatz bestimmt.
+Für den Brechungsindex wird das Ergebnis $n = 1.43$ aus \ref{sec:Brechungsgesetz} verwendet.
+
+Die Ergebnisse werden in der Tabelle \ref{tab:Plan} dargestellt.
+\begin{table}[H]
+  \centering
+  \caption{Berechneter Strahlenversatz mithilfe zwei verschiedener Methoden.}
+  \label{tab:Plan}
+  \begin{tabular}{c c c c c}
+    \toprule
+  & \multicolumn{2}{c}{1.Methode} & \multicolumn{2}{c}{2.Methode} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+    $\alpha / °$ & $\beta  /° $ & $s /cm$ &  $\beta_\text{berechnet}  /°$ & $s /cm$ \\
+    \midrule
+    10 & 7    & 0.30 & 6.97 & 0.31\\  
+    20 & 13.5 & 0.68 & 13.83 & 0.64\\    
+    30 & 19.5 & 1.13 & 20.46 & 1.03\\  
+    40 & 25.5 & 1.62 & 26.71 & 1.50\\  
+    50 & 31   & 2.22 & 32.39 & 2.09\\  
+    60 & 36   & 2.94 & 37.27 & 2.84\\  
+    70 & 48.5 & 3.23 & 41.08 & 3.75\\  
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Prisma}
+
+Bei dem verwendeten Prisma handelt es sich um ein Prisma aus Kornglas.
+Dieser hat einen brechenden Winkel von $\gamma = \qty{60}{°}$.
+Um die Ablenkung $\delta$ der beiden Laser am Prisma zu berechnen, wird die Formel \ref{eq:Prisma} verwendet.
+Die berechneten Ergebnisse werden in der Tabelle \ref{tab:Prisma} dargestellt.
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte und berechnete Ablenkung zweier Laser an einem Prisma.}
+  \label{tab:Prisma}
+  \begin{tabular}{c c c c c}
+    \toprule
+  & \multicolumn{2}{c}{Grüner Laser} & \multicolumn{2}{c}{Roter Laser} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+    $\alpha_1 / °$ & $\alpha_2  /° $ & $\delta_\text{grün}$ &  $\alpha_2  /°$ & $\delta_\text{rot}$ \\
+    \midrule
+    30 & 74    & 44   & 75 & 45 \\  
+    35 & 65    & 40   & 66 & 41 \\    
+    40 & 59.5  & 39.5 & 58 & 38 \\  
+    45 & 52    & 37   & 52 & 37 \\  
+    50 & 47    & 37   & 46 & 36 \\   
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\subsection{Beugung am Gitter}
 
