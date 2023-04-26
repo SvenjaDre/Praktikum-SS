@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {4.3}Planparallele Platte}{10}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Prisma}{11}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Beugung am Gitter}{11}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Diskussion}{11}{section.5}%
-\contentsline {section}{\numberline {6}Anhang}{11}{section.6}%
-\contentsline {section}{\nonumberline Literatur}{14}{section*.16}%
+\contentsline {section}{\numberline {5}Diskussion}{12}{section.5}%
+\contentsline {section}{\numberline {6}Anhang}{13}{section.6}%
+\contentsline {section}{\nonumberline Literatur}{16}{section*.18}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
