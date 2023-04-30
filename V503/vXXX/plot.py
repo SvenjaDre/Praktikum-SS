@@ -24,7 +24,7 @@ def min_exponent_2d(array):
         if len(non_zero_values) == 0:
             min_exp.append(0)
         else:
-            min_exp.append(int(np.floor(np.log10(np.abs(non_zero_values.min())))))
+            min_exp.append(int(np.floor(np.log10(np.abs(abs(non_zero_values).min())))))
     return min_exp
 
 def array_to_latex_table(array, filename):
@@ -96,7 +96,7 @@ def plot_data_with_errorbars(good,good2,x, y, x_err, y_err, xlabel="", ylabel=""
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
     plt.grid()
-    plt.legend()
+    plt.legend(fontsize="small")
     plt.savefig(filepath)
     plt.clf()
 
@@ -242,6 +242,8 @@ print(good2)
 
 e=gemeinsamer_faktor(Ladung[good2,0])
 print(e)
+F=const.physical_constants["Faraday constant"][0]
+print(f"Avogadrokonstante:{F/e}")
 
 
 
