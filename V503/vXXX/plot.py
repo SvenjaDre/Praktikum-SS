@@ -225,19 +225,19 @@ Ladung[:,0],Ladung[:,1]=q(Ladung0[:,0], Radius[:,0], Ladung0[:,1], Radius[:,1])
 
 array1=np.column_stack((np.array(msumm),np.array(ddiff)))
 array2=np.column_stack((np.array(mdiff),np.array(ddiff)))
-Messwerte=np.array([mtauf,mtab,vauf,vab,v0])
-Auswertung=np.array([array1,array2,Ladung,Radius])
+Messwerte=np.array([mtauf,mtab,vauf,vab,v0,np.column_stack((vis0,np.zeros(16)))])
+Auswertung=np.array([array1,array2,Ladung0,Ladung,Radius])
 exp1=array_to_latex_table(Daten, "content/Tabelle1.tex")
 exp2=array_to_latex_table_3d(Messwerte, "content/Tabelle2.tex")
 exp3=array_to_latex_table_3d(Auswertung, "content/Tabelle3.tex")
-
 good1= Ladung[:,0]> Ladung[:,1]
 good2=np.logical_and(good,good1)
 
-plot_data_with_errorbars(good,good2,Radius[:,0], Ladung[:,0], Radius[:,1], Ladung[:,1], xlabel=r"Radius$/\mu m$", ylabel=r"Ladung$/10^{-18}C$", filepath="build/Ladungen.pdf")
+#plot_data_with_errorbars(good,good2,Radius[:,0], Ladung[:,0], Radius[:,1], Ladung[:,1], xlabel=r"Radius$/\mu m$", ylabel=r"Ladung$/10^{-18}C$", filepath="build/Ladungen.pdf")
 print(exp1)
 print(exp2)
 print(exp3)
+print(good)
 print(good2)
 
 e=gemeinsamer_faktor(Ladung[good2,0])
