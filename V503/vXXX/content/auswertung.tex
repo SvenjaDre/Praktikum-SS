@@ -80,10 +80,10 @@ ergibt. Die gemittelten Geschwindigkeiten finden sich ebenfalls in Tabelle \ref{
     \end{tabular}
   \end{table}
 \noindent Bevor nun die Ladungsmengen der Tröpfchen bestimmt wird, soll nun zuerst die Viskosität der Luft bestimmt werden.
-Nach Tabelle \ref{tab:R} sollen nun den Widerständen $R$ eine Temperatur zugeordnet werden. Demnach entspricht der
+Nach Tabelle \ref{fig:Wid} sollen nun den Widerständen $R$ eine Temperatur zugeordnet werden. Demnach entspricht der
 Widerstand von Tröpfchen 1 ungefähr einer Temperatur von $21°C$ und das letzte Tröpfchen einer Temperatur von $20°C$. Den anderen Tröpfchen
 liegen liegen vom Widerstandswert ziemlich dazwischen. Deswegen sind diesen Tröpfchen eine Temperatur von $21,5°C$ zugeordnet worden.
-In Abbildung \ref{fig:} ist die Temperatur-Abhängigkeit zwischen Viskosität und Temperatur linear approximiert.
+In Abbildung \ref{fig:Vis} ist die Temperatur-Abhängigkeit zwischen Viskosität und Temperatur linear approximiert.
 Es lässt sich erkennen, dass $T=16°C$ einer Viskosität von $\eta=\qty{1.805e-5}{\newton\second\per\meter\squared}$
 und $T=32°C$ einer Viskosität von $\eta=\qty{1.881e-5}{\newton\second\per\meter\squared}$ entspricht.
 Dadurch ergibt sich der lineare Zusammenhang zwischen Temperatur und Viskosität von
@@ -91,7 +91,7 @@ Dadurch ergibt sich der lineare Zusammenhang zwischen Temperatur und Viskosität
     \eta=(T-16°C)\cdot \qty{4.75e-8}{\newton\second\per\kelvin\meter\squared}+\qty{1.805e-5}{\newton\second\per\meter\squared}
 \end{equation}
 Die sich ergebenden Viskositäten sind in Tabelle \ref{tab:Mittel} zu sehen. Die Viskositäten müssten noch wegen der kleinen Abmessung
-korrigiert werden. Diese Korrektur wird allerdings direkt auf die Ladung der Tröpfchen gemäß \eqref{eq:}
+korrigiert werden. Diese Korrektur wird allerdings direkt auf die Ladung der Tröpfchen gemäß \eqref{eq:qkor}
 angewendet. Nun werden die Differenz- und Summengeschwindigkeiten $v_\text{diff}=v_\text{ab}-v_\text{auf} $ und $v_\text{summ}=v_\text{ab}+v_\text{auf}$
 berechnet. Die mögliche Abweichung ergibt sich bei beiden zu $\Delta v_\text{diff/summ}=\sqrt{\Delta v_\text{ab}^2+\Delta v_\text{auf}^2}$.
 Die entsprechenden resultierenden Werte für die Tröpfchen sind in Tabelle \ref{tab:Ergebnis} zu sehen.
@@ -101,6 +101,18 @@ Außerdem soll die Bedingung $2v_0=v_\text{diff}$. Diese Bedingun soll als erfü
 $\left|2v_0-v_\text{diff}\right|<\Delta v_\text{diff}$ gilt. Auf Grund der sehr großen Abweichung schließt das nur 
 die Tröpfchen 5,10,12,15 und 16 aus. Zur Bestimmung der Elementarladung wird daher noch ein anderes Auschlusskriterium von
 Nöten sein.
+\begin{figure}[H]
+    \centering
+    \includegraphics{content/Widerstand.png}
+    \caption{Widerstandstabelle für Temperaturen}
+    \label{fig:Wid}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics{content/Viskosität.png}
+    \caption{linearer Zusammenhang zwischen Viskosität und Temperatur}
+    \label{fig:Vis}
+  \end{figure}
 Nun wird nach Gleichung \eqref{eq:q} die Ladung der Tropfen $q_0$ berechnet. Der Fehler ergibt sich durch
 \begin{equation}
     \Delta q_0=\overline{q_0}\cdot \Delta v_\text{diff}\cdot \sqrt{\frac{1}{4v_\text{diff}^2}+\frac{1}{v_\text{summ}^2}}.
@@ -173,7 +185,7 @@ Ladung und Radius der einzelnen Tropfen sind inklusiver ihres Fehlers in Abbildu
   \begin{equation*}
     e=\qty{2.88e-19}{\coulomb}
   \end{equation*}
-  Mit der Faraday-Konstante $F=\qty{9.649e4}{\coulomb\per\mol}$ lässt sich nun zusätzlich noch die Avogadro-Konstante
+  Mit der Faraday-Konstante $F=\qty{9.649e4}{\coulomb\per\mol}$\cite{PhysikTabellen} lässt sich nun zusätzlich noch die Avogadro-Konstante
   durch
   \begin{equation*}
     N_A=F/e=\qty{3.35e23}{}
