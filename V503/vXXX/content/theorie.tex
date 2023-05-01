@@ -5,8 +5,67 @@ Die Öltröpfchen werden dabei mit einem Zerstäuber in das elektrische Feld ein
 Die Tröpfchen erhalten ein vielfaches der Elementarladung, aufgrund der durch die Zerstäubung entstehende Reibung.
 Im Plattenkondensator wirken auf dem Tröpfchen zu einem die Gewichtskraft $\vec{F}_g = mg$ und die Stokesche Reibungskraft mit
 $\vec{F}_R = -6 \pi r \eta_L \vec{v}$.
+In der Abbildung \ref{fig:Ftröpfchen} wird dargestellt, in welche Richtung die Kräfte wirken, bei verschiednener Polung des Plattenkondensators.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{content/Ftröpfchen.png}
+    \caption{Wirkende Kräfte auf ein Öltröpfchen im Plattenkondensator.}
+    \label{fig:Ftröpfchen}
+\end{figure}
 
+Es stellt sich eine Gleichgewichtsgeschwindigkeit $v_0$ ein, wenn die Tröpfchen in kürzere Zeit beschleunigt werden.
+Bei einem abgeschalteten E-Feld lässt sich die Kräftegleichung 
+\begin{equation}
+    \label{Faus}
+    \frac{4 \pi}{3} r^3 (\rho_\text{oel} - \rho_L) g = 6 \pi \eta_L r v_0
+\end{equation}
+aufstellen.
 
+Wird an die untere Platte des Plattenkondesators eine positive Spannung angelegt, zeigt die elektrische Kraft $F_el = q \vac{E}$ ind die gleiche Richtung, wie die Gewichtskraft.
+Das Öltröpfchen fällt mit einer Geschwindigkeit $v_ab$ nach unten. 
+Die Reibungskraft wirkt immer entgegengesetzt der Fallrichtung.
+Es lässt sich die Kräftegleichung
+\begin{equation}
+    \label{eq:Fvab}
+    \frac{4 \pi}{3} r^3 (\rho_\text{oel} - \rho_L) g - 6 \pi \eta_L r v_\text{ab}= -q E
+\end{equation}
+aufstellen.
 
+Wenn die positive Spannung an der oberen Platte angeschlossen wird, bewegt sich das Tröpfchen  mit einer Geschwindigkeit $v_\text{auf}$ in die Richtung nach oben,
+in der auch die elektrische Kraft wirkt.
+Für die Kräftegleicung ergibt sich dadurch
+\begin{equation}
+    \label{eq:Fvauf}
+    \frac{4 \pi}{3} r^3 (\rho_\text{oel} + \rho_L) g + 6 \pi \eta_L r v_\text{ab}= +q E.
+\end{equation}
+
+Um die Ladung q zu bestimmen werden die Gleichungen \ref{eq:Fvab} und \ref{eq:Fvab} verwendet.
+Daraus ergibt sich
+
+\begin{equation}
+    \label{eq:q}
+    q = 
+    3 \pi \eta_L \sqrt{\frac{9}{4} \frac{\eta_L}{g} \frac{(v_\text{ab} - v_\text{auf})}{(\rho_\text{oel} - \rho_L)}} \frac{(v_\text{ab} - v_\text{auf})}{E}.
+\end{equation}
+
+Der Tröpfchenradius r kann dadurch über die Formel 
+
+\begin{equation}
+    \label{eq:r}
+    r = \sqrt{\frac{9 \etal_L (v_\text{ab} - v_\text{auf})}{2 g (\rho_\text{oel} - \rho_L)}}
+\end{equation}
+berechnet werden0.
+Für die Berechnung von \ref{eq:q} ist darauf zu achten, dass das Gesetz von Stokes nur gilt, wenn die Tröpfchen eine größere ABmessung haben, als die 
+mittlere freie Wellenlänge in Luft $\overline{l}$.
+Die Viskostiaät der Lufr wird mit dem Cunningham-Korrekturterm korregiert.
+\begin{equation}
+    \label{eq:nl}
+    \eta_\text{eff} = \eta_L (\frac{1}{1 + A \frac{1}{r}}) =  \eta_L (\frac{1}{1 + B \frac{1}{q r}})
+\end{equation}
+Dabei gilt für $B = \qty{6.17 \cdot 10^{-3}}{Torr \cdot cm }$. 
+Für die korregiertwe Ladung gilt somit
+\begin{equation}
+    q^{2/3} = q_0^{2/3} (1 + B /(p \cdot r))
+\end{equation}
 \cite{sample}
