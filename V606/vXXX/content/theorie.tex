@@ -1,0 +1,115 @@
+\section{Zielsetzung}
+Ziel des Versuchs ist die Bestimmung der Suszeptibilität der seltenen Erden
+\ce{Nd2O3},\ce{Gd2O3} und \ce{Dy2O3}.
+\section{Theorie}
+\label{sec:Theorie}
+\subsection{Magnetismus in Materie}
+Im Vakuum ergibt sich die magnetische Flussdichte $\vec{B}$ aus der magnetischen Feldstärke $\vec{H}$
+durch 
+\begin{equation}
+    \vec{B}= \mu_0 \vec{H},
+    \label{eq:BVakuum}
+\end{equation}
+wobei $\mu_0$ die Induktionskonstante im Vakuum ist.
+Wirkt nun das Feld $\vec{H}$ auf Materie, kann diese um $\vec{M}$ magnetisiert werden und ändert
+die magnetische Flussdichte in der Form
+\begin{equation}
+    \vec{B}= \mu_0 \vec{H}+\vec{M}.
+    \label{eq:BMaterie}
+\end{equation}
+Die Magnetisierung $\vec{M}$ wird durch $N$ atomare magnetische Momente der Form 
+$\vec{M}=N\mu_0 \vec{H}$ hervorgerufen. Da diese atomaren magnetischen Momente ebenfalls durch 
+das äußere Feld $\vec{H}$ hervorgerufen wird, hängt $\vec{M}$ auch direkt vom äußeren Feld ab.
+Daher kann der Zusammenhang näherungsweise linear über die Suszeptibilität $\chi$ beschrieben werden.
+Es ergibt sich
+\begin{equation}
+    \vec{M}= \mu_0 \chi \vec{H}.
+    \label{eq:MMakro}
+\end{equation}
+Allgemein ist die Suszeptibilität $\chi$ nicht konstant, sondern eine Funktion von $T$, der Temperatur, und von $\vec{H}$ selbst.
+Diese Suszeptibilität soll im Folgenden einmal theoretisch aus der Quantenmechanik und einmal experimentell
+durch die makroskopische Veränderung der Flussdichte in Spulen untersucht werden.
+Dabei werden paramagnetische Materialien untersucht. Der Paramagnetischer Magnetismus,
+tritt anders als der Diamagnetismus, der bei allen Atomen auf Grund von induzierten Momenten 
+auftritt, nur bei Materialien auf, die schon im feldfreien Raum nicht verschwindende atomare
+Drehimpulse aufweisen. Während beim Diamagnetismus das Feld gemäß des Induktionsgesetzes abgeschwächt,
+richten sich beim Paramagnetismus die existierenden Momente in Richtung des äußeren magnetischen 
+Felds aus und verstärken dieses im Material. Daher ist die Suszeptibilität dort größer 0.
+\subsection{Quantenmechanische Berechnung der Suszeptibilität}
+Nun soll die Suszeptibilität in Abhängigkeit des atomaren Gesamtdrehimpulses $\vec{J}$ bestimmt werden.
+Dieser ergibt sich nach LS-Kopplung aus der Vektorsumme 
+\begin{equation}
+    \vec{J}= \vec{L}+\vec{S}.
+    \label{eq:LS}
+\end{equation}
+Wobei $\vec{L}$ den Gesamtbahndrehimpuls beschreibt und sich aus den Einzeldrehimpulsen $\vec{L}=\sum\vec{l_i}$
+und den Gesamtspin $\vec{S}$, der sich durch $\vec{S}=\sum \vec{s_i}$ berechnen lässt.
+Die Beträge $\left|\vec{L}\right|$, $\left|\vec{S}\right|$, $\left|\vec{J}\right|$ ergeben sich aus den
+entsprechenden Quantenzahlen $L$,$S$,$J$ durch 
+\begin{align}\label{eq:absdreh}
+    \left|\vec{L}\right|&=\sqrt{L(L+1)}\hbar\\
+    \left|\vec{S}\right|&=\sqrt{S(S+1)}\hbar\\
+    \left|\vec{J}\right|&=\sqrt{J(J+1)}\hbar.
+\end{align}
+Diese elementaren Drehimpulse lassen sich über das Bohrsche Magneton $\mu_B=\frac{e_0}{2m_0}\hbar$ und
+$g_s$, dem gyromagnetischen Verhältnis des freien Elektrons, in magnetische Momente überführen durch
+\begin{align}\label{eq:absmu}
+    \left|\vec{\mu_L}\right|&=\mu_B\sqrt{L(L+1)}\\
+    \left|\vec{\mu_S}\right|&=g_s \mu_B\sqrt{S(S+1)}.
+\end{align}
+Die einzelnen Komponenten des magnetischen Moments aus Spin und Bahndrehimpuls können nicht direkt gemessen werden, sondern
+sie ergeben ein gemeinsamen Drehimpuls $\vec{J}$. Daher gehen nur dazu parallele Anteile gemäß
+$\left|\vec{\mu_J}\right|=\left|\vec{\mu_S}\right|\cos{\alpha}+\left|\vec{\mu_L}\right|\cos{\beta}$ ein.
+Unter Verwendung geometrischer Identitäten und der Annahme, dass $g_s$ ungefähr 2 ist, ergibt sich als Zusammenhang für
+das magnetische Moment $\left|\vec{\mu_J}\right|$
+\begin{equation}
+    \left|\vec{\mu_J}\right| \approx \mu_B g_j \sqrt{J(J+1)}.
+    \label{eq:muj}
+\end{equation}
+$g_j$ wird der Landé-Faktor genannt und kann direkt aus den Quantenzahlen des Atoms gemäß
+\begin{equation}
+    g_J=\frac{3J(J+1)+\{S(S+1)-L(L+1)\}}{2J(J+1)}
+\end{equation}
+berechnet werden.
+Nun muss noch beachtet werden, dass das magnetische Moment der z-Komponente des Gesamtdrehimpuls gequantelt ist.
+Es gilt $\left|\vec{\mu_{J_z}}\right| \approx \mu_B g_j m$. $m$ ist eine Orientierungsquantenzahl, die ganzzahlige Werte von -J bis J
+annehmen kann. Dieser Effekt, beziehungsweise die Aufspaltung der entsprechenden Energieniveaus, wird Zeemann-Effekt genannt.
+Wenn nun die Besetzungswahrscheinlichkeit der Energieniveaus gemäß der Boltzmannverteilung genutzt wird, kann das magnetische Moment $\overline{\mu}$ über
+alle Orientierungen gemittelt werden. Nun kann das mittlere magnetische Moment für
+große Temperaturen genähert werden. Dann ergibt sich die Suszeptibilität zu 
+\begin{equation}
+    \chi= \frac{\mu_0\mu_B^2g_J^2NJ(J+1)}{3kT}.
+    \label{eq:chi}
+\end{equation}
+Daher lässt sich erkennen, dass die Suszeptibilität mit $1/T$ geht und damit dem Curieschen Gesetz für den paramagnetismus folgt.
+Für Messungen bei Raumtemperatur wird demnach für eine Temperatur von $T=\qty{293.15}{\kelvin}$ angenommen.
+Die Teilchenzahl pro Volumen lässt sich durch die Formel
+\begin{equation}
+    N=N_A\frac{\rho}{M_\text{mol}}
+\end{equation}
+berechnen. Dabei ist $N_A$ die Avogadro-Konstante, $\rho$ die reale Dichte des Stoffs und $M_\text{mol}$ die molare Masse des Stoffs.
+\subsection{Bestimmung der Gesamtdrehimpulse von Atomen }
+Das elementare magnetische Moment wird durch elementare Drehimpulse erzeugt. In 
+voll besetzten Schalen heben sich die elementaren Spinmomente und Bahndrehimpulsmomente vollständig weg.
+In leichten Atomen mit ausschließlicher Besetzung von niedrigen Energieniveaus, sind die paramagnetischen
+Phänomene noch kaum beobachtbar, da nur kleine Bahndrehimpulse erreicht werden können.
+Erst bei seltenen Erden die eine unabgeschlossene 4f-Schale besitzen können Elektronen mit
+großen Bahndrehimpulsquantenzahlen bei vielen gleichgerichteten Spins aufnehmen.
+
+\subsubsection{Besetzungsregeln}
+Diese für den Paramagnetismus günstige Besetzung ergibt sich aus den Hundschen Regeln
+\begin{enumerate}
+    \item{ Die Spins $\vec{s_i}$ kombinieren zum maximalen Gesamtspin $\vec{S}=\sum\vec{s_i}$, der nach dem Pauli
+    Prinzip möglich ist. Daher die Elektronen müssen sich in mindestens einer Quantenzahl unterscheiden.}
+    \item Die Bahndrehimpulse $\vec{l_i}$ setzen sich so zusammen, dass der maximale Drehimpuls 
+    $\vec{L}=\sum\vec{l_i}$, der mit dem Pauli-Prinzip und der Regel verträglich ist, entsteht.
+    \item Der Gesamtdrehimpuls ist $J=L-S$, wenn die Schale weniger als halb und 
+    $J=L+S$, wenn die Schale mehr als halb gefüllt ist.
+    \label{Hundsche_Regel}
+\end{enumerate}
+
+\subsubsection{Suszeptibilität von \ce{Nd2O3}}
+\subsubsection{Suszeptibilität von \ce{Gd2O3}}
+\subsubsection{Suszeptibilität von \ce{Dy2O3}}
+\subsection{Abgleichbedingungen der Brückenschaltung}
+\cite{sample}
