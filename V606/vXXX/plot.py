@@ -1,21 +1,15 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+Daten = np.loadtxt('Messfilter.csv', delimiter=',', skiprows=1)
 
-plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-plt.legend(loc='best')
+f = Daten[:,0]
+U = Daten[:,1]
 
-plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-plt.legend(loc='best')
+plt.plot(f, U, 'x')
+plt.xlabel(r'$\nu /kHz$')
+plt.ylabel(r'$U /mV$')
+plt.grid(True)
 
-# in matplotlibrc leider (noch) nicht möglich
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+
 plt.savefig('build/plot.pdf')
