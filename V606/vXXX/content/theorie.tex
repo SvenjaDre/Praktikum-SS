@@ -29,7 +29,7 @@ Es ergibt sich
 Allgemein ist die Suszeptibilität $\chi$ nicht konstant, sondern eine Funktion von $T$, der Temperatur, und von $\vec{H}$ selbst.
 Diese Suszeptibilität soll im Folgenden einmal theoretisch aus der Quantenmechanik und einmal experimentell
 durch die makroskopische Veränderung der Flussdichte in Spulen untersucht werden.
-Dabei werden paramagnetische Materialien untersucht. Der Paramagnetischer Magnetismus,
+Dabei werden paramagnetische Materialien untersucht. Der Paramagnetismus,
 tritt anders als der Diamagnetismus, der bei allen Atomen auf Grund von induzierten Momenten 
 auftritt, nur bei Materialien auf, die schon im feldfreien Raum nicht verschwindende atomare
 Drehimpulse aufweisen. Während beim Diamagnetismus das Feld gemäß des Induktionsgesetzes abgeschwächt,
@@ -42,8 +42,8 @@ Dieser ergibt sich nach LS-Kopplung aus der Vektorsumme
     \vec{J}= \vec{L}+\vec{S}.
     \label{eq:LS}
 \end{equation}
-Wobei $\vec{L}$ den Gesamtbahndrehimpuls beschreibt und sich aus den Einzeldrehimpulsen $\vec{L}=\sum\vec{l_i}$
-und den Gesamtspin $\vec{S}$, der sich durch $\vec{S}=\sum \vec{s_i}$ berechnen lässt.
+Dabei beschreibt $\vec{L}$ den Gesamtbahndrehimpuls, der sich aus den Einzeldrehimpulsen $\vec{L}=\sum\vec{l_i}$ zusammensetzt
+und der Gesamtspin $\vec{S}$ lässt sich durch die Aufsummierung der Einzelspins $\vec{S}=\sum \vec{s_i}$ berechnen.
 Die Beträge $\left|\vec{L}\right|$, $\left|\vec{S}\right|$, $\left|\vec{J}\right|$ ergeben sich aus den
 entsprechenden Quantenzahlen $L$,$S$,$J$ durch 
 \begin{align}\label{eq:absdreh}
@@ -69,9 +69,10 @@ das magnetische Moment $\left|\vec{\mu_J}\right|$
 $g_j$ wird der Landé-Faktor genannt und kann direkt aus den Quantenzahlen des Atoms gemäß
 \begin{equation}
     g_J=\frac{3J(J+1)+\{S(S+1)-L(L+1)\}}{2J(J+1)}
+    \label{eq:lande}
 \end{equation}
 berechnet werden.
-Nun muss noch beachtet werden, dass das magnetische Moment der z-Komponente des Gesamtdrehimpuls gequantelt ist.
+Nun muss noch beachtet werden, dass das magnetische Moment der z-Komponente des Gesamtdrehimpulses gequantelt ist.
 Es gilt $\left|\vec{\mu_{J_z}}\right| \approx \mu_B g_j m$. $m$ ist eine Orientierungsquantenzahl, die ganzzahlige Werte von -J bis J
 annehmen kann. Dieser Effekt, beziehungsweise die Aufspaltung der entsprechenden Energieniveaus, wird Zeemann-Effekt genannt.
 Wenn nun die Besetzungswahrscheinlichkeit der Energieniveaus gemäß der Boltzmannverteilung genutzt wird, kann das magnetische Moment $\overline{\mu}$ über
@@ -81,11 +82,12 @@ große Temperaturen genähert werden. Dann ergibt sich die Suszeptibilität zu
     \chi= \frac{\mu_0\mu_B^2g_J^2NJ(J+1)}{3kT}.
     \label{eq:chi}
 \end{equation}
-Daher lässt sich erkennen, dass die Suszeptibilität mit $1/T$ geht und damit dem Curieschen Gesetz für den paramagnetismus folgt.
+Daher lässt sich erkennen, dass die Suszeptibilität mit $1/T$ geht und damit dem Curieschen Gesetz für den Paramagnetismus folgt.
 Für Messungen bei Raumtemperatur wird demnach für eine Temperatur von $T=\qty{293.15}{\kelvin}$ angenommen.
 Die Teilchenzahl pro Volumen lässt sich durch die Formel
 \begin{equation}
     N=N_A\frac{\rho}{M_\text{mol}}
+    \label{eq:N}
 \end{equation}
 berechnen. Dabei ist $N_A$ die Avogadro-Konstante, $\rho$ die reale Dichte des Stoffs und $M_\text{mol}$ die molare Masse des Stoffs.
 \subsection{Bestimmung der Gesamtdrehimpulse von Atomen }
@@ -93,7 +95,7 @@ Das elementare magnetische Moment wird durch elementare Drehimpulse erzeugt. In
 voll besetzten Schalen heben sich die elementaren Spinmomente und Bahndrehimpulsmomente vollständig weg.
 In leichten Atomen mit ausschließlicher Besetzung von niedrigen Energieniveaus, sind die paramagnetischen
 Phänomene noch kaum beobachtbar, da nur kleine Bahndrehimpulse erreicht werden können.
-Erst bei seltenen Erden die eine unabgeschlossene 4f-Schale besitzen können Elektronen mit
+Erst bei seltenen Erden, die eine unabgeschlossene 4f-Schale besitzen, können die Schalen Elektronen mit
 großen Bahndrehimpulsquantenzahlen bei vielen gleichgerichteten Spins aufnehmen.
 
 \subsubsection{Besetzungsregeln}
@@ -107,9 +109,76 @@ Diese für den Paramagnetismus günstige Besetzung ergibt sich aus den Hundschen
     $J=L+S$, wenn die Schale mehr als halb gefüllt ist.
     \label{Hundsche_Regel}
 \end{enumerate}
-
-\subsubsection{Suszeptibilität von \ce{Nd2O3}}
-\subsubsection{Suszeptibilität von \ce{Gd2O3}}
-\subsubsection{Suszeptibilität von \ce{Dy2O3}}
+\subsubsection{Suszeptibilität von verschiedenen seltenen Erden}
+Im folgenden wird die Suzeptibilität von \ce{Nd2O3}, \ce{Gd2O3} und \ce{Dy2O3} untersucht werden.
+Das sind alles Verbindungen die freie Elektronen auf der 4f-Schale besitzen und somit ein magnetisches Moment ungleich 0.
+\ce{Nd^{3+}} hat 3 freie Elektronen, die nach der 1. Hundschen Regel alle Spin-Up haben, also einen gesamt Spin von $S=3\cdot 0,5$.
+Die Bahndrehimpulszahl l nimmt für Elektron 1 $l=3$, für Elektron 2 $l=2$ und für Elektron 3 $l=1$ an und maximiert nach Regel 2 den
+gesamt Drehimpuls zu $L=6$. Da die 4f-Schale insgesammt 14 Elektronen halten kann, ist die Schale weniger als halb gefüllt und es ergibt sich
+$J=L-S=4.5$. Der Lande-Faktor berechnet sich dann nach Formel \eqref{eq:lande} und $\chi$ nach Formel \eqref{eq:chi}, wobei sich die Teilchenzahl durch
+Formel \eqref{eq:N} berechnen lässt. Dabei muss beachtet werden, dass die seltenen Erden immer 2 Mal in den Verbindungen vorkommen und die Anzahl an seltenen Erden demnach
+doppelt so groß ist wie die Anzahl an Verbindungen. Diese Prozess lässt sich mit allen Verbindungen wiederholen, wobei bei \ce{Dy^{3+}} die 4f-Schale mehr als die Hälfte gefüllt sind
+und sich demnach ein Gesamtdrehimpuls von $J=L+S$ einstellt. Die berechneten Werte sind in Tabelle \ref{tab:Theo}
+zu sehen.
+\begin{table}[H]
+    \centering
+    \caption{Theoretische Bestimmung der Suszeptibilität}
+    \begin{tabular}{||c||c|c|c||}
+    \hline
+    \hline
+    \textbf{} & \textbf{\ce{Nd2O3}} & \textbf{\ce{Gd2O3}} & \textbf{\ce{Dy2O3}} \\
+    \hline
+    \hline
+    4f-Elektronen & 3 & 7&9 \\
+    \hline
+    Spinquantenzahl-$S$ & 1.5&3.5 & 2.5 \\
+    \hline
+    Bahndrehimpulsquantenzahl-$L$&6 &0 & 5\\
+    \hline
+    Gesamtbahndrehimpulsquantenzahl-$J$ &4.5 &3.5 & 7.5 \\
+    \hline
+    Landé-Faktor $g_j$ & 0.72 & 2& 1.33 \\
+    \hline
+    Dichte $\rho$ in $\unit{\gram\per\centi\meter\cubed}$ & 7.24 & 7.4& 7.8 \\
+    \hline
+    Molare Masse $M_\text{mol}$ in $\unit{\gram\per\mol} $\cite{NIST} & 336.48 &362.49 &373.0 \\
+    \hline
+    Teilchenzahl $N/10^{28}$ & 2.59& 2.46 &2.52 \\
+    \hline
+    Suszeptibilität $\chi_T$ &0.0030 &0.0139 &0.0254 \\
+    \hline
+    \hline
+    \end{tabular}
+    \label{tab:Theo}
+\end{table}
+    
 \subsection{Abgleichbedingungen der Brückenschaltung}
+Eine klassische Methode physikalische Größen zu bestimmen, ist über die Messung durch eine Brückenschaltung.
+Der Vorteil bei Brückenschaltungen liegt daran, dass man einen Ausgleich auf Null deutlich genauer einstellen kann, als eine direkte Messung der Größe.
+Der grundsätzliche Aufbau der Messschaltung ist in Abbildung \ref{fig:Brücke} abgebildet. Dabei werden im allgemeinen zwei Spulen über einen verstellbaren Widerstand
+$R_3$/$R_4$ abgeglichen. Das heißt, dass keine Brückenspannung $U_\text{Br}$ gemessen wird. Wird nun ein paramagnetisches Material in 
+die Spule eingefügt, verstärkt sich die Induktivität um $\Delta L=\mu_0\chi Q \frac{n^2}{l}$. Dabei ist $Q$ die Querschnittsfläche der Probe, $l$ die Länge der Spule,
+$n$ die Windungszahl und $\chi$ die zu bestimmende Suszeptibilität. Die Folge einer größeren Induktivität ist, dass die Spule sperriger
+gegen große Frequenzen wird und dadurch ein größerer Anteil der Spannung über sie abfällt. Das sorgt dafür, dass das Verhältnis der Spannungen über $L$ und $L_M$
+sich verändert und nicht mehr dem Verhältnis $R_3$/$R_4$ entspricht. Damit ergibt sich wieder eine von Null verschiedene Brückenspannung, die direkt von
+der Suzeptibilität der Probe abhängt. Damit ergibt sich $\chi$ bei hohen Frequenzen zu
+\begin{equation}
+    \chi= 4 \frac{F\cdot U_\text{Br}}{Q\cdot U_\text{Sp}}.
+    \label{eq:chiU}
+\end{equation}
+Der Zusammenhang lässt sich aus der komplexen Wechselstromrechnung herleiten, wobei bei hohen Frequenzen der Einfluss
+parasitärer Widerstände vernachlässigt werden kann. $U_\text{Sp}$ ist die Speisespannung der Quelle und $F$ die Querschnittsfläche der Spule.
+Nun kann eine weitere Abgleichbedingung hergeleitet werden die besagt, wie die Änderung des Widerstandsverhältnisses $\Delta R$ mit der Suszeptibilität 
+zusammenhängt. Es ergibt sich
+\begin{equation}
+    \chi= 2 \frac{F\cdot \Delta R}{Q\cdot R_3}.
+    \label{eq:chiR}
+\end{equation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=1]{content/Brückenschaltung.png}
+    \caption{Brückenschaltung zur Messung der Suszeptibilität.}
+    \label{fig:Brücke}
+\end{figure}
+
 \cite{sample}
