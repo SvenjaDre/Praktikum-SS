@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
 import scipy.constants as const
-from scipy.optimize import minimize_scalar
+from scipy.optimize import fmin
 import numpy as np
 import math
 
@@ -100,15 +100,44 @@ def plot_data_with_errorbars(good,good2,x, y, x_err, y_err, xlabel="", ylabel=""
     plt.savefig(filepath)
     plt.clf()
 
+def abstand1(daten,x):
+        a=0
+        for i in range(np.size(daten)):
+            for j in range(i,np.size(daten)):
+                a=a+np.abs(np.round((np.abs(daten[i]-daten[j]) / x)) - (np.abs(daten[i]-daten[j])) / x)**2
+        return a
+
 def gemeinsamer_faktor(daten):
     def abstand(x):
-        return np.sum(np.abs(np.round(daten / x) - daten / x))
+        a=0
+        for i in range(np.size(daten)):
+            for j in range(i,np.size(daten)):
+                a=a+np.abs(np.round(np.abs(daten[i]-daten[j] / x)) - np.abs(daten[i]-daten[j]) / x)**2
+        return a
 
     # Suche die reelle Zahl, die den Abstand zwischen den Datenpunkten und ihren gerundeten ganzzahligen Vielfachen minimiert
-    result = minimize_scalar(abstand, bounds=(0, np.min(daten)))
-    gesch_est = result.x
+    result = fmin(abstand, np.min(daten))
+    x=np.linspace(1e-19,np.min(daten),5000)
+    fig ,ax =plt.subplots(constrained_layout=True)
+    y=np.empty(np.size(x))
+    for i in range(np.size(x)):
+        y[i]=abstand1(daten,x[i])
+    n=daten/result[0]
+    rn=np.round(n)
+    
+    q=daten/rn
+    print(q)
+    dq=np.sqrt((1/(5*(5-1)))*np.sum((q-result[0]))**2)
+    ax.plot(x,y,".",markersize=1)
+    ax.set_xlabel(r"potentielle Elementarladung $e/C$")
+    ax.set_ylabel(r"Güte")
+    ax.set_xlim(1e-19,np.min(daten))
+    plt.grid()
+    plt.savefig("Guetefunktion.pdf")
+    plt.clf()
+    gesch_est = result[0]
 
-    return gesch_est
+    return gesch_est,dq
 
 def Datapoint(Daten):
     mean = np.mean(Daten)
@@ -223,27 +252,34 @@ Ladung=np.empty([16,2])
 Ladung[:,0],Ladung[:,1]=q(Ladung0[:,0], Radius[:,0], Ladung0[:,1], Radius[:,1])
 
 
-array1=np.column_stack((np.array(msumm),np.array(ddiff)))
+array1=np.column_stack((np.array(diff),np.array(np.zeros(16))))
 array2=np.column_stack((np.array(mdiff),np.array(ddiff)))
 Messwerte=np.array([mtauf,mtab,vauf,vab,v0,np.column_stack((vis0,np.zeros(16)))])
 Auswertung=np.array([array1,array2,Ladung0,Ladung,Radius])
 exp1=array_to_latex_table(Daten, "content/Tabelle1.tex")
 exp2=array_to_latex_table_3d(Messwerte, "content/Tabelle2.tex")
 exp3=array_to_latex_table_3d(Auswertung, "content/Tabelle3.tex")
+
 good1= Ladung[:,0]> Ladung[:,1]
 good2=np.logical_and(good,good1)
+good3=good2
+#good3[2]=False
+#good3[8]=False
+#good3[12]=False
+exp4=array_to_latex_table_3d(Auswertung[:,good2,:], "content/Tabelle4.tex")
 
-#plot_data_with_errorbars(good,good2,Radius[:,0], Ladung[:,0], Radius[:,1], Ladung[:,1], xlabel=r"Radius$/\mu m$", ylabel=r"Ladung$/10^{-18}C$", filepath="build/Ladungen.pdf")
+#plot_data_with_errorbars(good,good2,Radius[:,0], Ladung[:,0], Radius[:,1], Ladung[:,1], xlabel=r"Radius$/ m$", ylabel=r"Ladung$/C$", filepath="build/Ladungen.pdf")
 print(exp1)
 print(exp2)
 print(exp3)
+print(exp4)
 print(good)
 print(good2)
 
-e=gemeinsamer_faktor(Ladung[good2,0])
-print(e)
+e,de=gemeinsamer_faktor(Ladung[good2,0])
+print(e,de)
 F=const.physical_constants["Faraday constant"][0]
-print(f"Avogadrokonstante:{F/e}")
+print(f"Avogadrokonstante:{F/e,(F/e**2)*de}")
 
 
 
