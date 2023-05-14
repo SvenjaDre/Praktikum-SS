@@ -268,7 +268,7 @@ good3=good2
 #good3[12]=False
 exp4=array_to_latex_table_3d(Auswertung[:,good2,:], "content/Tabelle4.tex")
 
-#plot_data_with_errorbars(good,good2,Radius[:,0], Ladung[:,0], Radius[:,1], Ladung[:,1], xlabel=r"Radius$/ m$", ylabel=r"Ladung$/C$", filepath="build/Ladungen.pdf")
+plot_data_with_errorbars(good,good2,Radius[:,0], Ladung[:,0], Radius[:,1], Ladung[:,1], xlabel=r"Radius$/ m$", ylabel=r"Ladung$/C$", filepath="build/Ladungen.pdf")
 print(exp1)
 print(exp2)
 print(exp3)
