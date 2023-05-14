@@ -39,6 +39,8 @@ def array_to_latex_table(array, filename):
                     formatted_row.append("{:.2f}".format(cell * 10**-minexponent[i], minexponent[i]).replace(".", ","))
                 elif exponent[i] >5:
                     formatted_row.append("{:.2f}".format(cell * 10**-minexponent[i], minexponent[i]).replace(".", ","))
+                elif (10*cell).is_integer():
+                    formatted_row.append("{:.1f}".format(cell).replace(".", ","))
                 else:
                     formatted_row.append("{:.2f}".format(cell).replace(".", ","))
                 i=i+1
@@ -108,7 +110,8 @@ cL=1800
 Ri=1e-2
 alp=Dwinkel(The)
 frunt=Data("content/US3v.csv")
-exp1=array_to_latex_table(frunt, "content/Tabelle1.tex")
+newarray=np.column_stack([frunt[1:,0],alp,frunt[1:,1:]])
+exp1=array_to_latex_table(newarray, "content/Tabelle1.tex")
 Si70=Data("content/US3SI70.csv")
 Si45=Data("content/US3SI45.csv")
 exp2=array_to_latex_table(np.append(Si45,Si70[:,1:],axis=1), "content/Tabelle3.tex")
@@ -117,11 +120,13 @@ print(exp2)
 v15=v(frunt[2,1:],f0,alp[0],cL)
 v30=v(frunt[1,1:],f0,alp[1],cL)
 v60=v(frunt[3,1:],f0,alp[2],cL)
-Plot1(v15,frunt[2,1:]/np.cos((np.pi / 180)*alp[0]),r"Strömungsgeschwindigkeit v [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","Geschwindigkeit15.pdf")
-Plot1(v30,frunt[1,1:]/np.cos((np.pi / 180)*alp[1]),r"Strömungsgeschwindigkeit v [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","Geschwindigkeit30.pdf")
-Plot1(v60,frunt[3,1:]/np.cos((np.pi / 180)*alp[2]),r"Strömungsgeschwindigkeit v [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","Geschwindigkeit60.pdf")
+exp3=array_to_latex_table(np.column_stack([np.array([1.5,2.5,3.5,4.5,6]),v15,v30,v60]), "content/Tabelle2.tex")
+
+Plot1(v15,frunt[2,1:]/np.cos((np.pi / 180)*alp[0]),r"Strömungsgeschwindigkeit v [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","build/Geschwindigkeit15.pdf")
+Plot1(v30,frunt[1,1:]/np.cos((np.pi / 180)*alp[1]),r"Strömungsgeschwindigkeit v [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","build/Geschwindigkeit30.pdf")
+Plot1(v60,frunt[3,1:]/np.cos((np.pi / 180)*alp[2]),r"Strömungsgeschwindigkeit v [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","build/Geschwindigkeit60.pdf")
 
 Tiefe=s(Si45[:,0])
 
-Plot2(Tiefe*1000,Si45[:,1],Si70[:,1], "Messtiefe s [mm]",r"Streuintensität [1000 v$^2$/s]","Streui.pdf", "45% Pumpleistung","70% Pumpleistung")
-Plot2(Tiefe*1000,Si45[:,2],Si70[:,2], "Messtiefe s [mm]",r"Strömungsgeschwindigkeit [m/s]","Stroev.pdf", "45% Pumpleistung","70% Pumpleistung")
+Plot2(Tiefe*1000,Si45[:,1],Si70[:,1], "Messtiefe s [mm]",r"Streuintensität [1000 v$^2$/s]","build/Streui.pdf", "45% Pumpleistung","70% Pumpleistung")
+Plot2(Tiefe*1000,Si45[:,2],Si70[:,2], "Messtiefe s [mm]",r"Strömungsgeschwindigkeit [m/s]","build/Stroev.pdf", "45% Pumpleistung","70% Pumpleistung")
