@@ -88,6 +88,10 @@ def Plot2 (x, y1,y2, xlabel="", ylabel="", filepath="",label1="",label2=""):
     plt.savefig(filepath)
     plt.clf()
 
+def Datapoint(Daten):
+    mean = np.mean(Daten)
+    std = np.std(Daten, ddof=1) / np.sqrt(len(Daten))
+    return mean, std
 
 def Dwinkel(The):
     cl=1800
@@ -122,11 +126,17 @@ v30=v(frunt[1,1:],f0,alp[1],cL)
 v60=v(frunt[3,1:],f0,alp[2],cL)
 exp3=array_to_latex_table(np.column_stack([np.array([1.5,2.5,3.5,4.5,6]),v15,v30,v60]), "content/Tabelle2.tex")
 
-Plot1(v15,frunt[2,1:]/np.cos((np.pi / 180)*alp[0]),r"Strömungsgeschwindigkeit v [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","build/Geschwindigkeit15.pdf")
-Plot1(v30,frunt[1,1:]/np.cos((np.pi / 180)*alp[1]),r"Strömungsgeschwindigkeit v [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","build/Geschwindigkeit30.pdf")
-Plot1(v60,frunt[3,1:]/np.cos((np.pi / 180)*alp[2]),r"Strömungsgeschwindigkeit v [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","build/Geschwindigkeit60.pdf")
+Plot1(v15,frunt[2,1:]/np.cos((np.pi / 180)*alp[0]),r"Strömungsgeschwindigkeit $v$ [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","build/Geschwindigkeit15.pdf")
+Plot1(v30,frunt[1,1:]/np.cos((np.pi / 180)*alp[1]),r"Strömungsgeschwindigkeit $v$ [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","build/Geschwindigkeit30.pdf")
+Plot1(v60,frunt[3,1:]/np.cos((np.pi / 180)*alp[2]),r"Strömungsgeschwindigkeit $v$ [m/s]",r"Dopplerverschiebung $\Delta \nu/\cos{\alpha}$ [Hz]","build/Geschwindigkeit60.pdf")
 
 Tiefe=s(Si45[:,0])
 
-Plot2(Tiefe*1000,Si45[:,1],Si70[:,1], "Messtiefe s [mm]",r"Streuintensität [1000 v$^2$/s]","build/Streui.pdf", "45% Pumpleistung","70% Pumpleistung")
-Plot2(Tiefe*1000,Si45[:,2],Si70[:,2], "Messtiefe s [mm]",r"Strömungsgeschwindigkeit [m/s]","build/Stroev.pdf", "45% Pumpleistung","70% Pumpleistung")
+Plot2(Tiefe*1000,Si45[:,1],Si70[:,1], r"Messtiefe $s$ [mm]",r"Streuintensität [1000 v$^2$/s]","build/Streui.pdf", "45% Pumpleistung","70% Pumpleistung")
+Plot2(Tiefe*1000,Si45[:,2],Si70[:,2], r"Messtiefe $s$ [mm]",r"Strömungsgeschwindigkeit [m/s]","build/Stroev.pdf", "45% Pumpleistung","70% Pumpleistung")
+
+V0=v0(5e-3,frunt[0,1:]*1e-3/60)
+vm=np.empty([5,2])
+for i in range(0, 5):
+    vm[i]=Datapoint(np.column_stack([v15[i],v30[i],v60[i]]))
+print(vm)
