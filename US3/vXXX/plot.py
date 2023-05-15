@@ -140,3 +140,5 @@ vm=np.empty([5,2])
 for i in range(0, 5):
     vm[i]=Datapoint(np.column_stack([v15[i],v30[i],v60[i]]))
 print(vm)
+
+exp3=array_to_latex_table(np.column_stack([np.array([1.5,2.5,3.5,4.5,6]),V0,vm]), "content/Tabelle4.tex")

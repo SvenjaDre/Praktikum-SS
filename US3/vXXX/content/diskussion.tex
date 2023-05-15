@@ -7,5 +7,36 @@ Der lineare Zusammenhang, der in den Plots erkennbar ist ergibt sich direkt aus 
 berechnetem Wert ein linearer Zusammenhang besteht.
 Ansonsten lässt sich noch der Mittelwert über die Dopplerwinkel bilden und mit einer abgeschätzten Strömungsgeschwindigkeit aus 
 der Fließgeschwindigkeit gemäß $v_0=\frac{v_{\text{Fl}}}{\pi \cdot R^2}$ vergleichen, wobei $R$ der halbe Innendurchmesser des Rohrs ist.
-Die Strömungsgeschwindigkeiten steigen erwartungsgemäß mit zunehmender Fließgeschwindigkeit an. 
-\label{sec:Diskussion}
+Die entsprechenden Werte sind in Tabelle \ref{tab:vm} aufgelistet. Es fällt im Vergleich auf, dass die theoretische mittlere Geschwindigkeit, teilweise deutlich, über der experimentellen liegt.
+Bei größer werdenden Fließgeschwindigkeiten gleichen sich die Geschwindigkeiten an. Dabei ist zu beachten, dass der theoretische Wert auch nur gemittelt über dem Rohr gilt, da die Strömungsgeschwindigkeit bekannterweise
+nicht konstant ist. Daher eine mögliche Erklärung für die Differenz zwischen den Geschwindigkeiten könnte darin bestehen, dass die Ultraschallsonde besonders die Kugeln an Rand detektiert. Ein größerer Faktor könnte allerdings die
+generelle Reibung der Kugeln in der Flüssigkeit sein. Diese könnte die Kugeln ausbremsen oder Turbulenzen verursachen die ebnfalls eine ungleichmäßige Bewegung verursachen könnten.
+Zusätzlich kann das Gemisch mit Luft durchmischt sein, was Teile des Ultraschalls absorbiert und auch wieder die laminare Strömung unterbricht.
+Es fällt auf, dass bei größer werdenden Fließgeschwindigkeiten eine Annäherung zwischen Theorie und Experiment stattfindet. Bei größer werdenden
+Geschwindigkeiten bewegen sich Kugeln aufgrund der Reibung mit dem Rohr eher durch die Mitte, wo Sie dann auch schneller fließen können.
+\begin{table}[H]
+    \centering
+    \caption{Strömungsgeschwindigkeiten $v$ bei verschiedenen Fließgeschwindigkeiten $v_\text{Fl}$.}
+    \label{tab:vm}
+    \begin{tabular}{S[table-format=1.1] S[table-format=1.2] c}
+        \toprule
+        {$v_\text{Fl}$}&{$v_0$}&{$v_\text{Mittel}$}\\
+        \midrule
+        1,5 & 0,32 & $0,12 \pm 0,04$ \\
+        2,5 & 0,53 & $0,25 \pm 0,07$ \\
+        3,5 & 0,74 & $0,46 \pm 0,14$ \\
+        4,5 & 0,95 & $0,68 \pm 0,19$ \\
+        6 & 1,27 & $1,15 \pm 0,30$ \\
+        \bottomrule
+    \end{tabular}
+  \end{table}
+  
+  \noindent Das Strömungsprofil aus den Abbildungen \ref{fig:si} und \ref{fig:sv} entspricht näherungsweise der
+  Erwartung. Das Rohr hat einen Innendurchmesser von 5mm, wodurch die größte Streuintensität und Geschwindigkeit bei einer Messtiefe von
+  35mm zu erwarten ist. Bei 40\% Pumpleistung wird das Maximum eher bei 34mm gefunden, während bei 70\% das Maximum bei 36 mm Messtiefe vorliegt.
+  Der Verlauf bei niedriger Tiefe hat auch den gewünschten parabelförmigen Verlauf der bei laminaren Strömungen durch Rohre üblich ist.
+  Bei hohen Messtiefen wird eine nahezu konstante Geschwindigkeit gemessen. Der Unterschied zwischen geringen un hohen Messtiefen besteht darin, dass
+  das Ultraschall bei den niedrigen Tiefen, auch nur diese Tiefe erreicht und mit dieser wechselwirken kann. Bei großen Tiefen, kann der Ultraschall zwar
+  die Tiefe erreichen, aber misst auch Frequenzen, die von Kugeln aus der Mitte des Rohrs reflektiert worden sind. Dadurch ist der Verlauf bei niedrigen
+  Tiefen brauchbarer als bei Tiefen jenseits der Mitte.   
+  \label{sec:Diskussion}
