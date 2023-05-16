@@ -3,15 +3,15 @@
 Der für Menschen hörbare Frequenzbereich liegt zwischen ca. $\qty{16}{Hz}$ bis $\qty{20}{kHz}$.
 Unterhalb dieses Frequenzbereich wird als Infraschall bezeichnet.
 Der Frequenzbereich von $\qty{20}{kHz}$ bis $\qty{1}{GHz}$ wird Ultraschall genannt.
-Bei Frequenzen über $\qty{1}{GHz}$ wird als Hyperschall bezeichnet.\\
+Bei Frequenzen über $\qty{1}{GHz}$ wird dieser Bereich als Hyperschall bezeichnet.\\
 
 
 \noindent Bei der Doppler-Sonographie wird der sogenannte Doppler-Effekt verwendet.
 Der Doppler-Effekt beschreibt die Frequenzänderung, wenn sich die Schallquelle und ein Beobachter relativ zueinander bewegen.
 Es lassen sich vier verschiedene Fälle betracheten.
 Beim ersten Fall, befindetet sich der Beobachter in Ruhe und die Schallquelle bewegt sich auf den Beobachter zu.
-Die Freqenz $\nu_0$ der Quelle verschiebt sich zu einer höheren Frequenz $\nu_\text{kl}$.
-Entfernt sich die Quelle vom Beobachter, verschiebt sich die Freqeunz zu einer kleineren Frequenz $\nu_\text{gr}$.
+Die Frequenz $\nu_0$ der Quelle verschiebt sich zu einer höheren Frequenz $\nu_\text{gr}$.
+Entfernt sich die Quelle vom Beobachter, verschiebt sich die Freqeunz zu einer kleineren Frequenz $\nu_\text{kl}$.
 Die verschobenen Frequenzen lassen über 
 \begin{equation}
     \label{eq:vklgr}
@@ -36,16 +36,16 @@ Dies lässt sich berechnen mit
     \label{eq:deltav}
     \Delta \nu = \nu_0 \frac{v}{c}(\cos \alpha + \sin \beta).
 \end{equation}
-Die Winkel $\alpha$ und $\beta$ beschreiben dabei den Winkel zwischen dem Bewegten Objekt und der einlaufenden bzw. auslaufenden Welle.
+Die Winkel $\alpha$ und $\beta$ beschreiben dabei den Winkel zwischen der Geschwindigkeit v des bewegten Objekts und der Wellennormalen der einlaufenden bzw. auslaufenden Welle.
 Das Impul-Echo-Verfahren hat die Besonderheit, dass die beiden Winkel identisch sind und somit $\alpha = \beta$ gilt.
 Dies ist auch in der Abbildung \ref{fig:IEV} zu erkennen.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{content/TheoBild.png}
-    \caption{Blutströmung bestimmen durch das Impuls-Echo-Verfahren.}
+    \caption{Blutströmung bestimmen durch das Impuls-Echo-Verfahren \cite{sample}.}
     \label{fig:IEV}
 \end{figure}
-Die Winkel sind identisch, da die Ultraschallsonde Sender und der Empfänger enthält.
+\noindent Die Winkel sind identisch, da die Ultraschallsonde Sender und der Empfänger enthält.
 Die Frequenzverschiebung lässt sich aufgrunddessen berechnen über
 \begin{equation}
     \Delta \nu = 2 \nu_0 \frac{v}{c} \cos \alpha.
@@ -53,7 +53,7 @@ Die Frequenzverschiebung lässt sich aufgrunddessen berechnen über
 \end{equation}
 \\
 
-\noindent Um Ultraschallwelle zu erzeugen, kann der reziporken Piezo-elektrischen Effekt verwendet werden.
+\noindent Um Ultraschallwelle zu erzeugen, kann der reziproken Piezo-elektrischen Effekt verwendet werden.
 Dabei wird in ein elektrisches Wechselfeld ein piezoelektrischen Kristall gebracht.
 Dadurch wird der Kristall zur Schwingung angeregt und die Ultraschallwellen strahlen vom Kristall ab.
 Eine hohe Schallenergiedichte wird erreicht, wenn die Anregungsfrequenz der Eigenfrequenz entspricht.
@@ -69,6 +69,7 @@ Diese Dopplerwinkel lassen brechnen über
     \alpha = 90° - \arcsin \Bigr( \sin \theta \cdot \frac{c_L}{c_P}\Bigl).
     \label{eq:alp}
 \end{equation}
-Dabei beschreibt $c_L$ die Schallgeschwindigkeit der Dopplerphantomflüssigkeit und $c_P$ die Schallgeschwindigkeit des Dopplerprismas.
+Dabei beschreibt $c_L$ die Schallgeschwindigkeit der Dopplerphantomflüssigkeit, $c_P$ die Schallgeschwindigkeit des Dopplerprismas
+und $\theta$ den Einschallwinkel des Doppler-Prismas.
 
 \cite{sample}
