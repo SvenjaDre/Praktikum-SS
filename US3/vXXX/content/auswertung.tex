@@ -1,5 +1,14 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Fehlerrechnung}
+Der Mittelwert einer physikalischen Größe $a$ mit $N$ Einzelmesswerten ist gegeben durch
+\begin{equation}\label{eq:mean}
+    \overline{x}=\frac{1}{N}\sum_{i=1}^Na_\text{i}\,.
+\end{equation}
+Die Standardabweichung eines Mittelwerts zu einer physikalischen Größe a bestimmt sich mit
+\begin{equation}\label{eq:std}
+    \Delta{x}=\sqrt{\frac{1}{N(N-1)}\sum_{i=1}^N\left(a_\text{i}-\overline{x}\right)}\,.
+\end{equation}
 \subsection{Strömungsgeschwindigkeit}
 Die gemessenen Frequenzverschiebungen sind in Tabelle \ref{tab:Messwertedf} für alle 3 Prismawinkel mit ihren zugehörigen 
 Dopplerwinkeln $\alpha$ und bei 5 verschiedenen Fließgeschwindigkeiten aufgetragen. Die Dopplerwinkel ergeben sich nach Formel\eqref{eq:alp}.
@@ -63,12 +72,12 @@ Die Ergebnisse für den Prismawinkel $\theta = 15°$ sind in Abbildung \ref{fig:
 \subsection{Strömungsprofil}
 Nun soll das Strömungsprofil des Innenrohrs untersucht werden. Dafür wird die Geschwindigkeit und 
 die Streuintensität bei verschiedenen Messtiefen gemessen. Zur Besseren Vergleichbarkeit ist dies bei 2 verschiedenen 
-Pumpleistungen durchgeführt worden. Die erste ist bei 40\% Pumpleistung durchgeführt worden, was $\qty{3.4}{\liter\per\minute}$ entspricht.
-Die zweite wurde bei 70\% also $\qty{5.3}{\liter\per\minute}$ gemessen. Die Messergebnisse sind in Tabelle \ref{tab:Profil} aufgeführt.
+Pumpleistungen durchgeführt worden. Die erste ist bei 45\% Pumpleistung durchgeführt worden, was $\qty{3.4}{\liter\per\minute}$ entspricht.
+Die zweite wird bei 70\% also $\qty{5.3}{\liter\per\minute}$ gemessen. Die Messergebnisse sind in Tabelle \ref{tab:Profil} aufgeführt.
 Die Messtiefe ist am Messgerät als eine Absorptionszeit $t$ angegeben. Um nun die entsprechende Tiefe $s$ in mm zu bekommen, muss
 die Zeit über die Schallgeschwindigkeit in eine entsprechende Strecke überführt werden. Dabei muss beachtet werden, dass die Materialien unterschiedliche
 Schallgeschwindigkeiten besitzen und so die Umrechnung im Prisma sich von der in der Dopplerflüssigkeit unterscheidet. Der erste Messpunkt
-bei $\qty{12}{\micro\second}$ ist so gewählt worden, dass er genau der Messtiefe von 30mm entspricht, was die genau dem Abstand zwischen Sonde
+bei $\qty{12}{\micro\second}$ ist so gewählt worden, dass er genau der Messtiefe von 30mm \cite{sample} entspricht, was die genau dem Abstand zwischen Sonde
 und Flüssigkeit entspricht. Die Umrechnung danach erfolgt über
 \begin{equation}
   s=\frac{2}{3}\cdot t.
