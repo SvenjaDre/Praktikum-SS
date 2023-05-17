@@ -6,26 +6,26 @@ Ziel des Versuchs ist die Bestimmung der Suszeptibilität der seltenen Erden
 \subsection{Magnetismus in Materie}
 Im Vakuum ergibt sich die magnetische Flussdichte $\vec{B}$ aus der magnetischen Feldstärke $\vec{H}$
 durch 
-\begin{equation}
+\begin{equation*}
     \vec{B}= \mu_0 \vec{H},
     \label{eq:BVakuum}
-\end{equation}
+\end{equation*}
 wobei $\mu_0$ die Induktionskonstante im Vakuum ist.
 Wirkt nun das Feld $\vec{H}$ auf Materie, kann diese um $\vec{M}$ magnetisiert werden und ändert
 die magnetische Flussdichte in der Form
-\begin{equation}
+\begin{equation*}
     \vec{B}= \mu_0 \vec{H}+\vec{M}.
     \label{eq:BMaterie}
-\end{equation}
+\end{equation*}
 Die Magnetisierung $\vec{M}$ wird durch $N$ atomare magnetische Momente der Form 
 $\vec{M}=N\mu_0 \vec{H}$ hervorgerufen. Da diese atomaren magnetischen Momente ebenfalls durch 
 das äußere Feld $\vec{H}$ hervorgerufen wird, hängt $\vec{M}$ auch direkt vom äußeren Feld ab.
 Daher kann der Zusammenhang näherungsweise linear über die Suszeptibilität $\chi$ beschrieben werden.
 Es ergibt sich
-\begin{equation}
+\begin{equation*}
     \vec{M}= \mu_0 \chi \vec{H}.
     \label{eq:MMakro}
-\end{equation}
+\end{equation*}
 Allgemein ist die Suszeptibilität $\chi$ nicht konstant, sondern eine Funktion von $T$, der Temperatur, und von $\vec{H}$ selbst.
 Diese Suszeptibilität soll im Folgenden einmal theoretisch aus der Quantenmechanik und einmal experimentell
 durch die makroskopische Veränderung der Flussdichte in Spulen untersucht werden.
@@ -38,35 +38,35 @@ Felds aus und verstärken dieses im Material. Daher ist die Suszeptibilität dor
 \subsection{Quantenmechanische Berechnung der Suszeptibilität}
 Nun soll die Suszeptibilität in Abhängigkeit des atomaren Gesamtdrehimpulses $\vec{J}$ bestimmt werden.
 Dieser ergibt sich nach LS-Kopplung aus der Vektorsumme 
-\begin{equation}
+\begin{equation*}
     \vec{J}= \vec{L}+\vec{S}.
     \label{eq:LS}
-\end{equation}
+\end{equation*}
 Dabei beschreibt $\vec{L}$ den Gesamtbahndrehimpuls, der sich aus den Einzeldrehimpulsen $\vec{L}=\sum\vec{l_i}$ zusammensetzt
 und der Gesamtspin $\vec{S}$ lässt sich durch die Aufsummierung der Einzelspins $\vec{S}=\sum \vec{s_i}$ berechnen.
 Die Beträge $\left|\vec{L}\right|$, $\left|\vec{S}\right|$, $\left|\vec{J}\right|$ ergeben sich aus den
 entsprechenden Quantenzahlen $L$,$S$,$J$ durch 
-\begin{align}\label{eq:absdreh}
+\begin{align*}
     \left|\vec{L}\right|&=\sqrt{L(L+1)}\hbar\\
     \left|\vec{S}\right|&=\sqrt{S(S+1)}\hbar\\
     \left|\vec{J}\right|&=\sqrt{J(J+1)}\hbar.
-\end{align}
+\end{align*}
 Diese elementaren Drehimpulse lassen sich über das Bohrsche Magneton $\mu_B=\frac{e_0}{2m_0}\hbar$ und
 $g_s$, dem gyromagnetischen Verhältnis des freien Elektrons, in magnetische Momente überführen durch
-\begin{align}\label{eq:absmu}
-    \left|\vec{\mu_L}\right|&=\mu_B\sqrt{L(L+1)}\\
-    \left|\vec{\mu_S}\right|&=g_s \mu_B\sqrt{S(S+1)}.
-\end{align}
+\begin{align*}
+    \left|\vec{\mu_L}\right|&=\mu_\text{B}\sqrt{L(L+1)}\\
+    \left|\vec{\mu_S}\right|&=g_\text{s} \mu_\text{B}\sqrt{S(S+1)}.
+\end{align*}
 Die einzelnen Komponenten des magnetischen Moments aus Spin und Bahndrehimpuls können nicht direkt gemessen werden, sondern
 sie ergeben ein gemeinsamen Drehimpuls $\vec{J}$. Daher gehen nur dazu parallele Anteile gemäß
 $\left|\vec{\mu_J}\right|=\left|\vec{\mu_S}\right|\cos{\alpha}+\left|\vec{\mu_L}\right|\cos{\beta}$ ein.
 Unter Verwendung geometrischer Identitäten und der Annahme, dass $g_s$ ungefähr 2 ist, ergibt sich als Zusammenhang für
 das magnetische Moment $\left|\vec{\mu_J}\right|$
-\begin{equation}
-    \left|\vec{\mu_J}\right| \approx \mu_B g_j \sqrt{J(J+1)}.
+\begin{equation*}
+    \left|\vec{\mu_J}\right| \approx \mu_\text{B} g_\text{j} \sqrt{J(J+1)}.
     \label{eq:muj}
-\end{equation}
-$g_j$ wird der Landé-Faktor genannt und kann direkt aus den Quantenzahlen des Atoms gemäß
+\end{equation*}
+$g_\text{j}$ wird der Landé-Faktor genannt und kann direkt aus den Quantenzahlen des Atoms gemäß
 \begin{equation}
     g_J=\frac{3J(J+1)+\{S(S+1)-L(L+1)\}}{2J(J+1)}
     \label{eq:lande}
@@ -79,7 +79,7 @@ Wenn nun die Besetzungswahrscheinlichkeit der Energieniveaus gemäß der Boltzma
 alle Orientierungen gemittelt werden. Nun kann das mittlere magnetische Moment für
 große Temperaturen genähert werden. Dann ergibt sich die Suszeptibilität zu 
 \begin{equation}
-    \chi= \frac{\mu_0\mu_B^2g_J^2NJ(J+1)}{3kT}.
+    \chi= \frac{\mu_0\mu_\text{B}^2g_J^2NJ(J+1)}{3kT}.
     \label{eq:chi}
 \end{equation}
 Daher lässt sich erkennen, dass die Suszeptibilität mit $1/T$ geht und damit dem Curieschen Gesetz für den Paramagnetismus folgt.
@@ -177,8 +177,8 @@ zusammenhängt. Es ergibt sich
 \begin{figure}[H]
     \centering
     \includegraphics[scale=1]{content/Brückenschaltung.png}
-    \caption{Brückenschaltung zur Messung der Suszeptibilität.}
+    \caption{Brückenschaltung zur Messung der Suszeptibilität \cite{sample}.}
     \label{fig:Brücke}
 \end{figure}
 
-\cite{sample}
+
