@@ -29,7 +29,7 @@ def n_S (a, E):
 
 n_s = n_S(a_s, E_s) 
 #print(n_s)
-n_smittel = np.mean(n_s)
+n_smittel = ufloat(np.mean(n_s), np.std(n_s))
 print('Mittelwert senk: ',n_smittel)
 
 ######n parallel #####
@@ -40,10 +40,11 @@ def n_P(a, E):
 
 n_p = n_P(a_p, E_p)
 #print(n_p)
-n_pmittel = np.mean(n_p)
+n_pmittel = ufloat(np.mean(n_p), np.std(n_p))
 print('Mittelwert parra: ', n_pmittel)
 
-
+def theorie_para(a, n):
+    return (np.sqrt{n^2})
 
 plt.plot(a_p, E_p, 'rx', label = 'Messwerte parallel polarisiert')
 plt.plot(a_s, E_s, 'gx', label = 'Messwerte senkrecht polarisiert')
