@@ -25,17 +25,17 @@ E_s = np.sqrt(I_s/I_0)
 ##### n Senkrecht ##############
 #print('Brechungsindex Senkrecht polarisiert')
 #print()
-#def n_S (a, E):
-#    return np.sqrt((1 + E**2 + 2*E*np.cos(2*a*np.pi/180))/(1 - 2*E +E**2))
-#
-#n_s = n_S(a_s, E_s) 
+def n_S (a, E):
+    return np.sqrt((1 + E**2 + 2*E*np.cos(2*a*np.pi/180))/(1 - 2*E +E**2))
+
+n_s = n_S(a_s, E_s) 
 #print(n_s)
 #print()
-#n_smittel = np.mean(n_s)
+n_smittel = np.mean(n_s)
 #print('Mittelwert senk: ',n_smittel)
-#n_err = np.std(n_s)
+n_err = np.std(n_s)
 #print('standardabweicuhung', np.std(n_s))
-#n_errr = ufloat(np.mean(n_s), np.std(n_s))
+n_errr = ufloat(np.mean(n_s), np.std(n_s))
 #print()
 
 ############################## n parallel ##########################
@@ -46,7 +46,7 @@ def n_P(a, E):
     return np.sqrt(b/(2*np.cos(a)**2) + np.sqrt(b**2/(4*np.cos(a)**4) - b*np.tan(a)**2))
 
 n_p = n_P(a_p, E_p)
-print(n_p)
+#print(n_p)
 print()
 n_pmittel = np.mean(n_p)
 print('Mittelwert parra: ', n_pmittel)
