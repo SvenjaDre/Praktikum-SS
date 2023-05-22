@@ -1,7 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\subsection{Brechungsindex über die Fresnel Formel bestimmen}
+\subsection{Brechungsindizes über die Fresnel Formel bestimmen}
 Der gemessene Dunkelstrom ist $I_\text{dunkel} = 1.4 \unit{\nano\ampere}$. Dieser wird bei den folgenden Berechnungen von den gemmesenen Intensität abgezogen.
 Die gemessenen Intesitäten für das senkrecht polarisiertem Licht sind in der Tabelle \ref{tab:senk} und 
 die für parallel polarisiertem Licht in Tabelle \ref{tab:para} dargestellt.
@@ -24,7 +24,7 @@ und für den Brechungsindex bei senkrecht polarisiertem Licht
 Die Ergebnisse der Brechungindexe werden ebenfalls in der Tabelle \ref{tab:senk} und \ref{tab:para} dargestellt.
 \begin{table}[H]
   \centering
-  \caption{Gemessene Intensitäten und berechneter Brechungsindex bei senkrecht plarisierten Licht.}
+  \caption{Gemessene Intensitäten und berechneter Brechungsindizes bei senkrecht plarisierten Licht.}
   \label{tab:senk}
   \begin{tabular}{c c c c c c}
     \toprule
@@ -50,7 +50,7 @@ Die Ergebnisse der Brechungindexe werden ebenfalls in der Tabelle \ref{tab:senk}
     38 &  82  & 4.10    & 80 &  144  & 2.92   \\
     40 &  84  & 4.11    & 82 &  147  & 1.94   \\
     42 &  86  & 4.12    & 84 &  140  & 1.04   \\
-    44 &  88  & 4.12    & 86 &  70   & (4.88) \\ 
+    44 &  88  & 4.12    & 86 &  70   & 4.88 \\ 
     46 &  90  & 4.11    &    &       &        \\                 
     \bottomrule
   \end{tabular}
@@ -58,62 +58,69 @@ Die Ergebnisse der Brechungindexe werden ebenfalls in der Tabelle \ref{tab:senk}
       
 \begin{table}[H]
   \centering
-  \caption{Gemessene Intensitäten und berechneter Brechungsindex bei parallel plarisierten Licht.}
+  \caption{Gemessene Intensitäten und berechnete Brechungsindizes bei parallel plarisierten Licht.}
   \label{tab:para}
   \begin{tabular}{c c c c c c}
     \toprule
     $\alpha /°$ & $I / \unit{\micro\ampere}$ & $n$ & $\alpha /°$ & $I / \unit{\micro\ampere}$ & $n_\parallel$\\
     \midrule 
-    6  &  50  & 3.24     & 48 &  28   &  3.35  \\ 
-    8  &  50  & 3.25     & 50 &  27   &  3.43   \\
-    10 &  50  & 3.27     & 52 &  24   &  3.39   \\
-    12 &  49  & 3.24     & 54 &  20   &  3.29   \\
-    14 &  48  & 3.22     & 56 &  20   &  3.47   \\
-    16 &  48  & 3.25     & 58 &  18   &  3.52   \\
-    18 &  42  & 3.00     & 60 &  14   &  3.43  \\
-    20 &  47  & 3.27     & 62 &  14   &  3.66   \\
-    22 &  46  & 3.26     & 64 &  12   &  3.75   \\
-    24 &  45  & 3.25     & 66 &  11   &  3.96   \\
-    26 &  44  & 3.25     & 68 &  9.6  &  4.16   \\
-    28 &  44  & 3.31     & 70 &  8    &  4.38   \\
-    30 &  41  & 3.22     & 72 &  8.2  &  4.89   \\
-    32 &  41  & 3.28     & 74 &  8.6  &  5.57   \\
-    34 &  37  & 3.15     & 76 &  9.6  &  6.54   \\
-    36 &  38  & 3.28     & 78 &  10   &  7.71   \\
-    38 &  37  & 3.31     & 80 &  12   &  9.71   \\
-    40 &  36  & 3.35     & 82 &  21   &  14.60  \\
-    42 &  34  & 3.34     & 84 &  30   &  22.74   \\
-    44 &  32  & 3.34     & 86 &  50   &  46.27   \\
-    46 &  30  & 3.34     &    &       &           \\
+    6  &  50  & 3.35  & 48 &  28   & 3.50 \\ 
+    8  &  50  & 22.1  & 50 &  27   & 2.33 \\
+    10 &  50  & 3.80  & 52 &  24   & 13.15 \\
+    12 &  49  & 3.73  & 54 &  20   & 2.34  \\
+    14 &  48  & 22.9  & 56 &  20   & 2.28  \\
+    16 &  48  & 3.26  & 58 &  18   & 16.12 \\
+    18 &  42  & 4.27  & 60 &  14   & 1.83  \\
+    20 &  47  & 7.51  & 62 &  14   & 2.51  \\
+    22 &  46  & 3.04  & 64 &  12   & 4.22  \\
+    24 &  45  & 7.01  & 66 &  11   & 1.65  \\
+    26 &  44  & 4.50  & 68 &  9.6  & 3.51  \\
+    28 &  44  & 3.05  & 70 &  8    & 2.27  \\
+    30 &  41  & 18.29  & 72 &  8.2  & 1.57  \\
+    32 &  41  & 3.34  & 74 &  8.6  & 9.02   \\
+    34 &  37  & 3.08  & 76 &  9.6  & 1.84  \\
+    36 &  38  & 21.0  & 78 &  10   & 1.80  \\
+    38 &  37  & 2.76  & 80 &  12   & 15.33  \\
+    40 &  36  & 3.85  & 82 &  21   & 2.12  \\
+    42 &  34  & 6.27  & 84 &  30   & 3.41   \\
+    44 &  32  & 2.45  & 86 &  50   & 8.36   \\
+    46 &  30  & 5.42  &    &       &      \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-\noindent Die berechneten Brechungsindexe werden nun gemittelt.
+\noindent Die berechneten Brechungsindizes werden nun gemittelt.
+Die Unsicherheiten wurden mithilfe von $uncertenties$ berechnet.
 Damit ergibt sich 
 \begin{equation*}
-  \overline{n_\perp} = 3.65 \pm
+  \overline{n}_\perp = 3.65 \pm 0.59
 \end{equation*}
 und\begin{equation*}
-  \overline{n_\parallel} = 5.62 \pm
+  \overline{n}_\parallel = 6.20 \pm 5.98
 \end{equation*}    
 
-\subsection{Brewsterwinkel}
-    
+\subsection{Brechungsindex über den Brewsterwinkel bestimmen}
 
+Der Brewsterwinkel lässt sich bei parallel polarisiertem Licht bestimmen.
+Dabei handelt sich um den Winkel, bei dem das Minimum gemessen wurde.
+Der Brewsterwinkel ist somit
+\begin{equation*}
+  \alpha_p = \qty{70}{°}.
+\end{equation*}    
+Der brechungsindex wird nun über die Formel \ref{eq:Brewster} berechnet.
+Für den Brechungsindex ergibt sich damit 
+\begin{equation*}
+  n_{\alpha_p} = 2.74 \pm 0.14.
+\end{equation*}
 
-
-
-
-
-
+\noindent In der Abbildung \ref{fig:plot} sind die Messwerte und die jeweiligen Theoriekurven abgebildet.
+Bei den Theoriekurven wurde die Formeln \ref{tab:senk} und \ref{tab:para} verwendet.
+Für den jeweiligen Brechungsindex wurde der zuvor berechnete Wert $\overline{n}_\parallel$ und $\overline{n}_\perp$ eingesetzt.
 
 \begin{figure}
   \centering
   \includegraphics{plot.pdf}
-  \caption{Plot.}
+  \caption{Graphische Darstellung der Messwerte und der Theoriekurve.}
   \label{fig:plot}
 \end{figure}
 
-
-Siehe \autoref{fig:plot}!
