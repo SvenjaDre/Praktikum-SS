@@ -157,7 +157,8 @@ Ul=Grenzspannung(lp,"Violett")
 Ur=Grenzspannung(rp,"Rot")
 
 
-exp1=array_to_latex_table(Daten2V,"content/Messwerte2V.tex")
+exp1=array_to_latex_table(Daten2V[:25,:],"content/Messwerte2V1.tex")
+exp3=array_to_latex_table(Daten2V[25:,:],"content/Messwerte2V2.tex")
 
 Daten20V=Data("content/20V.CSV")
 
