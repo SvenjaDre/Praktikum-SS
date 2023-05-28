@@ -97,7 +97,7 @@ def linear_regression(x,y,color):
 
 def Auswertung(Daten,color,high):
     mask=Daten[:,1]>=0
-    #fig,ax=Plot1(high,Daten[mask,0],np.sqrt(Daten[mask,1]),r"U/V",r"$\sqrt{I}$/pA","Datenpunkte",f"content/{color}.pdf")
+    #fig,ax=Plot1(high,Daten[mask,0],np.sqrt(Daten[mask,1]),r"U/V",r"$\sqrt{I/\text{pA}}$","Datenpunkte",f"content/{color}.pdf")
     goodU=Daten[mask,0]
     goodI=Daten[mask,1]
     params,errors=linear_regression(goodU[:(high)],np.sqrt(goodI[:(high)]),color)
@@ -185,4 +185,5 @@ wave={
 Photo(wave)
 
 Plot3(Daten20V[:,0],Daten20V[:,1],"U/V","I/pA","content/Allgelb.pdf")
+""
 

@@ -3,11 +3,15 @@
 \subsection{2V-Messung}
 Die Messung von -2V bis 2V sollte für die rote, grüne und violette Spektrallinie mit der größten Intensität
 aufgenommen werden. Dabei entspricht die rote Spektrallinie der Wellenlänge 623nm , die grüne der Wellenlänge 546nm und
-die violette der Wellenlänge 435nm \cite{sample},\cite{Spektrum}.
+die violette der Wellenlänge 435nm \cite{sample},\cite{Spektrum}. Für jede Spektrallinie 
+ist der durch Einfall des entsprechendes Licht erzeugte Photostrom $I_\text{Ph}$ gemessen worden. Dabei ist die Spannung zwischen Photokathode und
+Anode von -2V bis 2V variiert worden. Dabei bedeuten negative Spannungen eine Bremsspannung. Also eine Spannung die Elektronen in Richtung
+Kathode beschleunigen und eine positive Spannung bedeutet eine beschleunigende Spannung in Richtung Anode. Die Messwerte sind in den Tabellen \ref{tab:2VMesswerte1} und \ref{tab:2VMesswerte2}
+aufgeführt.
 \begin{table}[H]
   \centering
   \caption{Messwerte für die rote, grüne und violette Spektrallinie(1).}
-  \label{tab:2VMesswerte(1)}
+  \label{tab:2VMesswerte1}
   \begin{tabular}{S[table-format=1.2] S[table-format=3] S[table-format=1.2] S[table-format=4]S[table-format=1.2]S[table-format=2]}
       \toprule
       {$U_\text{Grün}$/V}&{$I_\text{GrPh}$/pA}&{$U_\text{violett}$/V}&{$I_\text{ViPh}$/pA}&{$U_\text{Rot}$/V}&{$I_\text{RotPh}$/pA}\\
@@ -44,7 +48,7 @@ die violette der Wellenlänge 435nm \cite{sample},\cite{Spektrum}.
 \begin{table}[H]
   \centering
   \caption{Messwerte für die rote, grüne und violette Spektrallinie(2).}
-  \label{tab:2VMesswerte(2)}
+  \label{tab:2VMesswerte2}
   \begin{tabular}{S[table-format=1.2] S[table-format=3] S[table-format=1.2] S[table-format=4]S[table-format=1.2]S[table-format=2]}
       \toprule
       {$U_\text{Grün}$/V}&{$I_\text{GrPh}$/pA}&{$U_\text{violett}$/V}&{$I_\text{ViPh}$/pA}&{$U_\text{Rot}$/V}&{$I_\text{RotPh}$/pA}\\
@@ -77,25 +81,69 @@ die violette der Wellenlänge 435nm \cite{sample},\cite{Spektrum}.
       \bottomrule
   \end{tabular}
 \end{table}
-
+\noindent Da der Photostrom in der Nähe der Grenzspannung quadratisch zur Änderung der Spannung geht, wird die Wurzel 
+der Stromstärke gegen die Spannung aufgetragen. In der Nähe der Grenzspannung wird dann eine Lineare Regression mittels der Funktion
+Polyfit aus der Bibliothek Numpy aus Python durchgeführt \cite{numpy}. Gesucht ist dann die Grenzspannung bei der kein Photostrom am 
+Picoamperemeter ankommt. Wenn $a$ die Steigung der Ausgleichsgerade ist und $b$ der Y-Achsenabschnitt ist, ergibt sich die Grenzspannung $U_\text{Grenz}$ als Nullstelle durch 
+\begin{equation}
+  U_\text{Grenz}=-\frac{b}{a}.
+  \label{eq:Grenz}
+\end{equation}
+Der Fehler der linearen Regression $\Delta a$ und $\Delta b$ pflanzt sich nach dem Gaußschen Fehlerfortpflanzungsgesetz
+zu 
+\begin{equation*}
+  \Delta U_\text{Grenz}= U_\text{Grenz}\sqrt{\left(\frac{\Delta b}{b}\right)^2+\left(\frac{\Delta a}{a}\right)^2},
+\end{equation*}
+wobei der Fehler automatisch über die Bibliothek uncertainties in Python berechnet worden ist \cite{uncertainties}.
+\\
+\noindent Die erste Spektrallinie die ausgewertet wird, ist die rote. Die Messdaten sind in Abbildung \ref{fig:rot} aufgetragen.
+Wegen der schnellen Sättigung des Stroms ist die lineare Regression nur für die ersten 3 Messpunkte mit positivem Strom durchgeführt worden.
+Als Fit-Parameter ergeben sich dann
+\begin{align*}
+  a_\text{rot}&=\qty{9.51(0.425)}{\sqrt{\pico\ampere}\per\volt}\\
+  b_\text{rot}&=\qty{5.72(0.221)}{\sqrt{\pico\ampere}}.\\
+\end{align*}
+Nach Gleichung \eqref{eq:Grenz} ergibt sich die Grenzspannung dann zu
+\begin{equation*}
+  U_\text{rot}=\qty{-0.6(0.04)}{\volt}.
+\end{equation*}
 \begin{figure}[H]
   \centering
   \includegraphics{content/rot.pdf}
   \caption{Messung der Stromabhängigkeit bei Variation der Brems-/Beschleunigungsspannung der roten Spektrallinie}
   \label{fig:rot}
 \end{figure}
-\begin{figure}[H]
-  \centering
-  \includegraphics{content/gelb.pdf}
-  \caption{Messung der Stromabhängigkeit bei Variation der Brems-/Beschleunigungsspannung der gelben Spektrallinie im Grenzbereich}
-  \label{fig:gelb}
-\end{figure}
+
+\noindent Die Messdaten für die grüne Spektrallinie wird in Abbildung \ref{fig:grün}
+aufgetragen. Die Ausgleichsrechnung wird mit den ersten 7 Messpunkte mit positiver 
+Stromstärke durchgeführt.
+Als Fit-Parameter ergeben sich
+\begin{align*}
+  a_\text{grün}&=\qty{34.2(1.08)}{\sqrt{\pico\ampere}\per\volt}\\
+  b_\text{grün}&=\qty{20.7(0.44)}{\sqrt{\pico\ampere}}.\\
+\end{align*}
+Wegen Gleichung \eqref{eq:Grenz} ergibt sich die Grenzspannung dann zu
+\begin{equation*}
+  U_\text{rot}=\qty{-0.604(0.023)}{\volt}.
+\end{equation*}
 \begin{figure}[H]
   \centering
   \includegraphics{content/grün.pdf}
   \caption{Messung der Stromabhängigkeit bei Variation der Brems-/Beschleunigungsspannung der grünen Spektrallinie}
   \label{fig:grün}
 \end{figure}
+
+\noindent In Abbildung \ref{fig:violett} ist der Photostrom der violetten Spektrallinie gegen die 
+Spannung aufgetragen. Es sind die ersten 12 Messungen für Ströme größer 0 für eine 
+Lineare Regression herangezogen worden. Die Fit-Parameter lauten 
+\begin{align*}
+  a_\text{violett}&=\qty{22(0.603)}{\sqrt{\pico\ampere}\per\volt}\\
+  b_\text{violett}&=\qty{23.8(0.45)}{\sqrt{\pico\ampere}}.\\
+\end{align*}
+Die Grenzspannung ergibt sich dann durch \eqref{eq:Grenz} zu
+\begin{equation*}
+  U_\text{violett}=\qty{-1.08(0.04)}{\volt}.
+\end{equation*}
 \begin{figure}[H]
   \centering
   \includegraphics{content/lila.pdf}
@@ -103,6 +151,11 @@ die violette der Wellenlänge 435nm \cite{sample},\cite{Spektrum}.
   \label{fig:violett}
 \end{figure}
 \subsection{20V-Messung}
+Nun wird noch die Spannungsabhängigkeit des Photostroms für eine Spektrallinie, die 
+gelbe mit einer Wellenlänge von 578nm \cite{sample}, genauer über einem Spannungsbereich von -20V 
+bis 20V gemessen. Dabei ist auch hier wieder um den Nulldurchgang des Stroms sehr genau in 0,5V Schritten gemessen worden.
+Die Messwerte sind in Tabelle \ref{tab:20VMesswerte} eingetragen. Die gesamte Abhängigkeit zwischen Strom und Spannung 
+ist in Abbildung \ref{fig:Allgelb} dargestellt.
 \begin{table}[H]
   \centering
   \caption{Messwerte für die gelbe Spektrallinie von -20V bis 20V.}
@@ -145,14 +198,51 @@ die violette der Wellenlänge 435nm \cite{sample},\cite{Spektrum}.
   \end{tabular}
 \end{table}
 
+\noindent Auch für die gelbe Spektrallinie soll nun die Grenzspannung bestimmt werden. Dafür wird in Abbildung \ref{fig:gelb}
+die Wurzel des Stroms gegen die Spannung aufgetragen. Die ersten 7 Messungen mit positiven Photoströmen werden linearisiert.
+Dabei ergeben sich als Fit-Parameter
+\begin{align*}
+  a_\text{gelb}&=\qty{27.4(0.9)}{\sqrt{\pico\ampere}\per\volt}\\
+  b_\text{gelb}&=\qty{13.6(0.33)}{\sqrt{\pico\ampere}}.\\
+\end{align*}
+Die Grenzspannung ergibt sich dann durch \eqref{eq:Grenz} zu
+\begin{equation*}
+  U_\text{gelb}=\qty{-0.498(0.020)}{\volt}.
+\end{equation*}
+\begin{figure}[H]
+  \centering
+  \includegraphics{content/gelb.pdf}
+  \caption{Messung der Stromabhängigkeit bei Variation der Brems-/Beschleunigungsspannung der gelben Spektrallinie im Grenzbereich}
+  \label{fig:gelb}
+\end{figure}
 \begin{figure}[H]
   \centering
   \includegraphics{content/Allgelb.pdf}
   \caption{Messung der Stromabhängigkeit bei Variation der Brems-/Beschleunigungsspannung der gelben Spektrallinie im gesamten 20V Bereich}
-  \label{fig:rot}
+  \label{fig:Allgelb}
 \end{figure}
-\subsection{Bestimmung der Grenzspannung und h/e$_0$}
-
+\subsection{Bestimmung der Grenzspannung und $h/e_0$}
+Die zuvor berechneten Grenzspannungen bedeuten, dass selbst die energiereichsten Teilchen
+die Anode nicht mehr erreichen. Daher kann $U_\text{Grenz} e_0$ als kinetische Energie der Elektronen 
+interpretiert werden, die von den Photonen übertragen wird. Da die Photonen Energie mit $h$ proportional
+zur Frequenz der Spektrallinien ansteigt, muss auch die Grenzspannung proportional zur Frequenz ansteigen.
+Die Frequenz der einzelnen Spektrallinien ergibt sich durch $\nu=c/\lambda$.
+Wenn nun die die Grenzspannungen der einzelnen Spektrallinien gegen die Frequenz aufgetragen werden, wie in Abbildung \ref{fig:Grenz}
+dargestellt, lässt sich der lineare Verlauf erkennen. Die Steigung $a$ entspricht dann dem Verhältnis $h/e$ und der
+Y-Achsenabschnitt $b$ lässt sich mit $e$ multipliziert in die Austrittsarbeit umrechnen.
+Da die Grenzspannung der roten Spektrallinie im Vergleich zum Rest eindeutig nicht zum Verlauf passt, wird diese bei der linearen Regression nicht
+berücksichtigt.
+Die Fit-Parameter ergeben sich dann zu
+\begin{align*}
+  a&=\qty{-3.42(0.008)e-15}{\volt\second}\\
+  b&=\qty{1.28(0.004)}{\volt}.
+\end{align*}
+Damit ergibt sich experimentell für $h/e_0$ und die Austrittsarbeit $W_A$
+\begin{align}
+  \frac{h}{e_0}&=\qty{-3.42(0.008)e-15}{\volt\second}\\
+  W_A&=\qty{1.28(0.004)}{\eV}.
+  \label{eq:ergebnis}
+\end{align}
 \begin{figure}[H]
   \centering
   \includegraphics{content/Grenzspannung.pdf}
