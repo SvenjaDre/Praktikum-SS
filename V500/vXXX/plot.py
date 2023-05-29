@@ -128,7 +128,7 @@ def Photo(dict):
     y=unp.nominal_values(np.array([dict["Gelb"][1],dict["Grün"][1],dict["Violett"][1]]))
     params, errors =linear_regression(x,y,"")
     x1=np.linspace(0,8e14,1000)
-    Plot2 (fig,ax,x1,x1*params[0]+params[1], filepath="content/Grenzspannung.pdf",label1="Ausgleichsgerade",xlim1=[0,7e14],ylim=[-1.15,2])
+    #Plot2 (fig,ax,x1,x1*params[0]+params[1], filepath="content/Grenzspannung.pdf",label1="Ausgleichsgerade",xlim1=[0,7e14],ylim=[-1.15,2])
 
 def Plot3 (x, y, xlabel="", ylabel="", filepath=""):
     fig, ax =plt.subplots()
@@ -184,6 +184,6 @@ wave={
 
 Photo(wave)
 
-Plot3(Daten20V[:,0],Daten20V[:,1],"U/V","I/pA","content/Allgelb.pdf")
+#Plot3(Daten20V[:,0],Daten20V[:,1],"U/V","I/pA","content/Allgelb.pdf")
 ""
 
