@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
 import scipy.constants as const
+from scipy.optimize import differential_evolution
 from scipy.optimize import fmin
 import numpy as np
 import math
@@ -112,12 +113,12 @@ def gemeinsamer_faktor(daten):
         a=0
         for i in range(np.size(daten)):
             for j in range(i,np.size(daten)):
-                a=a+np.abs(np.round(np.abs(daten[i]-daten[j] / x)) - np.abs(daten[i]-daten[j]) / x)**2
+                a=a+np.abs(np.round((np.abs(daten[i]-daten[j]) / x)) - (np.abs(daten[i]-daten[j])) / x)**2
         return a
 
     # Suche die reelle Zahl, die den Abstand zwischen den Datenpunkten und ihren gerundeten ganzzahligen Vielfachen minimiert
-    result = fmin(abstand, np.min(daten))
-    x=np.linspace(1e-19,np.min(daten),5000)
+    result=fmin(abstand,x0=np.min(daten))
+    x=np.linspace(1.2e-19,1.1*np.min(daten),1000)
     fig ,ax =plt.subplots(constrained_layout=True)
     y=np.empty(np.size(x))
     for i in range(np.size(x)):
@@ -131,7 +132,7 @@ def gemeinsamer_faktor(daten):
     ax.plot(x,y,".",markersize=1)
     ax.set_xlabel(r"potentielle Elementarladung $e/C$")
     ax.set_ylabel(r"Güte")
-    ax.set_xlim(1e-19,np.min(daten))
+    ax.set_xlim(1e-19,1.1*np.min(daten))
     plt.grid()
     plt.savefig("Guetefunktion.pdf")
     plt.clf()
@@ -186,7 +187,7 @@ def q0(vis, d, g, oel, U, msumm,mdiff, ddiff):
 def q(q0, r, dq0, dr):
     B = 6.17e-5*np.ones(16)
     p = 760*np.ones(16)
-    q = q0 * np.sqrt((1 + B / (p * r)) ** 3)
+    q = q0 * (1 + B / (p * r)) ** (-3/2)
     dq = np.sqrt(
         (q * dq0 / q0) ** 2 + (3 * q0 * B * dr / (2 * p * r**2)) ** 2 * (1 + B / (p * r))
     )
