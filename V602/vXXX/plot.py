@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from uncertainties import ufloat
-
+import uncertainties.unumpy as unp 
 ###### Bragg Bedingung ##############
 
 Daten = np.loadtxt('ÜBraggbedingung.csv', delimiter=',',skiprows=1)
@@ -26,7 +26,12 @@ daten = np.loadtxt('Ecu.csv', delimiter=',', skiprows=1)
 theta_2 = daten[:,0]
 I_2 = daten[:,1]
 
+talpha = 40.4
+tbeta = 44.8
+
 plt.plot(theta_2, I_2, 'x', label='Messwerte')
+plt.axvline(x=talpha, color='green', linestyle='-', label=r'$K_\beta$')
+plt.axvline(x=tbeta, color='red', linestyle='-', label=r'$K_\alpha$')
 plt.xlabel(r'$2 \theta /°$')
 plt.ylabel(r'$Imps /s$')
 plt.legend()
@@ -38,10 +43,15 @@ plt.clf()
 
 daten_2 = np.loadtxt('Detailspektrum.csv', delimiter=',', skiprows=1)
 
-theta_3 = daten_2[:,0]
+theta_3 = daten_2[:,0]  #Daten von winkel 34-37 rausgenommen zur besseren übersicht, sowie die Winkel von 49-50
 I_3 = daten_2[:,1]
-#Daten von winkel 34-37 rausgenommen zur besseren übersicht, sowie die Winkel von 49-50
+
+talpha = 40.4
+tbeta = 45
+
 plt.plot(theta_3, I_3, 'x', label='Messwerte')
+plt.axvline(x=talpha, color='green', linestyle='-', label=r'$K_\beta$')
+plt.axvline(x=tbeta, color='red', linestyle='-', label=r'$K_\alpha$')
 plt.xlabel(r'$2 \theta /°$')
 plt.ylabel(r'$Imps /s$')
 plt.legend()
@@ -49,7 +59,16 @@ plt.grid(True)
 plt.savefig('build/Detailsp.pdf')
 
 plt.clf()
+###### min Wellenlänge und max E #####
 
+ta = ufloat(22.5,0.1)
+tb = ufloat(20.2,0.1)
+
+def Bragg(t):
+    d = 201.4e-12
+    return 2*d*unp.sin(t)
+
+print('lamda für Kalpha: ',Bragg(ta*np.pi/180))
 ###### Absorptionsspektrum ######
 #### Brom Br ####
 

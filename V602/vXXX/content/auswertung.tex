@@ -2,57 +2,83 @@
 \label{sec:Auswertung}
 
 \subsection{Überprüfung der Bragg-Bedingung}
-
+Der Winkelbereich des Geiger-Müller-Zähhlrohrs und die gemessenene Intensität der Röntgenstrahlung werden in der Abbildung \ref{fig:Braggb}
+dargestellt.
+Das Maximum der Kurve wird in der Abbildung markiert. 
 \begin{figure}[H]
     \centering
     \includegraphics{build/Braggbed.pdf}
-    \label{fig:Braggb}
     \caption{Graphische Darstellung der gemessene Impulse in Abhängigkeit der Winkel.}
+    \label{fig:Braggb}
 \end{figure}
+\noindent Das Maximum liegt bei einem Winkel von
+\begin{equation*}
+    2 \theta_B = \qty{28.2}{°} \iff \theta = \qty{14.1 \pm 0.1}{°}.
+\end{equation*}
+Der Sollwinkel beträgt dabei $\theta_\text{B,theo} = \qty{14}{°}$.
+
 
 \subsection{Das Emissionsspektrum einer Cu-Röntgenröhre}
-
+Das gemessene Emissionsspektrum der Cu-Röntgenröhre wird in der Abbildung \ref{fig:ECu} dargestellt.
+Die $K_\alpha$ und $K_\beta$ Linie sind eingezeichnet.
+Der Bremsberg befindet sich vor der $K_\alpha$ Linie.
 \begin{figure}[H]
     \centering
     \includegraphics{build/ECu.pdf}
-    \label{fig:ECu}
     \caption{Emessionsspektrum einer Cu-Röntgenröhre.}
+    \label{fig:ECu}
 \end{figure}
-
+Für eine genaure Betrachtung der beiden Linien wird das Detailspektrum aufegzeichnet.
+Dieses wird in einem Kristallwinkelbereich von $\qty{17}{°}$ bis $\qty{25}{°}$ gemessen.
+Jedoch werden nur die Werte zur besseren Betrachtung der Winkelbereich zwischen $\qty{19}{°}$ und $\qty{24.4}{°}$ in der Abbildung \ref{fig:Detail} dargestellt.
 \begin{figure}[H]
     \centering
     \includegraphics{build/Detailsp.pdf}
-    \label{fig:Detail}
     \caption{Detailspektrum der $K_\alpha$ und $K_\beta$ Kennlinien.}
+    \label{fig:Detail}
 \end{figure}
-
+Es wird die minimale Wellenlänge bzw. maximale Energie bestimmt.
+Dabei werden die Grenzwinkel
+\begin{equation*}
+    \theta_\text{\alpha} = \qty{22.5}{°}
+\end{equation*} 
+und
+\begin{equation*}
+    \theta_\text{\beta} = \qty{20.2}{°}
+\end{equation*}
+betrachtet.
+Mithilfe der Gleichung \ref{eq:GlBragg} werden die minimalen Wellenlänge berechnet.
+Somit ergibt sich 
+\begin{equation*}
+    \lambda_\text{K \alpha}
+\end{equation*}
 \subsection{Das Absorptionsspektrum}
 
 \begin{figure}[H]
     \centering
     \includegraphics{build/AbsorberZn.pdf}
-    \label{fig:AbZn}
     \caption{Absorptionsspektrum des Zink Absorbers.}
+    \label{fig:AbZn}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics{build/AbsorberBr.pdf}
-    \label{fig:AbBr}
     \caption{Absorptionsspektrum des Brom Absorbers.}
+    \label{fig:AbBr}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics{build/AbsorberGa.pdf}
-    \label{fig:AbGa}
     \caption{Absorptionsspektrum des Gallium Absorbers}
+    \label{fig:AbGa}
 \end{figure}
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics{build/AbsorberSr.pdf}
-    \label{fig:AbSr}
+    \includegraphics{build/AbsorberSr.pdf}    
     \caption{Absorptionsspektrum des Strontium Absorbers.}
+    \label{fig:AbSr}
 \end{figure}
