@@ -28,30 +28,112 @@ Der Bremsberg befindet sich vor der $K_\alpha$ Linie.
     \caption{Emessionsspektrum einer Cu-Röntgenröhre.}
     \label{fig:ECu}
 \end{figure}
-Für eine genaure Betrachtung der beiden Linien wird das Detailspektrum aufegzeichnet.
+
+\noindent Für eine genaure Betrachtung der beiden Linien wird das Detailspektrum aufegzeichnet.
 Dieses wird in einem Kristallwinkelbereich von $\qty{17}{°}$ bis $\qty{25}{°}$ gemessen.
 Jedoch werden nur die Werte zur besseren Betrachtung der Winkelbereich zwischen $\qty{19}{°}$ und $\qty{24.4}{°}$ in der Abbildung \ref{fig:Detail} dargestellt.
+
 \begin{figure}[H]
     \centering
     \includegraphics{build/Detailsp.pdf}
     \caption{Detailspektrum der $K_\alpha$ und $K_\beta$ Kennlinien.}
     \label{fig:Detail}
 \end{figure}
-Es wird die minimale Wellenlänge bzw. maximale Energie bestimmt.
+
+\noindent Es wird die minimale Wellenlänge bzw. maximale Energie bestimmt.
 Dabei werden die Grenzwinkel
+
 \begin{equation*}
-    \theta_\text{\alpha} = \qty{22.5}{°}
+    \theta_{\text{K}\alpha} = \qty{22.5}{°}
 \end{equation*} 
 und
 \begin{equation*}
-    \theta_\text{\beta} = \qty{20.2}{°}
+    \theta_{\text{K}\beta}  = \qty{20.2}{°}
 \end{equation*}
 betrachtet.
-Mithilfe der Gleichung \ref{eq:GlBragg} werden die minimalen Wellenlänge berechnet.
-Somit ergibt sich 
+
+\noindent Mithilfe der Gleichung \ref{eq:GlBragg} werden die minimalen Wellenlänge berechnet.
+Mit den berechneten Wellenlänge wird die Energie über 
+\begin{equation}
+    E = \frac{h c}{\lambda}
+\end{equation}
+in eV berechnet.
+Die Ergebnisse werden in der Tabelle \ref{tab:Ergebnis1} dargestellt
+\begin{table}[H]
+    \centering
+    \caption{Berechnete Wellenlänge und dazugehörigen Energien.}
+    \label{tab:Ergebnis1}
+    \begin{tabular}{c c c}
+        \toprule
+        $ $  & $\lambda_\text{min} / 10^{-10}\unit{\meter}$ & $E_\text{max} /10^{3}\unit{\electronvolt}$\\
+        \midrule
+        $K_\alpha$ & 1.541 \pm 0.006 & 8.042 \pm 0.034 \\
+        $K_\beta $& 1.391 \pm 0.007 & 8.91 \pm 0.04 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\noindent Die Halbwertsbreite der $K_\alpha$ Linie wird durch die Winkel
 \begin{equation*}
-    \lambda_\text{K \alpha}
+    \theta_{\alpha,1} = \qty{22.25}{°}
 \end{equation*}
+und
+\begin{equation*}
+    \theta_{\alpha,2} = \qty{22.7}{°}
+\end{equation*}
+begrenzt.
+Die der $K_\beta$ Linie durch die Winkel
+\begin{equation*}
+    \theta_{\beta,1} = \qty{20}{°}
+\end{equation*}
+und
+\begin{equation*}
+    \theta_{\beta,2} = \qty{20.4}{°}.
+\end{equation*}
+Die Differenz der Winkel wird gebildet und die Energie berechnet.
+Das Auflösungsvermögen wird durch 
+\begin{equation}
+    A_K = \frac{E_K}{|\Delta E_K|}
+\end{equation}
+berechnet.
+Die berechnete Energien der Halbwertsbreiten und Auflösungsvermögen werden in der Tabelle \ref{tab:Ergebnis2}
+\begin{table}[H]
+    \centering
+    \caption{Berechnete Energie der Halbwertsbreite und das Auflösungsvermögen.}
+    \label{tab:Ergebnis2}
+    \begin{tabular}{c c c}
+        \toprule
+        $ $  & $ \Delta E /10^{2}\unit{\electronvolt} $ & $ A_K $\\
+        \midrule
+        $K_\alpha$ & 1.5 \pm 0.5  & 53 \pm 17 \\
+        $K_\beta $ & 1.7 \pm 0.6 & 53 \pm 19 \\
+        \bottomrule
+    \end{tabular}
+\end{table} 
+Zur Berechnung der Abschirmkonstantn $\sigma_1$, $\sigma_2$ und $\sigma_3$ werden die Formel 
+\begin{equation}
+    \sigma_1 = z-\sqrt{\frac{E_\text{abs}}{R_\infty}}
+\end{equation}
+\begin{equation}
+    \sigma_2 = z-2\cdot \sqrt{\frac{E_\text{abs}-E_\text{\alpha}}{R_\infty}}
+\end{equation}
+\begin{equation} 
+    \sigma_3 = z-3\cdot \sqrt{\frac{E_\text{abs}-E_\text{\beta}}{R_\infty}} 
+\end{equation} 
+verwendet.
+Dabei gilt für die Ordnungszahl für Kupfer $z = 29$, für $R_\infty = 13.6\unit{\electronvolt}$ und nach \cite{NIST} gilt $E_\text{abs}=8980.476\unit{\electronvolt}$.
+Damit ergibt sich 
+\begin{equation*}
+    \sigma_1 = 3.30 
+\end{equation*}
+\begin{equation*}
+    \sigma_2 = 12.38 \pm 0.30 
+\end{equation*}
+\begin{equation*}
+    \sigma_3 = 22.3 \pm 2.1
+\end{equation*}
+
+
 \subsection{Das Absorptionsspektrum}
 
 \begin{figure}[H]
