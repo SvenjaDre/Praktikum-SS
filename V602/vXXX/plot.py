@@ -85,30 +85,58 @@ ta_2 = ufloat(22.7,0.1)
 tb_1 = ufloat(20,0.1)
 tb_2 = ufloat(20.4,0.1)
 
-print('deltaE_kalpha = ',E(ta_2)-E(ta_1) )
-print('deltaE_kbeta = ',E(tb_2)-E(tb_1))
-
-print('A_Ka = ',E(ta)/abs((E(ta_2)-E(ta_1))))
-print('A_Kb = ',E(tb)/abs((E(tb_2)-E(tb_1))) )
+#print('deltaE_kalpha = ',E(ta_2)-E(ta_1) )
+#print('deltaE_kbeta = ',E(tb_2)-E(tb_1))
+#
+#print('A_Ka = ',E(ta)/abs((E(ta_2)-E(ta_1))))
+#print('A_Kb = ',E(tb)/abs((E(tb_2)-E(tb_1))) )
 
 E_abs = 8980.476
 R = 13.6
 
 s1 = 29 - unp.sqrt(E_abs/R)
-print("s1: " , s1)
+#print("s1: " , s1)
 s2 = 29 - 2* unp.sqrt((E_abs - E(ta))/R)
-print("s2: " , s2)
+#print("s2: " , s2)
 s3 = 29 - 3* unp.sqrt((E_abs - E(tb))/R)
-print("s3: " , s3)
+#print("s3: " , s3)
 ###### Absorptionsspektrum ######
 #### Brom Br ####
 
+print('----- Brom -------')
 datenBr = np.loadtxt('AbsorberBr.csv', delimiter=',', skiprows=1)
 
-theta = datenBr[:,0]
-I = datenBr[:,1]
+theta_br = datenBr[:,0]
+I_Br = datenBr[:,1]
 
-plt.plot(theta, I, 'x', label='Messwerte')
+I_maxBr = np.max(I_Br)
+I_minBr = np.min(I_Br)
+I_kBr = np.min(I_Br)+(np.max(I_Br)-np.min(I_Br))/2
+
+print('I_minBr = ',np.min(I_Br))
+print('I_maxBr = ',np.max(I_Br))
+print('I_kBr = ',I_kBr)
+
+def sigmoid(x, a, b):
+    return a*x+b 
+x_br = [26.4, 26.6]
+y_br = [20, 27]
+
+from scipy.optimize import curve_fit
+params, covariance_matrix = curve_fit(sigmoid, x_br, y_br)
+
+uncertainties = np.sqrt(np.diag(covariance_matrix))
+
+for name, value, uncertainty in zip('ab', params, uncertainties): 
+    print(f'{name} = {value:8.3f} ± {uncertainty:.3f}')
+
+t_br = (22.5 +904)/35
+t_br1 = ufloat(26.47, 0.05)
+print('t_br =', t_br)
+print('E_kBr = ', E(t_br1/2))
+plt.plot(np.linspace(26.4,26.6,50),sigmoid(np.linspace(26.4, 26.6, 50), 35, -904), color ='green', label=r'Hilfsgerade')
+plt.plot(t_br, I_kBr, 'rx', label=r'$I_K$')
+plt.plot(theta_br, I_Br, 'bx', label='Messwerte')
 plt.xlabel(r'$2 \theta /°$')
 plt.ylabel(r'$Imps /s$')
 plt.legend()
@@ -118,12 +146,39 @@ plt.savefig('build/AbsorberBr.pdf')
 plt.clf()
 
 ##### Gallium Ga #####
+print('--------- Gallium --------------')
 datenGa = np.loadtxt('AbsorberGa.csv', delimiter=',', skiprows=1)
 
 theta = datenGa[:,0]
-I = datenGa[:,1]
+I_ga = datenGa[:,1]
 
-plt.plot(theta, I, 'x', label='Messwerte')
+I_maxGa = np.max(I_ga)
+I_minGa = np.min(I_ga)
+I_kGa = np.min(I_ga)+(np.max(I_ga)-np.min(I_ga))/2
+
+print('I_minGa = ',np.min(I_ga))
+print('I_maxGa = ',np.max(I_ga))
+print('I_kGa = ',I_kGa)
+
+x_ga = [34.4, 34.5]
+y_ga = [50, 60 ]
+
+from scipy.optimize import curve_fit
+params, covariance_matrix = curve_fit(sigmoid, x_ga, y_ga)
+
+uncertainties = np.sqrt(np.diag(covariance_matrix))
+
+for name, value, uncertainty in zip('ab', params, uncertainties): 
+    print(f'{name} = {value:8.3f} ± {uncertainty:.3f}')
+
+t_ga = (54.5 + 3390)/100
+t_ga1 = ufloat(t_ga, 0.05)
+print('t_ga =', t_ga)
+print('E_kGa = ', E(t_ga1/2))
+
+plt.plot(np.linspace(34.4,34.5,50),sigmoid(np.linspace(34.4, 34.5, 50), 100, -3390), color ='green', label=r'Hilfsgerade')
+plt.plot(t_ga, I_kGa, 'rx', label=r'$I_K$')
+plt.plot(theta, I_ga, 'x', label='Messwerte')
 plt.xlabel(r'$2 \theta /°$')
 plt.ylabel(r'$Imps /s$')
 plt.legend()
@@ -133,13 +188,39 @@ plt.savefig('build/AbsorberGa.pdf')
 plt.clf()
 
 #### Zink Zn ######
-
+print('--------- Zink---------------')
 datenZn = np.loadtxt('AbsorberZn.csv', delimiter=',', skiprows=1)
 
 theta = datenZn[:,0]
-I = datenZn[:,1]
+I_Zn = datenZn[:,1]
 
-plt.plot(theta, I, 'x', label='Messwerte')
+I_maxZn = np.max(I_Zn)
+I_minZn = np.min(I_Zn)
+I_kZn = np.min(I_Zn)+(np.max(I_Zn)-np.min(I_Zn))/2
+
+print('I_minZn = ',np.min(I_Zn))
+print('I_maxZn = ',np.max(I_Zn))
+print('I_kZn = ',I_kZn)
+
+x_zn = [40, 40.2]
+y_zn = [358, 769 ]
+
+from scipy.optimize import curve_fit
+params, covariance_matrix = curve_fit(sigmoid, x_zn, y_zn)
+
+uncertainties = np.sqrt(np.diag(covariance_matrix))
+
+for name, value, uncertainty in zip('ab', params, uncertainties): 
+    print(f'{name} = {value:8.3f} ± {uncertainty:.3f}')
+
+t_zn = (471 + 81842)/2055
+t_zn1 = ufloat(t_ga, 0.05)
+print('t_zn =', t_zn)
+print('E_kZn = ', E(t_zn1/2))
+
+plt.plot(np.linspace(40,40.2,50),sigmoid(np.linspace(40, 40.2, 50), 2055, -81842), color ='green', label=r'Hilfsgerade')
+plt.plot(t_zn, I_kZn, 'rx', label=r'$I_K$')
+plt.plot(theta, I_Zn, 'x', label='Messwerte')
 plt.xlabel(r'$2 \theta /°$')
 plt.ylabel(r'$Imps /s$')
 plt.legend()
@@ -149,13 +230,39 @@ plt.savefig('build/AbsorberZn.pdf')
 plt.clf()
 
 #### Strontium Sr #####
-
+print('----. Strontium ----------')
 datenSr = np.loadtxt('AbsorberSr.csv', delimiter=',', skiprows=1)
 
 theta = datenSr[:,0]
-I = datenSr[:,1]
+I_Sr = datenSr[:,1]
 
-plt.plot(theta, I, 'x', label='Messwerte')
+I_maxSr = np.max(I_Sr)
+I_minSr = np.min(I_Sr)
+I_kSr = np.min(I_Sr)+(np.max(I_Sr)-np.min(I_Sr))/2
+
+print('I_minSr = ',np.min(I_Sr))
+print('I_maxSr = ',np.max(I_Sr))
+print('I_kSr = ',I_kSr)
+
+x_sr = [22, 22.2]
+y_sr = [65, 83 ]
+
+from scipy.optimize import curve_fit
+params, covariance_matrix = curve_fit(sigmoid, x_sr, y_sr)
+
+uncertainties = np.sqrt(np.diag(covariance_matrix))
+
+for name, value, uncertainty in zip('ab', params, uncertainties): 
+    print(f'{name} = {value:8.3f} ± {uncertainty:.3f}')
+
+t_sr = (72 + 1915)/90
+t_sr1 = ufloat(t_sr, 0.05)
+print('t_sr =', t_sr)
+print('E_kSr = ', E(t_sr1/2))
+
+plt.plot(np.linspace(22,22.2,50),sigmoid(np.linspace(22, 22.2, 50), 90, -1915), color ='green', label=r'Hilfsgerade')
+plt.plot(t_sr, I_kSr, 'rx', label=r'$I_K$')
+plt.plot(theta, I_Sr, 'x', label='Messwerte')
 plt.xlabel(r'$2 \theta /°$')
 plt.ylabel(r'$Imps /s$')
 plt.legend()
@@ -163,3 +270,5 @@ plt.grid(True)
 plt.savefig('build/AbsorberSr.pdf')
 
 plt.clf()
+
+#def sigmak(t):
