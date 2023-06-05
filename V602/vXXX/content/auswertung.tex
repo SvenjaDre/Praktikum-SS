@@ -56,6 +56,7 @@ betrachtet.
 Mit den berechneten Wellenlänge wird die Energie über 
 \begin{equation}
     E = \frac{h c}{\lambda}
+    \label{eq:e}
 \end{equation}
 in eV berechnet.
 Die Ergebnisse werden in der Tabelle \ref{tab:Ergebnis1} dargestellt
@@ -135,13 +136,62 @@ Damit ergibt sich
 
 
 \subsection{Das Absorptionsspektrum}
+Die gemessenen Intensitäteten gegen den Winkel aufgetragen.
+Zur Bestimmung der Absorptionsenergie wird zunächst die mittlere Intensität der K-Kante bestimmt, indem 
+\begin{equation}
+    I_K = I_\text{min} + \frac{I_\text{max}- I_\text{min}}{2}
+\end{equation}
 
+\noindent berechnet wird. 
+Der zugehörige Winkel $\theta_k$ wird bestimmt, indem eine Hilfsgerade dey Form $y = a * x+ b$ zwischen den beiden Punkte gezogen wird, welche der mittleren Intesität am nächsten liegen.
+Der Winkel wird berechnet mit 
+\begin{equation}
+    \theta_k = \frac{I_k - b}{a}.
+\end{equation}
+Die Absorptionsenergie wird über die Gleichung \ref{eq:e} berechnet.
+Aus den berechneten Energien werden die Abschirmkonstanten $\sigma_k$ über die Formel \ref{eq:Abschirm} bestimmt.
+
+
+\subsubsection{Zink}
+Es wurde der Winkelbereich von $\qty{18}{°}$ bis $\qty{21}{°}$ gemessen. 
+Die Ergebnisse sind in der Abbildung \ref{fig:AbZn} dargestellt.
 \begin{figure}[H]
     \centering
     \includegraphics{build/AbsorberZn.pdf}
     \caption{Absorptionsspektrum des Zink Absorbers.}
     \label{fig:AbZn}
 \end{figure}
+Die mittlere Intesität beträgt
+\begin{equation*}
+    I_K = 452.5 Imps/s.
+\end{equation*}
+Aus der Hilfsgerade ergeben sich die Parameter und der Winkel
+\begin{equation*}
+    a = \qty{2055}{Imps/s°} ,
+\end{equation*}
+\begin{equation*}
+    b = \qty{-81842}{Imps/s}
+\end{equation*}
+und
+\begin{equation*}
+    \theta_k = 20.02.
+\end{equation*}
+Aus diesen Werten lassen sich nun  Absorptionsenergie und Absorptionskonstante berechnen.
+\begin{equation*}
+    E_K = 8.986 \pm 0.011\unit{\kilo\electronvolt}
+\end{equation*}
+\begin{equation*}
+    \sigma_k = 4.506 \pm 0.016
+\end{equation*}
+
+
+\subsubsection{Brom}
+Das Absorptiosspektrum wird in der Abbildung \ref{fig:AbBr} dargestellt.
+Der Winkelbereich wurde zwischen $\qty{12.5}{°}$ und $\qty{14.6}{°}$ gemessen.
+Für die mittlere Intensität ergibt sich 
+\begin{equation*}
+    I_K = \qty{22.5}{Imps/s}.
+\end{equation*}
 
 \begin{figure}[H]
     \centering
@@ -149,18 +199,110 @@ Damit ergibt sich
     \caption{Absorptionsspektrum des Brom Absorbers.}
     \label{fig:AbBr}
 \end{figure}
+\noindent Für die Parameter der Gerade und der daraus berechnete Winkel ergibt sich 
+\begin{equation*}
+    a = \qty{35}{Imps/s°},
+\end{equation*}
+\begin{equation*}
+    b = \qty{-904}{Imps/s}
+\end{equation*}
+und
+\begin{equation*}
+    \theta_K = 13.23.
+\end{equation*}
+Für die Absorptionsenergie wird 
+\begin{equation*}
+    E_K = 13.442 \pm 0,025 \unit{\kilo\electronvolt}
+\end{equation*}
+und für die Abschirmkonstanten
+\begin{equation*}
+     \sigma_K = 3.881 \pm 0.029
+\end{equation*}
+berechnet.
 
+\subsubsection{Gallium}
+Für die Messung des Gallium Absorbers wurde der Winkelbereich von $\qty{16.5}{°}$ bis $\qty{18.2}{°}$ gemessen.
+Das Absorptionsspektrum wird in Abbildung \ref{fig:AbGa} gezeigt
 \begin{figure}[H]
     \centering
     \includegraphics{build/AbsorberGa.pdf}
     \caption{Absorptionsspektrum des Gallium Absorbers}
     \label{fig:AbGa}
 \end{figure}
+\noindent Für die mittlere Intensität ergibt sich
+\begin{equation*}
+    I_K = 54.5.
+\end{equation*}
+Aus der Geraden ergeben sich die Parameter
+\begin{equation*}
+    a = \qty{100}{Imps/s°}
+\end{equation*}
+und
+\begin{equation*}
+    b = \qty{-3390}{Imps/s.}
+\end{equation*}
+Damit ergibt sich für den Winkel 
+\begin{equation*}
+    \theta_K = \qty{17.22}{°},
+\end{equation*}
+und für die Absorptionsenergie und die Abschirmkonstanten
+\begin{equation*}
+     E_K = 10.394 \pm 0.015 \unit{\kilo\electronvolt},
+\end{equation*}
+\begin{equation*}
+    \sigma_K = 3.578 \pm 0.020
+\end{equation*}
 
-
+\subsubsection{Strontium}
+Das Absorptionsspektrum des Strontium Absorbers wird in der Abbildung \ref{fig:AbSr} dargestellt.
+Dabei wurde in einem Winkelbereich zwischen $\qty{10}{°}$ und $\qty{11.8}°{}$ gemessen
+Die mittlere Intensität liegt bei 
+\begin{equation*}
+    I_K = \qty{72}{Imps/s}.
+\end{equation*}
 \begin{figure}[H]
     \centering
     \includegraphics{build/AbsorberSr.pdf}    
     \caption{Absorptionsspektrum des Strontium Absorbers.}
     \label{fig:AbSr}
 \end{figure}
+Die Parameter der Geraden ergeben 
+\begin{equation*}
+    a = \qty{90}{Imps/s°}
+\end{equation*}
+und
+\begin{equation*}
+    b = \qty{-1915}{Imps/s}.
+\end{equation*}
+Somit ergibt sich für den Winkel
+\begin{equation*}
+    \theta_K = 11.03
+\end{equation*}
+und für die Absorptionsenergie, sowie die Abschirmkonstante
+\begin{equation*}
+   E_K = 16.07 \pm 0.04 \unit{\kilo\electronvolt}, 
+\end{equation*}
+\begin{equation*}
+    \sigma_K = 4.03 \pm 0.04
+\end{equation*}
+
+\subsubsection{Moseleysche Gesetzt}
+Die Absorptionsenergie $E_K$ ist laut dem Moseley-Gesetzt proportional zur Ordnungszahl $Z^2$.
+Zur Bestimmung der Rydbergkonstante wird die Ordnungszahl gegen $\sqrt{E_K}$ aufgetragen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{build/Moseley.pdf}
+    \caption{Ordnungszahl gegen $\sqrt{E_K}$ aufgetragen, zur Bestimmung der Rydbergkonstante.}
+    \label{fig:Mos}
+\end{figure}
+\noindent Anhand des Verlaufs der Daten, wird eine Ausgleichsgerade verwendet.
+Für die Parameter ergeben sich 
+\begin{align*}
+    a = 0.258 \pm 0.018 \, \frac{1}{\sqrt{eV}} \\
+    b = 5.202 \pm 1.965.
+\end{align*} 
+Aus der Steigung $a$ lässt sich die Rydbergkonstante berechnen über
+\begin{equation*}
+    R_\infty = \frac{1}{a^2} = (15.1 \pm 2.1) \unit{\electronvolt}
+\end{equation*}
