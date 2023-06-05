@@ -73,6 +73,12 @@ Die Ergebnisse werden in der Tabelle \ref{tab:Ergebnis1} dargestellt
         \bottomrule
     \end{tabular}
 \end{table}
+%\noindent Mithilfe der Formel \ref{eq:minWelle} lässt sich der Theoriewert für die minimale Wellenlänge berechnen.
+%Dabei beträgt die Spannung $U = 35 \unit{\kilo\volt}$.
+%\begin{equation*}
+%    \lambda_\text{min,Theo} = 0.999 \cdot 10^{-9} \unit{\meter}
+%\end{equation*}
+
 
 \noindent Die Halbwertsbreite der $K_\alpha$ Linie wird durch die Winkel
 \begin{equation*}
@@ -97,7 +103,7 @@ Das Auflösungsvermögen wird durch
     A_K = \frac{E_K}{|\Delta E_K|}
 \end{equation}
 berechnet.
-Die berechnete Energien der Halbwertsbreiten und Auflösungsvermögen werden in der Tabelle \ref{tab:Ergebnis2}
+Die berechnete Energien der Halbwertsbreiten und Auflösungsvermögen werden in der Tabelle \ref{tab:Ergebnis2} dargestellt.
 \begin{table}[H]
     \centering
     \caption{Berechnete Energie der Halbwertsbreite und das Auflösungsvermögen.}
@@ -136,20 +142,20 @@ Damit ergibt sich
 
 
 \subsection{Das Absorptionsspektrum}
-Die gemessenen Intensitäteten gegen den Winkel aufgetragen.
+Die gemessenen Intensitäteten werde gegen den Winkel aufgetragen.
 Zur Bestimmung der Absorptionsenergie wird zunächst die mittlere Intensität der K-Kante bestimmt, indem 
 \begin{equation}
     I_K = I_\text{min} + \frac{I_\text{max}- I_\text{min}}{2}
 \end{equation}
-
+berechnet wird.
 \noindent berechnet wird. 
-Der zugehörige Winkel $\theta_k$ wird bestimmt, indem eine Hilfsgerade dey Form $y = a * x+ b$ zwischen den beiden Punkte gezogen wird, welche der mittleren Intesität am nächsten liegen.
+Der zugehörige Winkel $\theta_k$ wird bestimmt, indem eine Hilfsgerade der Form $y = a * x + b$ zwischen den beiden Punkte gezogen wird, welche der mittleren Intesität am nächsten liegen.
 Der Winkel wird berechnet mit 
 \begin{equation}
     \theta_k = \frac{I_k - b}{a}.
 \end{equation}
 Die Absorptionsenergie wird über die Gleichung \ref{eq:e} berechnet.
-Aus den berechneten Energien werden die Abschirmkonstanten $\sigma_k$ über die Formel \ref{eq:Abschirm} bestimmt.
+Aus den berechneten Energien werden dann die Abschirmkonstanten $\sigma_k$ über die Formel \ref{eq:Abschirm} bestimmt.
 
 
 \subsubsection{Zink}
@@ -163,7 +169,7 @@ Die Ergebnisse sind in der Abbildung \ref{fig:AbZn} dargestellt.
 \end{figure}
 Die mittlere Intesität beträgt
 \begin{equation*}
-    I_K = 452.5 Imps/s.
+    I_K = \qty{452.5}{Imps/s}.
 \end{equation*}
 Aus der Hilfsgerade ergeben sich die Parameter und der Winkel
 \begin{equation*}
@@ -174,9 +180,9 @@ Aus der Hilfsgerade ergeben sich die Parameter und der Winkel
 \end{equation*}
 und
 \begin{equation*}
-    \theta_k = 20.02.
+    \theta_k = \qty{20.02}{°}.
 \end{equation*}
-Aus diesen Werten lassen sich nun  Absorptionsenergie und Absorptionskonstante berechnen.
+Aus diesen Werten lassen sich nun die Absorptionsenergie und die Absorptionskonstante berechnen.
 \begin{equation*}
     E_K = 8.986 \pm 0.011\unit{\kilo\electronvolt}
 \end{equation*}
@@ -199,7 +205,7 @@ Für die mittlere Intensität ergibt sich
     \caption{Absorptionsspektrum des Brom Absorbers.}
     \label{fig:AbBr}
 \end{figure}
-\noindent Für die Parameter der Gerade und der daraus berechnete Winkel ergibt sich 
+\noindent Für die Parameter der Geraden und der daraus berechnete Winkel ergibt sich 
 \begin{equation*}
     a = \qty{35}{Imps/s°},
 \end{equation*}
@@ -208,7 +214,7 @@ Für die mittlere Intensität ergibt sich
 \end{equation*}
 und
 \begin{equation*}
-    \theta_K = 13.23.
+    \theta_K = \qty{13.23}{°}.
 \end{equation*}
 Für die Absorptionsenergie wird 
 \begin{equation*}
@@ -255,7 +261,7 @@ und für die Absorptionsenergie und die Abschirmkonstanten
 
 \subsubsection{Strontium}
 Das Absorptionsspektrum des Strontium Absorbers wird in der Abbildung \ref{fig:AbSr} dargestellt.
-Dabei wurde in einem Winkelbereich zwischen $\qty{10}{°}$ und $\qty{11.8}°{}$ gemessen
+Dabei wurde in einem Winkelbereich zwischen $\qty{10}{°}$ und $\qty{11.8}{°}$ gemessen.
 Die mittlere Intensität liegt bei 
 \begin{equation*}
     I_K = \qty{72}{Imps/s}.
