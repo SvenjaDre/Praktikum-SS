@@ -155,7 +155,7 @@ def Vanadium(Daten,dt):
     Time,dT=Halbwertzeit(params[0],errors[0])
     print(f"Halbwertzeit von Vanadium:{Time:.3g} ± {dT:.3g}")
     ax.legend()
-    plt.savefig(f"content/Vanadium.pdf")
+    plt.savefig(f"build/Vanadium.pdf")
     plt.clf()    
 def Silber(Daten,dt,file,cut,high):
         x=np.arange(dt,(len(Daten)+1)*dt,dt)
@@ -177,7 +177,7 @@ def Silber(Daten,dt,file,cut,high):
         print(f"Halbwertzeit von Ag 108:{Time08:.3g} ± {dT08:.3g}")
         Time10,dT10=Halbwertzeit(params2[0],errors2[0])
         print(f"Halbwertzeit von Ag 110:{Time10:.3g} ± {dT10:.3g}")
-        ax.legend(fontsize="small")
+        ax.legend(fontsize="x-small")
         plt.savefig(file)
         plt.clf() 
 
@@ -206,12 +206,12 @@ array=np.array([
     np.column_stack((unp.nominal_values(nSi1N),unp.std_devs(nSi1N))),
     np.column_stack((unp.nominal_values(Si2N),unp.std_devs(Si2N)))
 ])
-exp2=array_to_latex_table_3d(array,"content/Tabelle2.tex")
+exp2=array_to_latex_table_3d(array,"build/Tabelle2.tex")
 
 
 Vanadium(VaN,tVan)
-Silber(Si1N,tS1,"content/Silber1.pdf",19,10)
-Silber(Si2N,tS2,"content/Silber2.pdf",24,13)
+Silber(Si1N,tS1,"build/Silber1.pdf",19,10)
+Silber(Si2N,tS2,"build/Silber2.pdf",24,13)
 
 
 
