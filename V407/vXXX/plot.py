@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from uncertainties import ufloat
-
+import uncertainties.unumpy as unp 
 Daten = np.loadtxt('senkr.csv', delimiter=',')
 daten = np.loadtxt('parallel.csv', delimiter=',')
 
@@ -82,6 +82,6 @@ plt.legend()
 
 plt.savefig('build/plot.pdf')
 
-brew = 70
-n = np.tan(brew*np.pi/180)
+brew = ufloat(70,1)
+n = unp.tan(brew*np.pi/180)    #
 print(n)
