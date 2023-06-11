@@ -1,6 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Im Verlauf des Versuchs sind vier verschiedene Messreihen zur Untersuchung der Halbwertzeit verschiedener Isotope.
+Im Verlauf des Versuchs sind vier verschiedene Messreihen zur Untersuchung der Halbwertzeit verschiedener Isotope aufgenommen worden.
 Die entsprechenden Messwerte sind in Tabelle \ref{tab:Mess1} und \ref{tab:Mess2} aufgelistet. 
 Die erste Spalte misst die Hintergrundaktivität, indem in 30 Sekunden Intervallen die Zerfallsanzahl detektiert wird.
 Die zweite Spalte stellt die gemessenen Zerfälle von Vanadium in 35 Sekunden Intervallen dar, während die dritte und
@@ -81,19 +81,19 @@ vierte Spalte den Zerfall der Silberisotope \isotope[108]{Ag} und \isotope[110]{
       \bottomrule
   \end{tabular}
 \end{table}
-\noindent Nun müssen zunächst der Fehler der gemessenen Zerfallsanzahl bestimmt werden. Dieser ergibt sich dieser nach der 
+\noindent Nun muss zunächst der Fehler der gemessenen Zerfallsanzahl bestimmt werden. Dieser ergibt sich nach der 
 Poissonverteilung zu $\sqrt{N}$, wobei $N$ die gemessene Anzahl an Zerfällen im entsprechenden Zeitintervall angibt.
 Nun müssen die gemessenen Zerfälle noch um die natürliche Hintergrundstrahlung bereinigt werden. Da diese mit der Messung des entsprechenden Isotopenzerfalls
-nichts zu tun hat, aber immer auftritt. Die Hintergrundaktivität ergibt sich aus der Summe aller Zerfälle $N_\text{gesamt}$ über alle Intervalle, geteilt durch die gesamte Messzeit$T_\text{gesamt}$.
+nichts zu tun hat, aber immer auftritt. Die Hintergrundaktivität ergibt sich aus der Summe aller Zerfälle $N_\text{gesamt}$ über alle Intervalle, geteilt durch die gesamte Messzeit $T_\text{gesamt}$.
 Damit ergibt sich 
 \begin{equation*}
   A=\frac{N_\text{geamt}}{T_\text{gesamt}}=\frac{N_\text{geamt}}{17\cdot \qty{30}{s}}=\frac{182}{\qty{510}{s}}=\qty{0.357}{\per\s}
 \end{equation*}
-Der Fehler der Aktivität ergibt sich über den Fehler der Zerfallsanzahl $dN_\text{gesamt}=\sqrt{N_\text{gesamt}}$ zu $dA=A\cdot \frac{dN_\text{gesamt}}{N_\text{gesamt}}=\qty{0.026}{\per\s}$.
+Der Fehler der Aktivität ergibt sich über den Fehler der Zerfallsanzahl $\Delta N_\text{gesamt}=\sqrt{N_\text{gesamt}}$ zu $\Delta A=A\cdot \frac{dN_\text{gesamt}}{N_\text{gesamt}}=\qty{0.026}{\per\s}$.
 Damit lässt sich die Hintergrundaktivität als $A_\text{Hint}=\qty{0.357(0.026)}{\per\s}$ angeben.
 Im Folgenden wird die Fehlerrechnung mit der Python Bibliothek Uncertainties \cite{uncertainties} durchgeführt.
 Wenn nun die Hintergrundaktivität von den Isotopenmessungen unter Berücksichtigung des Fehlers abgezogen wird,
-ergeben sich die Messwerte aus Tabelle \ref{tab:Korr1} und \ref{tab:Korr2}.
+ergeben sich die korrigierten Zerfallsverläufe aus Tabelle \ref{tab:Korr1} und \ref{tab:Korr2}.
 \begin{table}[H]
   \centering
   \caption{Korrigierte Zerfälle unter Berücksichtigung des Messfehlers und der Hintergrundaktivität.}
@@ -177,7 +177,7 @@ nach der Theorie ein linearer Zusammenhang
     \label{eq:linN}
 \end{equation}
 Für Vanadium ist diese Auswertung direkt mit Polyfit aus der Bibliothek Numpy \cite{numpy}
-durchführbar, wobei die Fehler der einzelnen Messpunkte als Gewichte der Form $1/d\ln{N}$ übergeben werden. Dadurch werden 
+durchführbar, wobei die Fehler der einzelnen Messpunkte als Gewichte der Form $1/\Delta \ln{N}$ übergeben werden. Dadurch werden 
 Messpunkte mit einem geringeren relativen Fehler mehr beachtet als welche, wo der relative Fehler von $N$ groß ist.
 Für Vanadium ergeben sich die Ausgleichskoeffizienten zu
 \begin{align*}
@@ -192,32 +192,171 @@ ab wie bei Vanadium. Der große Unterschied besteht darin, dass die Zerfälle ze
 Der Zerfall von \isotope [110]{Ag} läuft sehr schnell ab, weswegen erst der lang andauernde Zerfall von \isotope [108]{Ag}
 untersucht wird und dann ausgehend von der ermittelten zeitlichen Entwicklung
 des Zerfalls können dann die erwarteten Zerfälle von \isotope [108]{Ag} von den Datenpunkten
-abgezogen werden und so eine Ausgleichsrechnung mit den bereinigten Daten durchzuführen und die Halbwertzeiten des anderen Zerfalls 
+abgezogen werden und so eine Ausgleichsrechnung mit den bereinigten Daten durchzuführen, um die Halbwertzeiten des anderen Zerfalls 
 herauszufinden. Die um die Hintergrundstrahlung korrigierten Datenpunkte der 
-ersten Messung für Silber sind in Abbildung \ref{fig:Si1} dargestellt. Die Wahl des ersten Datenpunktes der zur Regression des Zerfalls von \isotope [108]{Ag}, sollte
+ersten Messung für Silber sind in Abbildung \ref{fig:Si1} dargestellt. Die Wahl des ersten Datenpunktes t* der zur Regression des Zerfalls von \isotope [108]{Ag}, sollte
 so gewählt werden, dass davon ausgegangen werden kann, dass der Zerfall des kurzlebigen Zerfalls bereits abgeklungen ist. Dieser Punkt ist in der Abbildung grün markiert.
 Die Lineare Ausgleichsrechnung ergibt dann
 \begin{align*}
-  \lambda_\text{\isotope[108]{Ag}}&=\qty{1.6(1.0)e-3}{\per\s}\\
-  \ln{N_0(1-e^{-\lambda \Delta t})}_\text{\isotope[108]{Ag}}&=\num{2.85(0.32)}\frac{1}{\ln{s}}.
+  \lambda_\text{\isotope[108]{Ag}}&=\qty{2.8(0.9)e-3}{\per\s}\\
+  \ln{N_0(1-e^{-\lambda \Delta t})}_\text{\isotope[108]{Ag}}&=\num{3.25(0.25)}\frac{1}{\ln{s}}.
 \end{align*}
-Als Halbwertzeit ergibt sich $T_\text{\isotope[108]{Ag}}=\qty{422(256)}{\second}$.
+Als Halbwertzeit ergibt sich $T_\text{\isotope[108]{Ag}}=\qty{249(76)}{\second}$.
+Nun werden die nach der Ausgleichsgerade zu erwarteten Zerfälle von den gesamten Silber Zerfällen abgezogen, in dem 
+die Werte der Ausgleichsgerade als Potenzen der Exponentialfunktion angesehen werden. Diese Werte können dann von den ursprünglichen
+Daten abgezogen werden und wieder logarithmiert werden.
+Also es gilt $N_\text{\isotope[110]{Ag}}(t)=N_\text{Ag}(t)-N_\text{\isotope[108]{Ag}}(t)$.
+Nun muss beachtet werden, dass der kurzlebige Zerfall schnell abklingt und dadurch nur wenige Datenpunkte 
+in die Ausgleichsrechnung mit einbezogen werden können. Richtlinie sollte sein, dass nur Punkte mit einer größeren 
+Zerfallsanzahl berücksichtigt werden als durch den langlebigen Zerfall vorhergesagt.
+Der letzte Datenpunkt $T_\text{max}$ wird als Lila Fehlerbalken markiert. Der erste Datenpunkt ist ebenfalls ausgenommen worden, da er stark vom Verlauf des Rests abweicht.
+Zusätzlich sollte ein weiteres Mal darauf geachtet werden, dass der Startpunkt der Ausgleichsrechnung in einem Bereich liegt, bei dem 
+die Ausgleichsgerade maximal Werte im Bereich $\ln{N}=0$ annimmt. Da ungefähr gleich viele Isotope Silber vorliegen, aber
+der Zerfall der kurzlebigen Isotope deutlich schneller passiert, müssen dementsprechend im Anfangsbereich deutlich mehr Kernzerfälle
+von \isotope [110]{Ag} detektiert werden, während später, besonders nach t*, der kurzlebige Zerfall von \isotope [108]{Ag}
+dominiert.
+Als Koeffizienten der Ausgleichsgerade des langlebigen Zerfalls ergeben sich
+\begin{align*}
+  \lambda_\text{\isotope[110]{Ag}}&=\qty{2.54(0.9)e-2}{\per\s}\\
+  \ln{N_0(1-e^{-\lambda \Delta t})}_\text{\isotope[110]{Ag}}&=\num{4.07(0.355)}\frac{1}{\ln{s}}.
+\end{align*}
+Damit liegt die Halbwertzeit des kurzlebigen Zerfalls bei $T_\text{\isotope[110]{Ag}}=\qty{27.3(9.42)}{\second}$.
+Die Zerfälle gemäß Ausgleichsrechnung sind in Tabelle \ref{tab:Nsi1}
+\begin{table}[H]
+  \centering
+  \caption{Die erwarteten Zerfälle nach Isotop.}
+  \label{tab:Nsi1}
+  \begin{tabular}{c c}
+      \toprule
+      {$N_\text{\isotope[108]{Ag}}$}&{$N_\text{\isotope[110]{Ag}}$}\\
+      \midrule
+      $25,14 \pm 6,28$ & $45,46 \pm 16,64$ \\
+      $24,45 \pm 6,11$ & $35,28 \pm 13,97$ \\
+      $23,78 \pm 5,96$ & $27,38 \pm 12,09$ \\
+      $23,13 \pm 5,82$ & $21,24 \pm 10,59$ \\
+      $22,49 \pm 5,69$ & $16,49 \pm 9,28$ \\
+      $21,87 \pm 5,57$ & $12,79 \pm 8,10$ \\
+      $21,27 \pm 5,46$ & $9,93 \pm 7,02$ \\
+      $20,69 \pm 5,35$ & $7,70 \pm 6,04$ \\
+      $20,12 \pm 5,25$ & $5,98 \pm 5,16$ \\
+      $19,57 \pm 5,16$ & $4,64 \pm 4,38$ \\
+      $19,03 \pm 5,07$ & $3,60 \pm 3,69$ \\
+      $18,50 \pm 4,99$ & $2,79 \pm 3,09$ \\
+      $18,00 \pm 4,92$ & $2,17 \pm 2,58$ \\
+      $17,50 \pm 4,84$ & $1,68 \pm 2,14$ \\
+      $17,02 \pm 4,77$ & $1,31 \pm 1,77$ \\
+      $16,55 \pm 4,71$ & $1,01 \pm 1,46$ \\
+      $16,10 \pm 4,65$ & $0,79 \pm 1,20$ \\
+      $15,65 \pm 4,59$ & $0,61 \pm 0,98$ \\
+      $15,22 \pm 4,53$ & $0,47 \pm 0,80$ \\
+      $14,81 \pm 4,48$ & $0,37 \pm 0,66$ \\
+      $14,40 \pm 4,43$ & $0,29 \pm 0,53$ \\
+      $14,00 \pm 4,38$ & $0,22 \pm 0,43$ \\
+      $13,62 \pm 4,33$ & $0,17 \pm 0,35$ \\
+      $13,24 \pm 4,28$ & $0,13 \pm 0,28$ \\
+      $12,88 \pm 4,23$ & $0,10 \pm 0,23$ \\
+      $12,52 \pm 4,19$ & $0,08 \pm 0,18$ \\
+      $12,18 \pm 4,14$ & $0,06 \pm 0,15$ \\
+      $11,85 \pm 4,10$ & $0,05 \pm 0,12$ \\
+      $11,52 \pm 4,05$ & $0,04 \pm 0,10$ \\
+      $11,20 \pm 4,01$ & $0,03 \pm 0,08$ \\
+      $10,90 \pm 3,97$ & $0,02 \pm 0,06$ \\
+      $10,60 \pm 3,93$ & $0,02 \pm 0,05$ \\
+      $10,30 \pm 3,88$ & $0,01 \pm 0,04$ \\
+      $10,02 \pm 3,84$ & $0,01 \pm 0,03$ \\
+      $9,75 \pm 3,80$ & $0,01 \pm 0,03$ \\
+      $9,48 \pm 3,76$ & $0,01 \pm 0,02$ \\
+      $9,22 \pm 3,72$ & $0 \pm 0,02$ \\
+      $8,96 \pm 3,68$ & $0 \pm 0,01$ \\
+      $8,72 \pm 3,63$ & $0 \pm 0,01$ \\
+      $8,48 \pm 3,59$ & $0 \pm 0,01$ \\
+      $8,24 \pm 3,55$ & $0 \pm 0,01$ \\
+      $8,02 \pm 3,51$ & $0 \pm 0,01$ \\
+      $7,80 \pm 3,47$ & $0 \pm 0$ \\
+      $7,58 \pm 3,43$ & $0 \pm 0$ \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+Die zweite Messung der Silber Isotope ist in Abbildung \ref{fig:Si2} ausgewertet worden.
+Bei der zweiten Messreihe treten einige Datenpunkte auf wo negative Zerfälle im Konfidenzintervall liegen.
+Diese Punkte bieten keine große Aussagekraft mehr, weswegen sie bie der Ausgleichsrechnung ignoriert werden.
+Das Vorgehen und die Darstellung entsprechen dem Verfahren bei der ersten Messung.
+Für den langlebigen Zerfall ergibt sich für die Ausgleichsgerade
+\begin{align*}
+  \lambda_\text{\isotope[108]{Ag}}&=\qty{3.8(1.2)e-3}{\per\s}\\
+  \ln{N_0(1-e^{-\lambda \Delta t})}_\text{\isotope[108]{Ag}}&=\num{3.13(0.33)}\frac{1}{\ln{s}}
+\end{align*}
+und für die Halbwertzeit $T_\text{\isotope[108]{Ag}}=\qty{184(60)}{\second}$.
+Der Regression des kurzlebigen Zerfalls ergibt
+\begin{align*}
+  \lambda_\text{\isotope[110]{Ag}}&=\qty{3.0(0.2)e-2}{\per\s}\\
+  \ln{N_0(1-e^{-\lambda \Delta t})}_\text{\isotope[110]{Ag}}&=\num{5.24(0.05)}\frac{1}{\ln{s}},
+\end{align*}
+wobei die Halbwertzeit dort bei $T_\text{\isotope[110]{Ag}}=\qty{23.1(1.19)}{\second}$ liegt.
+\begin{table}[H]
+  \centering
+  \caption{Die erwarteten Zerfälle nach Isotop..}
+  \label{tab:Nsi2}
+  \begin{tabular}{c c}
+      \toprule
+      {$N_\text{\isotope[108]{Ag}}$}&{$N_\text{\isotope[110]{Ag}}$}\\
+      \midrule
+      $22,28 \pm 7,41$ & $148,41 \pm 7,62$ \\
+      $21,62 \pm 7,20$ & $116,69 \pm 6,50$ \\
+      $20,97 \pm 7,00$ & $91,76 \pm 5,71$ \\
+      $20,35 \pm 6,81$ & $72,15 \pm 5,07$ \\
+      $19,74 \pm 6,64$ & $56,73 \pm 4,51$ \\
+      $19,16 \pm 6,47$ & $44,61 \pm 4,00$ \\
+      $18,59 \pm 6,31$ & $35,08 \pm 3,51$ \\
+      $18,03 \pm 6,16$ & $27,58 \pm 3,06$ \\
+      $17,50 \pm 6,02$ & $21,69 \pm 2,65$ \\
+      $16,98 \pm 5,89$ & $17,05 \pm 2,28$ \\
+      $16,47 \pm 5,76$ & $13,41 \pm 1,95$ \\
+      $15,98 \pm 5,64$ & $10,54 \pm 1,66$ \\
+      $15,51 \pm 5,53$ & $8,29 \pm 1,40$ \\
+      $15,05 \pm 5,42$ & $6,52 \pm 1,18$ \\
+      $14,60 \pm 5,31$ & $5,13 \pm 0,99$ \\
+      $14,17 \pm 5,21$ & $4,03 \pm 0,83$ \\
+      $13,74 \pm 5,12$ & $3,17 \pm 0,69$ \\
+      $13,34 \pm 5,02$ & $2,49 \pm 0,57$ \\
+      $12,94 \pm 4,94$ & $1,96 \pm 0,47$ \\
+      $12,55 \pm 4,85$ & $1,54 \pm 0,39$ \\
+      $12,18 \pm 4,77$ & $1,21 \pm 0,32$ \\
+      $11,82 \pm 4,69$ & $0,95 \pm 0,26$ \\
+      $11,47 \pm 4,61$ & $0,75 \pm 0,22$ \\
+      $11,13 \pm 4,54$ & $0,59 \pm 0,18$ \\
+      $10,80 \pm 4,47$ & $0,46 \pm 0,15$ \\
+      $10,47 \pm 4,39$ & $0,36 \pm 0,12$ \\
+      $10,16 \pm 4,33$ & $0,29 \pm 0,10$ \\
+      $9,86 \pm 4,26$ & $0,23 \pm 0,08$ \\
+      $9,57 \pm 4,19$ & $0,18 \pm 0,06$ \\
+      $9,28 \pm 4,13$ & $0,14 \pm 0,05$ \\
+      $9,01 \pm 4,06$ & $0,11 \pm 0,04$ \\
+      $8,74 \pm 4,00$ & $0,09 \pm 0,03$ \\
+      $8,48 \pm 3,94$ & $0,07 \pm 0,03$ \\
+      $8,23 \pm 3,88$ & $0,05 \pm 0,02$ \\
+      $7,98 \pm 3,82$ & $0,04 \pm 0,02$ \\
+      $7,75 \pm 3,76$ & $0,03 \pm 0,01$ \\
+      $7,52 \pm 3,70$ & $0,03 \pm 0,01$ \\
+      $7,29 \pm 3,65$ & $0,02 \pm 0,01$ \\
+      $7,07 \pm 3,59$ & $0,02 \pm 0,01$ \\
+      $6,86 \pm 3,54$ & $0,01 \pm 0,01$ \\
+      $6,66 \pm 3,48$ & $0,01 \pm 0,01$ \\
+      $6,46 \pm 3,43$ & $0,01 \pm 0$ \\
+      $6,27 \pm 3,37$ & $0,01 \pm 0$ \\
+      $6,08 \pm 3,32$ & $0 \pm 0$ \\
+      $5,90 \pm 3,27$ & $0 \pm 0$ \\
+      $5,73 \pm 3,22$ & $0 \pm 0$ \\
+      $5,56 \pm 3,16$ & $0 \pm 0$ \\
+      $5,39 \pm 3,11$ & $0 \pm 0$ \\
+      $5,23 \pm 3,06$ & $0 \pm 0$ \\
+      $5,08 \pm 3,01$ & $0 \pm 0$ \\
+      $4,93 \pm 2,96$ & $0 \pm 0$ \\
+      $4,78 \pm 2,92$ & $0 \pm 0$ \\      
+      \bottomrule
+  \end{tabular}
+\end{table}
 
-\begin{align*}
-  \lambda_\text{\isotope[110]{Ag}}&=\qty{3.3(0.6)e-2}{\per\s}\\
-  \ln{N_0(1-e^{-\lambda \Delta t})}_\text{\isotope[110]{Ag}}&=\num{2.91(0.259)}\frac{1}{\ln{s}}.
-\end{align*}
-$T_\text{\isotope[110]{Ag}}=\qty{20.9(3.91)}{\second}$
-\begin{align*}
-  \lambda_\text{\isotope[108]{Ag}}&=\qty{4.4(1.3)e-3}{\per\s}\\
-  \ln{N_0(1-e^{-\lambda \Delta t})}_\text{\isotope[108]{Ag}}&=\num{3.33(0.35)}\frac{1}{\ln{s}}.
-\end{align*}
-$T_\text{\isotope[108]{Ag}}=\qty{156(44)}{\second}$
-\begin{align*}
-  \lambda_\text{\isotope[110]{Ag}}&=\qty{1.8(0.1)e-2}{\per\s}\\
-  \ln{N_0(1-e^{-\lambda \Delta t})}_\text{\isotope[110]{Ag}}&=\num{1.93(0.05)}\frac{1}{\ln{s}}.
-\end{align*}
-$T_\text{\isotope[110]{Ag}}=\qty{38.9(2.41)}{\second}$
 \begin{figure}[H]
   \centering
   \includegraphics{build/Vanadium.pdf}
