@@ -80,11 +80,10 @@ def array_to_latex_table_3d(array, filename):
             f.write(" \\\\\n")
     return minexponent
 
-def Plot1 (high,x, y, xlabel="", y1label="",label="", filepath=""):
+def Plot1 (high,x, y, xlabel="", y1label="",label="", filepath="",mask=[]):
     fig, ax1 =plt.subplots()
     fig.tight_layout()
     fig.subplots_adjust(right=0.8)
-    mask=(unp.nominal_values(y)-unp.std_devs(y))>0
     ax1.errorbar(x[mask],unp.nominal_values(y[mask]),yerr=unp.std_devs(y[mask]),xerr=None,color="r",fmt=".",label=label)
     ax1.errorbar(x[~mask],unp.nominal_values(y[~mask]),yerr=unp.std_devs(y[~mask]),xerr=None,color="k",fmt=".",label="Messpunkte ohne Aussagekraft")
     if high:ax1.errorbar(x[high-1],unp.nominal_values(y[high-1]),yerr=unp.std_devs(y[high-1]),xerr=None,color="g",fmt=".",label="Beginn der linearen Regression des langen Zerfalls")
@@ -148,7 +147,7 @@ def Nullmessung(daten,dt):
 def Vanadium(Daten,dt):
     x=np.arange(dt,(len(Daten)+1)*dt,dt)
     y=unp.log(Daten)
-    fig,ax,mask=Plot1(0,x,y,r"t/s",r"$\ln{N}$","Datenpunkte",f"content/Vanadium.pdf")
+    fig,ax,mask=Plot1(0,x,y,r"t/s",r"$\ln{N}$","Datenpunkte",f"content/Vanadium.pdf",Daten>0)
     params,errors=linear_regression(x,y,"Vanadium")
     x1=np.linspace(-1,max(x)+1,500)
     Plot2(fig,ax,x1,x1*params[0]+params[1],"Ausgleichsgerade",[0,max(x)+5],[0,max(unp.nominal_values(y))+0.5],None)
@@ -157,29 +156,39 @@ def Vanadium(Daten,dt):
     ax.legend()
     plt.savefig(f"build/Vanadium.pdf")
     plt.clf()    
-def Silber(Daten,dt,file,cut,high):
+def Silber(Daten,dt,file,cut,mind,high,table):
         x=np.arange(dt,(len(Daten)+1)*dt,dt)
         y=unp.log(Daten)
-        fig,ax,mask=Plot1(cut,x,y,r"t/s",r"$\log{N}$","Datenpunkte",file)
+        fig,ax,mask=Plot1(cut,x,y,r"t/s",r"$\log{N}$","Datenpunkte",file,(unp.nominal_values(Daten)-unp.std_devs(Daten))>0)
         mask1=mask[cut:]
         xx1=x[cut:]
         yy1=y[cut:]
         params1,errors1=linear_regression(xx1[mask1],yy1[mask1],"Silber Ag108")
-        newy=y-x*params1[0]-params1[1]
-        xx2=x[:high+1]
-        yy2=newy[:high+1]
-        params2,errors2=linear_regression(xx2,yy2,"Silber Ag110")
         x1=np.linspace(-1,max(x)+5,500)
+        Nlang=np.exp(x1*params1[0]+params1[1])
+       
+        p1=unp.uarray(params1,errors1)
+        Nl=unp.exp(x*p1[0]+p1[1])
+        newy=unp.log(Daten[mind:high]-Nl[mind:high])
+        xx2=x[mind:high]
+        params2,errors2=linear_regression(xx2,newy,"Silber Ag110")
+        p2=unp.uarray(params2,errors2)
+        Nk=unp.exp(x*p2[0]+p2[1])
+        Nkurz=np.exp(x1*params2[0]+params2[1])
         ax.errorbar(x[high-1],unp.nominal_values(y[high-1]),yerr=unp.std_devs(y[high-1]),xerr=None,color="purple",fmt=".",label="Tmax")
         Plot2(fig,ax,x1,x1*params1[0]+params1[1],"Ausgleichsgerade Ag108",[0,max(x)+0.5],[0,max(unp.nominal_values(y))+0.5],"skyblue")
-        Plot2(fig,ax,x1,x1*params2[0]+params2[1]+params1[1],"Ausgleichsgerade Ag110",[0,max(x)+0.5],[0,max(unp.nominal_values(y))+0.5],"steelblue")
+        Plot2(fig,ax,x1,x1*params2[0]+params2[1],"Ausgleichsgerade Ag110",[0,max(x)+0.5],[0,max(unp.nominal_values(y))+0.5],"steelblue")
         Time08,dT08=Halbwertzeit(params1[0],errors1[0])
         print(f"Halbwertzeit von Ag 108:{Time08:.3g} ± {dT08:.3g}")
         Time10,dT10=Halbwertzeit(params2[0],errors2[0])
         print(f"Halbwertzeit von Ag 110:{Time10:.3g} ± {dT10:.3g}")
+        y2=np.log(Nkurz+Nlang)
+        Plot2(fig,ax,x1,y2,"Summenkurve",[0,max(x)+0.5],[0,max(unp.nominal_values(y))+0.5],"darkblue")
         ax.legend(fontsize="x-small")
+
+        exp=array_to_latex_table_3d(np.array([np.column_stack((unp.nominal_values(Nl),unp.std_devs(Nl))),np.column_stack((unp.nominal_values(Nk),unp.std_devs(Nk)))]), table)
         plt.savefig(file)
-        plt.clf() 
+        plt.clf()
 
 
 Zerfälle=Data("content/V702.CSV")
@@ -210,8 +219,8 @@ exp2=array_to_latex_table_3d(array,"build/Tabelle2.tex")
 
 
 Vanadium(VaN,tVan)
-Silber(Si1N,tS1,"build/Silber1.pdf",19,10)
-Silber(Si2N,tS2,"build/Silber2.pdf",24,13)
+Silber(Si1N,tS1,"build/Silber1.pdf",16,1,9,"content/Tabelle3.tex")
+Silber(Si2N,tS2,"build/Silber2.pdf",22,0,13,"content/Tabelle4.tex")
 
 
 
