@@ -1,2 +1,36 @@
 \section{Diskussion}
+Für eine sinnvolle Untersuchung des Zerfallsverhalten von Isotopen muss am
+Ort des Versuchs die Hintergrundaktivität bestimmt werden. Diese ergibt sich zu 
+$A_\text{Hint}=\qty{0.357(0.026)}{\per\s}$. Damit ist auch die geforderte maximale Unschärfe von 
+10\% gegeben. Die Halbwertzeit von Vanadium ist experimentell zu $T_V=\qty{224(7)}{\second}$ bestimmt worden. Der Theoriewert weicht mit
+$T_V=\qty{225}{\second}$ \cite{V52} um deutlich weniger als der angegebene Fehler und um weniger als 1\% von dem experimentell ermittelten ab. Für 
+eine genauere Untersuchung müsste die Überbrückungszeit zwischen Aktivierung und Messung reduziert werden und mehrere Messreihen miteinander
+verglichen werden. Der Literaturwert des langlebigen Isotops \isotope[108]{Ag} ist mit
+$T_V=\qty{142}{\second}$ und der des kurzlebigen Isotops \isotope[110]{Ag} mit  $T_V=\qty{24.6}{\second}$ angegeben \cite{Ag108},\cite{Ag110}.
+Nun wird zunächst der langlebige Zerfall betrachtet. In der ersten Messung wird die Halbwertszeit $T_\text{\isotope[108]{Ag}}=\qty{249(76)}{\second} $
+und in der zweiten $T_\text{\isotope[108]{Ag}}=\qty{184(59)}{\second} $ gemessen. Was dabei auffällt, ist, dass 
+beide Werte deutlich größer sind als der theoretisch vorhergesagte, wobei der Theoriewert in der zweiten Messung noch in der Fehlerbreite liegt. 
+Dies ist allerdings nur dadurch bedingt, dass der sich aus der Ausgleichsrechnung ergebenden Fehler bei beiden Messungen sehr groß ist.
+Dies hat hauptsächlich statistische Ursprünge. Da der Fehler sich aus der Wurzel der Zerfälle ergibt, werden die relativen Fehler, die 
+in der logarithmischen Darstellung relevant sind, bei kleiner werdenden detektierten Zerfällen immer größer. Also die Messwerte streuen deutlich mehr.
+Für die Bestimmung der Ausgleichsgerade werden aber nur die Messwerte berücksichtigt bei denen 
+der kurzlebige keinen Einfluss mehr hat, wodurch die für die Ausgleichsrechnung herrangezogenen Werte 
+keine allzu große Aussagekraft mehr besitzen. Daher eine gute Lösung das Experiment aussagekräftiger zu machen, wäre einfach eine massereichere 
+Probe zu nehmen. Dadurch würden auch bei größeren Zeiten noch aussagekräftige Datenpunkte genommen werden. 
+Als Resultat des kurzlebigen Isotops ergeben sich Halbwertszeiten von $T_\text{\isotope[110]{Ag}}=\qty{27.3(9.42)}{\second}$ und 
+$T_\text{\isotope[110]{Ag}}=\qty{23.1(1.19)}{\second}$. Die Literaturwert liegt in der Fehlerbreite der ersten Messung. Generell ist der relative Fehler auch geringer. 
+Die erste Messung weicht um 11\% und die zweite um 6\% vom Literaturwert ab. Dabei ist natürlich zu beachten, dass 
+beide Halbwertszeiten aus fehlerhaft korrigierten Daten gewonnen worden ist. Es werden ja die vermuteten Zerfälle des langlebigen Zerfalls zunächst abgezogen.
+Außerdem hat sich die Isotopenanzahl vermutlich schon zwischen der Entnahme und dem Messbeginn einmal halbiert, weswegen der kurzlebige Zerfall nur sehr kurzzeitig messbar
+ist. Da zwei verschiedene Messreihen genommen worden sind um die gleiche physikalische Größe zu bestimmen bietet es sich an einen gewichteten Mittelwert zu bilden.
+\begin{equation}
+    T_\text{110,Mittel}=\frac{\frac{1}{\Delta T_\text{110,1}}^2\cdot T_\text{110,1}+\frac{1}{\Delta T_\text{110,2}}^2\cdot T_\text{110,2}}{\frac{1}{\Delta T_\text{110,1}}^2+\frac{1}{\Delta T_\text{110,1}}^2}
+    =\frac{\frac{1}{\qty{9.42}{\second}}^2\cdot \qty{27.3}{\second}+\frac{1}{\qty{1.19}{\second}}^2\cdot \qty{23.1}{\second}}{\frac{1}{\qty{9.42}{\second}}^2+\frac{1}{\qty{1.19}{\second}}^2}=\qty{23.2}{\second}
+\end{equation}
+Der neue Fehler liegt dann bei
+\begin{equation}
+    \Delta T = \frac{\Delta T_\text{110,1} \cdot \Delta T_\text{110,2} }{\sqrt{\Delta T_\text{110,1}^2+\Delta T_\text{110,2}^2}}
+    =\frac{\qty{9.42}{\second}\cdot \qty{1.19}{\second}}{\sqrt{(\qty{9.42}{\second})^2+(\qty{1.19}{\second})^2}}=\qty{1.18}{\second}
+\end{equation}
+Da die erste Messreihe keine wirklich genaue Aussage über die Halbwertzeit gibt, ist die Halbwertzeit auch nach Verrechnung kaum unterschiedlich zu dem Ergebnis aus Messung 2.
 \label{sec:Diskussion}
