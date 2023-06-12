@@ -2,7 +2,7 @@
 \label{sec:Auswertung}
 
 \subsection{Überprüfung der Bragg-Bedingung}
-Der Winkelbereich des Geiger-Müller-Zähhlrohrs und die gemessenene Intensität der Röntgenstrahlung werden in der Abbildung \ref{fig:Braggb}
+Der Winkelbereich des Geiger-Müller-Zähhlrohrs und die gemessenene Intensität der Röntgenstrahlung aus der Tabelle \ref{tab:1} werden in der Abbildung \ref{fig:Braggb}
 dargestellt.
 Das Maximum der Kurve wird in der Abbildung markiert. 
 \begin{figure}[H]
@@ -19,7 +19,7 @@ Der Sollwinkel beträgt dabei $\theta_\text{B,theo} = \qty{14}{°}$.
 
 
 \subsection{Das Emissionsspektrum einer Cu-Röntgenröhre}
-Das gemessene Emissionsspektrum der Cu-Röntgenröhre wird in der Abbildung \ref{fig:ECu} dargestellt.
+Das gemessene Emissionsspektrum der Cu-Röntgenröhre aus der Tabelle \ref{tab:2} wird in der Abbildung \ref{fig:ECu} dargestellt.
 Die $K_\alpha$ und $K_\beta$ Linie sind eingezeichnet.
 Der Bremsberg befindet sich vor der $K_\alpha$ Linie.
 \begin{figure}[H]
@@ -31,6 +31,7 @@ Der Bremsberg befindet sich vor der $K_\alpha$ Linie.
 
 \noindent Für eine genaure Betrachtung der beiden Linien wird das Detailspektrum aufegzeichnet.
 Dieses wird in einem Kristallwinkelbereich von $\qty{17}{°}$ bis $\qty{25}{°}$ gemessen.
+Die Werte sind in det Tabelle \ref{tab:3}zu finden.
 Jedoch werden nur die Werte zur besseren Betrachtung der Winkelbereich zwischen $\qty{19}{°}$ und $\qty{24.4}{°}$ in der Abbildung \ref{fig:Detail} dargestellt.
 
 \begin{figure}[H]
@@ -73,12 +74,19 @@ Die Ergebnisse werden in der Tabelle \ref{tab:Ergebnis1} dargestellt
         \bottomrule
     \end{tabular}
 \end{table}
-%\noindent Mithilfe der Formel \ref{eq:minWelle} lässt sich der Theoriewert für die minimale Wellenlänge berechnen.
-%Dabei beträgt die Spannung $U = 35 \unit{\kilo\volt}$.
-%\begin{equation*}
-%    \lambda_\text{min,Theo} = 0.999 \cdot 10^{-9} \unit{\meter}
-%\end{equation*}
-
+\noindent Mithilfe der Formel \ref{eq:minWelle} lässt sich der Theoriewert für die minimale Wellenlänge berechnen.
+Dabei beträgt die Spannung $U = 35 \unit{\kilo\volt}$.
+\begin{equation*}
+    \lambda_{min,Theo} = 3.40 \cdot 10^{-11} \unit{\meter}
+\end{equation*}
+Die theoretische maximale Energie ist nach \cite{Emax} für die $K_\alpha$-Linie
+\begin{equation*}
+    E_{K_\alpha,Theo} = \qty{8.047}{keV}
+\end{equation*}
+und für die $K_\beta$-Linie
+\begin{equation*}
+    E_{K_\beta,Theo} = \qty{8.905}{keV}.
+\end{equation*}
 
 \noindent Die Halbwertsbreite der $K_\alpha$ Linie wird durch die Winkel
 \begin{equation*}
@@ -160,7 +168,7 @@ Aus den berechneten Energien werden dann die Abschirmkonstanten $\sigma_k$ über
 
 \subsubsection{Zink}
 Es wurde der Winkelbereich von $\qty{18}{°}$ bis $\qty{21}{°}$ gemessen. 
-Die Ergebnisse sind in der Abbildung \ref{fig:AbZn} dargestellt.
+Die Ergebnisse aus der Tabelle \ref{tab:4} sind in der Abbildung \ref{fig:AbZn} dargestellt.
 \begin{figure}[H]
     \centering
     \includegraphics{build/AbsorberZn.pdf}
@@ -192,7 +200,7 @@ Aus diesen Werten lassen sich nun die Absorptionsenergie und die Absorptionskons
 
 
 \subsubsection{Brom}
-Das Absorptiosspektrum wird in der Abbildung \ref{fig:AbBr} dargestellt.
+Das gemessene Absorptiosspektrum aus der Tabelle \ref{tab:5} wird in der Abbildung \ref{fig:AbBr} dargestellt.
 Der Winkelbereich wurde zwischen $\qty{12.5}{°}$ und $\qty{14.6}{°}$ gemessen.
 Für die mittlere Intensität ergibt sich 
 \begin{equation*}
@@ -228,7 +236,8 @@ berechnet.
 
 \subsubsection{Gallium}
 Für die Messung des Gallium Absorbers wurde der Winkelbereich von $\qty{16.5}{°}$ bis $\qty{18.2}{°}$ gemessen.
-Das Absorptionsspektrum wird in Abbildung \ref{fig:AbGa} gezeigt
+Die gemessene Werte werden in der Tbaelle \ref{tab:6} dargestellt.
+Das Absorptionsspektrum wird in Abbildung \ref{fig:AbGa} gezeigt.
 \begin{figure}[H]
     \centering
     \includegraphics{build/AbsorberGa.pdf}
@@ -260,7 +269,7 @@ und für die Absorptionsenergie und die Abschirmkonstanten
 \end{equation*}
 
 \subsubsection{Strontium}
-Das Absorptionsspektrum des Strontium Absorbers wird in der Abbildung \ref{fig:AbSr} dargestellt.
+Das Absorptionsspektrum des Strontium Absorbers aus der Tabelle \ref{tab:7} wird in der Abbildung \ref{fig:AbSr} dargestellt.
 Dabei wurde in einem Winkelbereich zwischen $\qty{10}{°}$ und $\qty{11.8}{°}$ gemessen.
 Die mittlere Intensität liegt bei 
 \begin{equation*}
