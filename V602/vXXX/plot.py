@@ -60,7 +60,7 @@ plt.savefig('build/Detailsp.pdf')
 
 plt.clf()
 ###### min Wellenlänge und max E #####
-
+tmin = ufloat(4.0, 0.1)
 ta = ufloat(22.5,0.1)
 tb = ufloat(20.2,0.1)
 h = 6.626e-34
@@ -76,6 +76,7 @@ def Bragg(t):
 
 def E(t):
     return h*c/(2*d*unp.sin(t*np.pi/180)*e_0)
+    
 
 #print('E_kalpha = ',E(ta) )
 #print('E_kbeta = ',E(tb) )
