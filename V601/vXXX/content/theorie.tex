@@ -82,6 +82,27 @@ Damit ergibt sich die Wellenlänge des Lichts in Abhängigkeit des Anregungspote
 \end{figure}
 
 \subsection{Einfluss des Kontaktpotentials}
+Die angelegte Beschleunigungsspannung zwischen beiden Elektroden entspricht nicht direkt 
+dem realen Beschleunigungspotential. Da der Glühdraht eine möglichst hohe Elektronenemissionsrate besitzen soll, ist 
+ein Material gewählt worden mit einer deutlich geringeren Austrittsarbeit $\Phi_\text{G}$ als an der Beschleunigungselektrode $\Phi_\text{B}$.
+Die entsprechenden Verhältnisse sind in Abbildung \ref{fig:KontaktU} abgebildet. Der entscheidende 
+Einfluss auf die Messung besteht darin, dass das Beschleunigungspotential $U_\text{B}$ um
+die Differenz der Austrittsarbeit, dem sogenannten Kontaktpotential, reduziert ist.
+Das Kontaktpotential ergibt sich dann durch 
+\begin{equation}
+    K=\frac{\Phi_\text{B}-\Phi_\text{G}}{e_0}.
+    \label{eq:Kontakt}
+\end{equation}
+Die effektiv wirkende Spannung ist dann
+\begin{equation}
+    U_\text{B,eff}=U_\text{B}-K.
+\end{equation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.8]{content/Potentialverhältnisse.png}
+    \caption{Potentialverhältnisse zwischen Glühkathode und Beschleunigungselektrode \cite{sample}.}
+    \label{fig:KontaktU}
+\end{figure}
 \subsection{Einfluss des Energie-Spektrums der Elektronen}
 \subsection{Einfluss des Dampfdruckes}
 \subsection{Aufbau der Hg-Elektronenhülle}
