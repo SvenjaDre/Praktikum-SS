@@ -5,7 +5,30 @@
 
 Um den Dampfdruck $p_\text{sät}$ zu berechnen wird die Formel \ref{} verwendet.
 Für die Berechnung der mittleren freien Wellenlänge $\bar{w}$ wird die Formel \ref{} benutzt.
-
+Die berechneten Werte werden in der Tabelle \ref{tab:puw} dargestellt.
+Damit eine ausreichende Stoßwahrscheinlichkeit gegeben ist, sollte das Verhältnis zwischen der mittleren freien Wellenlänge un dem Abstand $a$ zwischen 
+Beschleunigunskathodde- und anode, zwischen 1000 und 4000 liegen.
+Das Verhältnis wird ebenfalls in der Tabelle \ref{tab:puw} dargestellt.
+Dabei beträgt der Abstand $a = \qty{1}{cm}$ 
+Da die Temperaturen ab $\qty{170}{°C}$ stärker schwanken, wird von einer Unsicherheit von $\pm\qty{2}{°C}$ ausgegangen.
+Die Fehlerrechnung wurde mit $uncertainties$ durchgeführt.
+\begin{table}[H]
+    \centering
+    \caption{Der Berechnete Dampfdruckund mittlere freie Wellenlänge. }
+    \label{tab:puw}
+    \begin{tabular}{c c c c c}
+        \toprule
+        $T/ \unit{\degreeCelsius}$ & $T/\unit{\kelvin}$ & $p_\text{sät}/\unit{\milli\bar}$ & $\bar{w}/\unit{\milli\meter}$ & $\frac{\bar{w}}{a}$\\
+        \midrule
+        $27.7 \pm 1$ & 300.85 & $ (6.52 \pm 0.49) \cdot 10^{-3}$   &$ (44.45 \pm 3.37)  \cdot 10^{-3}$ &$ 2.2 $\\
+        $148 \pm 1 $ & 421.15 & $ 4.46 \pm 0.17             $   &$ (0.649 \pm 0.025) \cdot 10^{-3}$ &$ 1539$ \\
+        $154 \pm 1 $ & 427.15 & $ 5.61 \pm 0.26             $   &$ (0.516 \pm 0.019) \cdot 10^{-3}$ &$ 1936$ \\
+        $161 \pm 1 $ & 434.15 & $ 7.27 \pm 0.26             $   &$ (0.398 \pm 0.014) \cdot 10^{-3}$ &$ 2510$ \\
+        $170 \pm 2 $ & 443.15 & $10.04 \pm 0.70             $   &$ (0.288 \pm 0.020) \cdot 10^{-3}$ &$ 3462$ \\
+        $196 \pm 2 $ & 469.15 & $23.72 \pm 1.48             $   &$ (0.122 \pm 0.076) \cdot 10^{-3}$ &$ 8181$ \\ 
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 
 Siehe \autoref{fig:plot}!
