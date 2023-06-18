@@ -30,5 +30,117 @@ Die Fehlerrechnung wurde mit $uncertainties$ durchgeführt.
     \end{tabular}
 \end{table}
 
+\subsection{Die Differentielle Energieverteilung}
+Um die Diferentielle Energeriverteilung zu bestimmen, werden die Differentialwerte auf Millimeterpapier bestimmt.
+Dabei werden die aufgenommenen Werte bei einer Temperatur von $T = \qty{27.7}{\degreeCelsius}$, welche in der Abbildung \ref{fig:27} dargestellt sind, verwendet.
+Die bestimmten Differentialwerte werden in der Tabelle \ref{tab:27} und in der Abbildung \ref{fig:K27} dargestellt.
+\begin{table}[H]
+    \centering
+    \caption{Differentialwerte der Messung bei einer Temperatur von $T = \qty{27.7}{\degreeCelsius}$.}
+    \label{fig:27}
+    \begin{tabular}{c c c}
+        \toprule
+        $U_B / \unit{\volt}$ & $\Delta U_B/\unit{\volt}$ & $\Delta I/\unit{\micro\ampere}$  \\
+        \midrule
+        1   & 1   &  0\\
+        2   & 1   &  0\\
+        3   & 1   &  0.1\\
+        4   & 1   &  0.12\\
+        5   & 1   &  0.2\\
+        6   & 1   &  0.32\\
+        6.5 & 0.5 &  0.48\\
+        7   & 0.5 &  0.64\\
+        7.5 & 0.5 &  1.15\\
+        8   & 0.5 &  1.6\\
+        8.5 & 0.5 &  7.41\\
+        9   & 0.5 &  0.41\\
+        10  & 1   &  0 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
-Siehe \autoref{fig:plot}!
+\begin{figure}[H]
+    \centering
+    \includegraphics{build/K27.pdf}
+    \caption{Differentielle Energieverteilung bei einer Temperatur $T = \qty{27.7}{\degreeCelsius}$.}
+    \label{fig:K27}
+\end{figure}
+Zur bestimmung des Kontaktpotentials $K$ wird die Formel \ref{eq:} verwendet.
+Dabei beträgt die Beschleunigungsspannung $U_B = \qty{11}{V}$.
+Aus den bestimmten Differentialwerten ergibt sich die maximale Spannung $U_\text{B,max} = \qty{8.5 \pm 0.5}{V}$.
+Für das Kontaktpotential ergibt sich damit 
+\begin{equation*}
+    K = \qty{2.5 \pm 0.5}{eV}.
+\end{equation*}
+Die Differentialwerte für die Messung bei einer Temperatur $T = \qty{148}{\degreeCelsius}$ werden in der Tabelle \ref{tab:148} und in der Abbildung \ref{fig:K148} 
+dargestellt.
+\begin{table}[H]
+    \centering
+    \caption{Differentialwerte der Messung bei einer Temperatur von $T = \qty{148}{\degreeCelsius}$.}
+    \label{fig:148}
+    \begin{tabular}{c c c}
+        \toprule
+        $U_B / \unit{\volt}$ & $\Delta U_B/\unit{\volt}$ & $\Delta I/\unit{\micro\ampere}$  \\
+        \midrule
+        0.5 & 0.5  & 3.6\\
+        1   & 0.5  & 2.1\\
+        1.5 & 0.5  & 2\\
+        2   & 0.5  & 1.08\\
+        3   & 1    & 0.36\\
+        4   & 1    & 0.5\\
+        5   & 1    & 0.6\\
+        6   & 1    & 0.4\\
+        7   & 1  & 0.3\\
+        8   & 1  & 0\\
+        9   & 1  & 0.03\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{build/K148.pdf}
+    \caption{Differentielle Energieverteilung bei einer Temperatur $T = \qty{148}{\degreeCelsius}$.}
+    \label{fig:K148}
+\end{figure}
+
+\subsection{Die Franck-Hertz Kurve}
+Um die Anregungsenergie für $\ce{Hg}$-Atome zu ermitteln, wurde der Abstand zwischen zwei Maxima auf dem Millimeterpapier ausgemessen.
+Der Abstand $\Delta U_B$ wird von den jeweiligen Kurven bei verschiedenen Temperaturen in der Tabelle \ref{tab:DeltaUb} dargestellt.
+Es wurde hierbei die Kurven \ref{fig:198}, \ref{fig:196}, \ref{fig:154}, \ref{fig:161}, \ref{fig:173} und \ref{fig:170} verwendet.
+
+\begin{table}[H]
+    \centering
+    \caption{Abstand $\Delta U_B /\unit{\volt}$ der Maxima der verschiedenen Franck-Hertz-Kurven.}
+    \label{tab:DeltaUb}
+    \begin{tabular}{c c c c c c}
+        \toprule
+        $T = 198.4 \unit{\degreeCelsius} $ & $T = 196 \unit{\degreeCelsius}$ & $T = 154.1 \unit{\degreeCelsius}$ & $T = 161 \unit{\degreeCelsius}$ & $T = 173 \unit{\degreeCelsius}$ & $T = 170 \unit{\degreeCelsius}$\\
+        \midrule
+        4.3                                &        4.5                       &   4.8                             &    5.3                         &  4.5                            &    4.3                         \\  
+        4.3                                &        4.8                       &   4.8                             &    5.6                         &  4.6                            &    4.3                          \\
+        4.5                                &        4.6                       &   5.1                             &    5.3                         &  4.5                            &    4.3                          \\
+        4.5                                &        5.1                       &   5.5                             &    5.8                         &  4.8                            &    4.3                          \\
+        4.7                                &        5.1                       &                                   &                                &  4.8                            &    4.8                          \\
+        4.5                                &        5.1                       &                                   &                                &                                 &                                 \\
+        4.7                                &        5.3                       &                                   &                                &                                 &                                 \\
+        4.7                                &        5.1                       &                                   &                                &                                 &                                 \\
+        4.8                                &        5.1                       &                                   &                                &                                 &                                 \\
+        4.3                                &                                  &                                   &                                &                                 &                                 \\
+        \hline
+        \multicolumn{6}{c}{Mittelwert}\\
+        \midrule
+        4.52 \pm 0.17 & 4.96 \pm 0.25 & 5.05 \pm 0.28 & 5.50 \pm 0.21 & 4.64 \pm 0.13 & 4.40 \pm 0.20\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\noindent Dies wird nun noch einmal gemittelt, wodurch sich der Abstand
+\begin{equation*}
+    \Delta U_B = \qty{4.8 \pm 0.2}{V}
+\end{equation*}
+ergibt.
+Für die Berechnung der Wellenlänge wird die Formel \ref{eq:} verwendet.
+Die Wellenlänge beträgt somit
+\begin{equation*}
+    \lambda = \qty{257.96 \pm 0.11}{nm}
+\end{equation*}
