@@ -3,13 +3,12 @@
 
 \subsection{Der Dampfdruck und die mittlere freie Wellenlänge}
 
-Um den Dampfdruck $p_\text{sät}$ zu berechnen wird die Formel \ref{} verwendet.
-Für die Berechnung der mittleren freien Wellenlänge $\bar{w}$ wird die Formel \ref{} benutzt.
+Um den Dampfdruck $p_\text{sät}$ zu berechnen wird die Formel \ref{eq:Druck} verwendet.
+Für die Berechnung der mittleren freien Wellenlänge $\bar{w}$ wird die Formel \ref{eq:freieW} benutzt.
 Die berechneten Werte werden in der Tabelle \ref{tab:puw} dargestellt.
-Damit eine ausreichende Stoßwahrscheinlichkeit gegeben ist, sollte das Verhältnis zwischen der mittleren freien Wellenlänge un dem Abstand $a$ zwischen 
-Beschleunigunskathodde- und anode, zwischen 1000 und 4000 liegen.
+Damit eine ausreichende Stoßwahrscheinlichkeit gegeben ist, sollte das Verhältnis zwischen der mittleren freien Wellenlänge und dem Abstand $a$ zwischen 1000 und 4000 liegen.
 Das Verhältnis wird ebenfalls in der Tabelle \ref{tab:puw} dargestellt.
-Dabei beträgt der Abstand $a = \qty{1}{cm}$ 
+Dabei beträgt der Abstand zwischen Beschleunigunskathodde- und anode im Experiment $a = \qty{1}{cm}$ 
 Da die Temperaturen ab $\qty{170}{°C}$ stärker schwanken, wird von einer Unsicherheit von $\pm\qty{2}{°C}$ ausgegangen.
 Die Fehlerrechnung wurde mit $uncertainties$ durchgeführt.
 \begin{table}[H]
@@ -37,7 +36,7 @@ Die bestimmten Differentialwerte werden in der Tabelle \ref{tab:27} und in der A
 \begin{table}[H]
     \centering
     \caption{Differentialwerte der Messung bei einer Temperatur von $T = \qty{27.7}{\degreeCelsius}$.}
-    \label{fig:27}
+    \label{tab:27}
     \begin{tabular}{c c c}
         \toprule
         $U_B / \unit{\volt}$ & $\Delta U_B/\unit{\volt}$ & $\Delta I/\unit{\micro\ampere}$  \\
@@ -65,7 +64,7 @@ Die bestimmten Differentialwerte werden in der Tabelle \ref{tab:27} und in der A
     \caption{Differentielle Energieverteilung bei einer Temperatur $T = \qty{27.7}{\degreeCelsius}$.}
     \label{fig:K27}
 \end{figure}
-Zur bestimmung des Kontaktpotentials $K$ wird die Formel \ref{eq:} verwendet.
+Zur bestimmung des Kontaktpotentials $K$ wird die Formel \ref{eq:Kontakt} verwendet.
 Dabei beträgt die Beschleunigungsspannung $U_B = \qty{11}{V}$.
 Aus den bestimmten Differentialwerten ergibt sich die maximale Spannung $U_\text{B,max} = \qty{8.5 \pm 0.5}{V}$.
 Für das Kontaktpotential ergibt sich damit 
@@ -77,7 +76,7 @@ dargestellt.
 \begin{table}[H]
     \centering
     \caption{Differentialwerte der Messung bei einer Temperatur von $T = \qty{148}{\degreeCelsius}$.}
-    \label{fig:148}
+    \label{tab:148}
     \begin{tabular}{c c c}
         \toprule
         $U_B / \unit{\volt}$ & $\Delta U_B/\unit{\volt}$ & $\Delta I/\unit{\micro\ampere}$  \\
@@ -139,7 +138,11 @@ Es wurde hierbei die Kurven \ref{fig:198}, \ref{fig:196}, \ref{fig:154}, \ref{fi
     \Delta U_B = \qty{4.8 \pm 0.2}{V}
 \end{equation*}
 ergibt.
-Für die Berechnung der Wellenlänge wird die Formel \ref{eq:} verwendet.
+Die Anregungsenergie beträgt somit
+\begin{equation*}
+    E = \qty{4.8 \pm 0.2}{eV}.
+\end{equation*}
+Für die Berechnung der Wellenlänge wird die Formel \ref{eq:WellenL} verwendet.
 Die Wellenlänge beträgt somit
 \begin{equation*}
     \lambda = \qty{257.96 \pm 0.11}{nm}
